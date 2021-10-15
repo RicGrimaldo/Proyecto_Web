@@ -1,0 +1,79 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 0px;
+}
+
+.item-flex-header{
+    flex-basis: 180px;
+    background-color: #94b7e4;
+}
+
+
+
+.header #logo img{
+    width: 100px;
+}
+
+#usuario img{
+    width: 70px;
+}
+
+#carrito img{
+    width: 35px;
+}
+
+.header #busqueda{
+    flex-basis: 1000px;
+}
+
+.header #barraNav{
+    flex-basis: 1000px;
+}
+
+
+/*Estilos para boton modo oscuro*/
+
+:root {
+    --color-green: #00a878;
+    --color-red: #fe5e41;
+    --color-button: #fdffff;
+    --color-black: #000;
+}
+#switch-button {
+    display: inline-block;
+}
+#switch-button .switch-button__checkbox {
+    display: none;
+}
+#switch-button .switch-button__label {
+    background-color: var(--color-red);
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+}
+#switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+}
+#switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: var(--color-green);
+}
+#switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(20px);
+}
