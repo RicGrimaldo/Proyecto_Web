@@ -3,7 +3,14 @@
     margin: 0px;
 }
 
+
+
+
+
+/*estilos para header*/
+
 .header{
+    font-family:Arial, Helvetica, sans-serif;
     display: flex;
     flex-wrap: wrap;
     background-color: #ffffff;
@@ -11,8 +18,10 @@
 }
 
 .item-flex-header{
-    flex-basis: 180px;
-    background-color: #94b7e4;
+    flex: 12%;
+    background-color: #66bde6;
+    text-align: center;
+    padding: 8px;
 }
 
 
@@ -21,8 +30,29 @@
     width: 100px;
 }
 
+#usuario{
+    text-align: right;
+    flex: 6%;
+}
+
+#txt-usuario{
+    text-align: left;
+    flex: 8%;
+}
+
+#switch-button{
+    text-align: right;
+    flex: 2%;
+}
+
+#txt-mnoche{
+    text-align: left;
+    flex: 4%;
+}
+
 #usuario img{
-    width: 70px;
+    align-content: center;
+    width: 40px;
 }
 
 #carrito img{
@@ -30,20 +60,20 @@
 }
 
 .header #busqueda{
-    flex-basis: 1000px;
+    flex: 65%;
 }
 
 .header #barraNav{
-    flex-basis: 1000px;
+    flex: 65%;
 }
 
 
 /*Estilos para boton modo oscuro*/
 
 :root {
-    --color-green: #00a878;
-    --color-red: #fe5e41;
-    --color-button: #fdffff;
+    --color-green: #172841;
+    --color-red: #83d0f3;
+    --color-button: #2b7ca1;
     --color-black: #000;
 }
 #switch-button {
@@ -76,4 +106,57 @@
 }
 #switch-button .switch-button__checkbox:checked + .switch-button__label:before {
     transform: translateX(20px);
+}
+
+/*estilos para barra de busqueda*/
+#form{
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    vertical-align: super;
+}
+
+.btn{
+    box-shadow: 8px 8px 10px  rgba(0, 0, 0,0.15);
+    background-color: white;
+    color: #1f272b;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/*.btn:hover{
+    background-color: #66bde6;
+    color: #f3f3f3;
+}*/
+
+/*estilos para footer*/
+
+.footer{
+    padding: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #66bde6;
+    display: flex;
+    line-height : 22px;
+}
+
+.footer #menu{
+    flex: 25%;
+}
+
+.footer #cliente{
+    flex: 25%;
+
+}
+
+.footer #nosotros{
+    flex: 25%;
+
+}
+
+.footer #redes{
+    flex: 25%;
+
 }
