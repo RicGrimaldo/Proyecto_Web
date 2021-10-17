@@ -13,8 +13,9 @@
     font-family:Arial, Helvetica, sans-serif;
     display: flex;
     flex-wrap: wrap;
-    background-color: #ffffff;
+    background-color: #66bde6;
     padding: 0px;
+    color: #ffffff;
 }
 
 .item-flex-header{
@@ -31,21 +32,31 @@
 }
 
 #usuario{
+    padding-top: 20px;
+    align-items: center;
     text-align: right;
     flex: 6%;
 }
 
 #txt-usuario{
+    align-items: center;
+    padding-top: 30px;
     text-align: left;
     flex: 8%;
 }
 
 #switch-button{
+    align-items: center;
+    padding-top: 18px;
+    background-color: #2c699b;
     text-align: right;
     flex: 2%;
 }
 
 #txt-mnoche{
+    align-items: center;
+    padding-top: 20px;
+    background-color: #2c699b;
     text-align: left;
     flex: 4%;
 }
@@ -56,6 +67,7 @@
 }
 
 #carrito img{
+    background-color: #2c699b;
     width: 35px;
 }
 
@@ -63,8 +75,36 @@
     flex: 65%;
 }
 
-.header #barraNav{
+nav{
+    display:flex;
     flex: 65%;
+    top: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    z-index: 100;
+}
+
+nav a{
+    flex-grow: 1;
+    text-decoration: none;
+    background: #2c699b;
+    padding: 15px 0px;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    
+
+}
+
+nav a:hover{
+    background: #244cbb;
+    color: rgb(255, 255, 255);
+        
+}
+
+
+.header #carrito{
+    background-color: #2c699b;
 }
 
 
@@ -84,9 +124,9 @@
 }
 #switch-button .switch-button__label {
     background-color: var(--color-red);
-    width: 50px;
-    height: 30px;
-    border-radius: 30px;
+    width: 45px;
+    height: 25px;
+    border-radius: 25px;
     display: inline-block;
     position: relative;
 }
@@ -94,8 +134,8 @@
     transition: .2s;
     display: block;
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-color: var(--color-button);
     content: '';
     border-radius: 50%;
@@ -137,9 +177,10 @@
 .footer{
     padding: 40px;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: #66bde6;
+    background-color: #2c699b;
     display: flex;
     line-height : 22px;
+    color: white;
 }
 
 .footer #menu{
@@ -159,4 +200,8 @@
 .footer #redes{
     flex: 25%;
 
+}
+
+#redes img{
+    width: 35px;
 }
