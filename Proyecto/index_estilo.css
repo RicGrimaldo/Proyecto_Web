@@ -3,10 +3,6 @@
     margin: 0px;
 }
 
-
-
-
-
 /*estilos para header*/
 
 .header{
@@ -18,14 +14,17 @@
     color: #ffffff;
 }
 
+.header a{
+    text-decoration: none;
+}
+
 .item-flex-header{
     flex: 12%;
-    background-color: #66bde6;
+    background: #6a9eda;
+
     text-align: center;
     padding: 8px;
 }
-
-
 
 .header #logo img{
     width: 100px;
@@ -39,6 +38,7 @@
 }
 
 #txt-usuario{
+    font-size: 16px;
     align-items: center;
     padding-top: 30px;
     text-align: left;
@@ -48,7 +48,7 @@
 #switch-button{
     align-items: center;
     padding-top: 18px;
-    background-color: #2c699b;
+    background-color: #5086c1;
     text-align: right;
     flex: 2%;
 }
@@ -56,7 +56,7 @@
 #txt-mnoche{
     align-items: center;
     padding-top: 20px;
-    background-color: #2c699b;
+    background-color: #5086c1;
     text-align: left;
     flex: 4%;
 }
@@ -66,8 +66,60 @@
     width: 40px;
 }
 
+/*Estilo para menu desplegable*/
+
+.menu{
+    position: absolute;
+    background-color: #6a9eda;
+    
+}
+
+.menu ul{
+    width: 100px;
+}
+
+.menu > li{
+    float: left;
+    list-style: none;
+    height: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+.menu li a{
+    display: block;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: center;
+    padding: 5px 5px 0px 5px;
+    color: #ffffff;
+
+}
+
+.menu li ul li{
+    display: inline !important;
+}
+
+.menu li ul li a{
+    display: inline-block;
+}
+
+.menu > li:hover{
+    height: 150px;
+}
+
+.menu li a:hover{
+    background-color: #5086c1;
+
+}
+
+/*Estilos header continuacion...*/
+
 #carrito img{
-    background-color: #2c699b;
+    background-color: #5086c1;
     width: 35px;
 }
 
@@ -87,24 +139,27 @@ nav{
 nav a{
     flex-grow: 1;
     text-decoration: none;
-    background: #2c699b;
+    background-color: #5086c1;
+    /*background: #2c699b;*/
     padding: 15px 0px;
-    font-size: 25px;
+    font-size: 20px;
     color: #ffffff;
     text-align: center;
+    transition: 0.5s;
     
 
 }
 
 nav a:hover{
-    background: #244cbb;
-    color: rgb(255, 255, 255);
+    transition: 0.4s;
+    background: #dfe0e0;
+    color: #5086c1;
         
 }
 
 
 .header #carrito{
-    background-color: #2c699b;
+    background-color: #5086c1;
 }
 
 
@@ -112,8 +167,8 @@ nav a:hover{
 
 :root {
     --color-green: #172841;
-    --color-red: #83d0f3;
-    --color-button: #2b7ca1;
+    --color-red: #b2dafa;
+    --color-button: #5086c1;
     --color-black: #000;
 }
 #switch-button {
@@ -167,37 +222,53 @@ nav a:hover{
     margin-bottom: 20px;
 }
 
+.btn img{
+    width: 30px;
+}
+
 /*.btn:hover{
     background-color: #66bde6;
     color: #f3f3f3;
 }*/
 
 /*estilos para footer*/
+.footer a{
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .footer{
     padding: 40px;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: #2c699b;
+    background-color: #5086c1;
     display: flex;
     line-height : 22px;
     color: white;
 }
 
+.footer h4{
+    border-bottom: 1px solid silver;
+}
+
 .footer #menu{
+    padding-right: 40px;
     flex: 25%;
 }
 
 .footer #cliente{
+    padding-right: 40px;
     flex: 25%;
 
 }
 
 .footer #nosotros{
+    padding-right: 40px;
     flex: 25%;
 
 }
 
 .footer #redes{
+    padding-right: 40px;
     flex: 25%;
 
 }
