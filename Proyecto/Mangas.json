@@ -1,0 +1,112 @@
+[
+    {
+        "titulo": "Akame Ga Kill!",
+        "autor": "Takahiro",
+        "generos": [
+            "acción", "aventura", "drama", "romance"
+        ],
+        "rangoEdad": "18 años en adelante",
+        "ruta": "PDF/Akame.pdf",
+        "imagenURL": "Imagenes/Akame.jpg",
+        "id": "1"
+    },
+    {
+        "titulo": "K-on!",
+        "autor": "Kakifly",
+        "generos": [
+            "recuentos de vida", "comedia", "escolar"
+        ],
+        "rangoEdad": "todas las edades",
+        "rutaArchivo": "PDF/K-on.pdf",
+        "imagenURL": "Imagenes/Kon.jpg",
+        "id": "2"
+    },
+    {
+        "titulo": "High Score Girl",
+        "autor": "Rensuke Oshikiri",
+        "generos": [
+            "recuentos de vida", "comedia", "romance", "drama"
+        ],
+        "rangoEdad": "todas las edades",
+        "rutaArchivo": "PDF/High Score Girl.pdf",
+        "imagenURL": "Imagenes/HighScoreGirl.jpg",
+        "id": "3"
+    },
+    {
+        "titulo": "Magi: The Labyrinth of Magic",
+        "autor": "Shinobu Ohtaka",
+        "generos": [
+            "acción", "aventura", "comedia", "fantasía"
+        ],
+        "rangoEdad": "13 años en adelante",
+        "rutaArchivo": "PDF/Magi.pdf",
+        "imagenURL": "Imagenes/Magi.jpg",
+        "id": "4"
+    },
+    {
+        "titulo": "Kaguya-sama: Love is war",
+        "autor": "Aka Akasaka",
+        "generos": [
+            "recuentos de vida", "comedia", "romance", "escolar"
+        ],
+        "rangoEdad": "13 años en adelante",
+        "rutaArchivo": "PDF/Kaguya Sama.pdf",
+        "imagenURL": "Imagenes/Kaguya.jpg",
+        "id": "5"
+    },
+    {
+        "titulo": "Karakai Jouzu no Takagi-san",
+        "autor": "Soichiro Yamamoto",
+        "generos": [
+            "recuentos de vida", "comedia", "romance", "escolar"
+        ],
+        "rangoEdad": "13 años en adelante",
+        "rutaArchivo": "PDF/Karakai Jouzu no Takagi-san.pdf",
+        "imagenURL": "Imagenes/Takagi.jpg",
+        "id": "6"
+    },
+    {
+        "titulo": "Karakai Jouzu no (Moto) Takagi-san",
+        "autor": "Inaba Mifumi",
+        "generos": [
+            "recuentos de vida", "comedia", "romance"
+        ],
+        "rangoEdad": "13 años en adelante",
+        "rutaArchivo": "PDF/Karakai Jouzu no (Moto) Takagi-san.pdf",
+        "imagenURL": "Imagenes/TakagiMoto.jpg",
+        "id": "7"
+    },
+    {
+        "titulo": "Tsurezure Children",
+        "autor": "Toshiya Wakabayashi",
+        "generos": [
+            "recuentos de vida", "comedia", "escolar", "romance"
+        ],
+        "rangoEdad": "13 años en adelante",
+        "rutaArchivo": "PDF/Tsurezure Children.pdf",
+        "imagenURL": "Imagenes/Children.jpg",
+        "id": "8"
+    },
+    {
+        "titulo": "ReLife",
+        "autor": "Yayoiso",
+        "generos": [
+            "recuentos de vida", "drama", "romance", "escolar"
+        ],
+        "rangoEdad": "18 años en adelante",
+        "rutaArchivo": "PDF/ReLife.pdf",
+        "imagenURL": "Imagenes/ReLife.jpg",
+        "id": "9"
+    },
+    {
+        "titulo": "Seitokai Yakuindomo",
+        "autor": "Tozen Ujiie",
+        "generos": [
+            "recuentos de vida", "comedia", "escolar"
+        ],
+        "rangoEdad": "18 años en adelante",
+        "rutaArchivo": "PDF/Seitokai Yakuindomo.pdf",
+        "imagenURL": "Imagenes/Seitokai.png",
+        "id": "10"
+    }
+]

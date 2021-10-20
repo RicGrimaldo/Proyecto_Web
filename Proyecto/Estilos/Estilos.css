@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body{
+    background:linear-gradient(#88a7d0af,#CAECF1);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.login-Container{
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 8px 8px 50px #000;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    align-items: center;
+}
+
+.login-Container form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.login-Container img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0px 0px 0px 1px #7cdeff,
+    0px 0px 0px 5px #b6eaff,
+    8px 8px 15px #c5f0cb,
+    -8px -8px 15px #7cdeff;
+    margin-bottom: 20px;
+}
+
+.login-Container h1{
+    border-bottom: 1px solid silver;
+    padding: 0 0 20px 0;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.txt_field input{
+    width: 100%;
+    padding:  0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: 0.2s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+input[type="submit"]{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: linear-gradient(120deg,#3498db,#2e05e6,#3498db);
+    background-size: 200%;
+    border-radius: 25px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+input[type="submit"]:hover{
+    background-position: right center;
+    letter-spacing: 1px;
+}
+
+.signUp-Link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signUp-Link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signUp-Link a:hover{
+    text-decoration: underline;
+}
