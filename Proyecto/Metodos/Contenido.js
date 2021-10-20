@@ -5,7 +5,7 @@ let biblioteca = [];
 const carrito = [];
 const contador = 0;
 
-function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id) {
+function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id, precio) {
     this.titulo = titulo;
     this.autor = autor;
     this.generos = generos;
@@ -13,6 +13,7 @@ function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id) {
     this.rutaArchivo = rutaArchivo;
     this.imagenURL = imagenURL;
     this.id = id;
+    this.precio = precio;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -58,7 +59,8 @@ const llenarCarrito = function(datos){
     for(item of datos){
         nuevoManga = new Manga(item.titulo, item.autor, 
                             item.generos, item.rangoEdad, 
-                            item.rutaArchivo, item.imagenURL, item.id);
+                            item.rutaArchivo, item.imagenURL, 
+                            item.id, item.precio);
         carrito.push(nuevoManga);
     }
     console.log(carrito);
@@ -67,7 +69,7 @@ const llenarCarrito = function(datos){
 const pintarCards = function(datos){
     for(let item of datos){
         templateCard.querySelector('h5').textContent = item.titulo;
-        templateCard.querySelector('p').textContent = "Autor: "  + item.autor;
+        templateCard.querySelector('p').textContent = "$"  + item.precio;
         templateCard.querySelector('img').setAttribute('src', item.imagenURL);
         templateCard.querySelector('.btn-dark').dataset.id = item.id;
         const clone = templateCard.cloneNode(true);

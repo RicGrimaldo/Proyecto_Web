@@ -8,7 +8,8 @@
         "rangoEdad": "18 años en adelante",
         "rutaArchivo": "PDF/Akame.pdf",
         "imagenURL": "Imagenes/Akame.jpg",
-        "id": "1"
+        "id": "1",
+        "precio": "109.00"
     },
     {
         "titulo": "K-on!",
@@ -19,7 +20,8 @@
         "rangoEdad": "todas las edades",
         "rutaArchivo": "PDF/K-on.pdf",
         "imagenURL": "Imagenes/Kon.jpg",
-        "id": "2"
+        "id": "2",
+        "precio": "89.00"
     },
     {
         "titulo": "High Score Girl",
@@ -30,7 +32,8 @@
         "rangoEdad": "todas las edades",
         "rutaArchivo": "PDF/High Score Girl.pdf",
         "imagenURL": "Imagenes/HighScoreGirl.jpg",
-        "id": "3"
+        "id": "3",
+        "precio": "129.00"
     },
     {
         "titulo": "Magi: The Labyrinth of Magic",
@@ -41,7 +44,8 @@
         "rangoEdad": "13 años en adelante",
         "rutaArchivo": "PDF/Magi.pdf",
         "imagenURL": "Imagenes/Magi.jpg",
-        "id": "4"
+        "id": "4",
+        "precio": "99.00"
     },
     {
         "titulo": "Kaguya-sama: Love is war",
@@ -52,7 +56,8 @@
         "rangoEdad": "13 años en adelante",
         "rutaArchivo": "PDF/Kaguya Sama.pdf",
         "imagenURL": "Imagenes/Kaguya.jpg",
-        "id": "5"
+        "id": "5",
+        "precio": "119.00"
     },
     {
         "titulo": "Karakai Jouzu no Takagi-san",
@@ -63,7 +68,8 @@
         "rangoEdad": "13 años en adelante",
         "rutaArchivo": "PDF/Karakai Jouzu no Takagi-san.pdf",
         "imagenURL": "Imagenes/Takagi.jpg",
-        "id": "6"
+        "id": "6",
+        "precio": "109.00"
     },
     {
         "titulo": "Karakai Jouzu no (Moto) Takagi-san",
@@ -74,7 +80,8 @@
         "rangoEdad": "13 años en adelante",
         "rutaArchivo": "PDF/Karakai Jouzu no (Moto) Takagi-san.pdf",
         "imagenURL": "Imagenes/TakagiMoto.jpg",
-        "id": "7"
+        "id": "7",
+        "precio": "89.00"
     },
     {
         "titulo": "Tsurezure Children",
@@ -85,7 +92,8 @@
         "rangoEdad": "13 años en adelante",
         "rutaArchivo": "PDF/Tsurezure Children.pdf",
         "imagenURL": "Imagenes/Children.jpg",
-        "id": "8"
+        "id": "8",
+        "precio": "89.00"
     },
     {
         "titulo": "ReLife",
@@ -96,7 +104,8 @@
         "rangoEdad": "18 años en adelante",
         "rutaArchivo": "PDF/ReLife.pdf",
         "imagenURL": "Imagenes/ReLife.jpg",
-        "id": "9"
+        "id": "9",
+        "precio": "129.00"
     },
     {
         "titulo": "Seitokai Yakuindomo",
@@ -107,6 +116,7 @@
         "rangoEdad": "18 años en adelante",
         "rutaArchivo": "PDF/Seitokai Yakuindomo.pdf",
         "imagenURL": "Imagenes/Seitokai.png",
-        "id": "10"
+        "id": "10",
+        "precio": "79.00"
     }
 ]
