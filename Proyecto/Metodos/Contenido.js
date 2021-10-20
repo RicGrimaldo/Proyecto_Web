@@ -2,13 +2,24 @@ const cards = document.getElementById('cards');
 const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
 let biblioteca = {};
+const carrito = [];
+
+function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id) {
+    this.titulo = titulo;
+    this.autor = autor;
+    this.generos = generos;
+    this.rangoEdad = rangoEdad;
+    this.rutaArchivo = rutaArchivo;
+    this.imagenURL = imagenURL;
+    this.id = id;
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     leerDatos();
     if(localStorage.getItem('biblioteca')) {
         biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
     }
-})
+});
 
 const cargarDatos = function(){
     var botones = document.getElementsByClassName('btn-dark');
@@ -20,7 +31,7 @@ const cargarDatos = function(){
             btn.disabled = false;
         }
     }
-}
+};
 
 cards.addEventListener('click', e =>{
     addbiblioteca(e);
@@ -32,6 +43,7 @@ const leerDatos = async() => {
         if (this.readyState == 4 && this.status == 200) {
             let datos = JSON.parse(this.responseText);
             pintarCards(datos);
+            llenarCarrito(datos);
             cargarDatos();
         }
     };
@@ -39,12 +51,22 @@ const leerDatos = async() => {
     xhttp.send();
 };
 
+const llenarCarrito = function(datos){
+    for(item of datos){
+        nuevoManga = new Manga(item.titulo, item.autor, 
+                            item.generos, item.rangoEdad, 
+                            item.rutaArchivo, item.imagenURL, item.id);
+        carrito.push(nuevoManga);
+    }
+    console.log(carrito);
+};
+
 const pintarCards = function(datos){
-    for(let manga of datos){
-        templateCard.querySelector('h5').textContent = manga.titulo;
-        templateCard.querySelector('p').textContent = "Autor: "  + manga.autor;
-        templateCard.querySelector('img').setAttribute('src', manga.imagenURL);
-        templateCard.querySelector('.btn-dark').dataset.id = manga.id;
+    for(let item of datos){
+        templateCard.querySelector('h5').textContent = item.titulo;
+        templateCard.querySelector('p').textContent = "Autor: "  + item.autor;
+        templateCard.querySelector('img').setAttribute('src', item.imagenURL);
+        templateCard.querySelector('.btn-dark').dataset.id = item.id;
         const clone = templateCard.cloneNode(true);
         fragment.appendChild(clone);
     }
@@ -62,11 +84,13 @@ const addbiblioteca = e =>{
 
 //  Para capturar los elementos
 const setbiblioteca = objeto => {
-    const manga = {
-        id: objeto.querySelector('.btn-dark').dataset.id,
-        titulo: objeto.querySelector('h5').textContent,
-        autor: objeto.querySelector('p').textContent
-    }
+    //Buscamos el manga que fue seleccionado
+    let manga = carrito.find(manga => manga.titulo === objeto.querySelector('h5').textContent);
+    // const nuevoManga = {
+    //     id: objeto.querySelector('.btn-dark').dataset.id,
+    //     titulo: objeto.querySelector('h5').textContent,
+    //     autor: objeto.querySelector('p').textContent
+    // }
 
     var btn = objeto.querySelector('.btn');
     btn.style.backgroundColor =  "#419641";

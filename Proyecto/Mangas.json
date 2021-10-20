@@ -6,7 +6,7 @@
             "acción", "aventura", "drama", "romance"
         ],
         "rangoEdad": "18 años en adelante",
-        "ruta": "PDF/Akame.pdf",
+        "rutaArchivo": "PDF/Akame.pdf",
         "imagenURL": "Imagenes/Akame.jpg",
         "id": "1"
     },
