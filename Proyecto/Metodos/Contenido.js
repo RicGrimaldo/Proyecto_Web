@@ -16,7 +16,7 @@ const cargarDatos = function(){
         var btn = botones[i];
         if(biblioteca[i+1] != null){
             btn.style.backgroundColor =  "#419641";
-            btn.innerText =  "Añadido";
+            btn.innerText =  "Añadido a mi biblioteca";
             btn.disabled = false;
         }
     }
@@ -70,7 +70,7 @@ const setbiblioteca = objeto => {
 
     var btn = objeto.querySelector('.btn');
     btn.style.backgroundColor =  "#419641";
-    btn.innerText =  "Añadido";
+    btn.innerText =  "Añadido a mi biblioteca";
     btn.disabled = false;
 
     //  Hacemos una copia del producto
