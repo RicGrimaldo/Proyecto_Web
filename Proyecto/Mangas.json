@@ -21,7 +21,7 @@
         "rutaArchivo": "PDF/K-on.pdf",
         "imagenURL": "Imagenes/Kon.jpg",
         "id": "2",
-        "precio": "89.00"
+        "precio": "89.90"
     },
     {
         "titulo": "High Score Girl",
@@ -45,7 +45,7 @@
         "rutaArchivo": "PDF/Magi.pdf",
         "imagenURL": "Imagenes/Magi.jpg",
         "id": "4",
-        "precio": "99.00"
+        "precio": "99.90"
     },
     {
         "titulo": "Kaguya-sama: Love is war",
@@ -81,7 +81,7 @@
         "rutaArchivo": "PDF/Karakai Jouzu no (Moto) Takagi-san.pdf",
         "imagenURL": "Imagenes/TakagiMoto.jpg",
         "id": "7",
-        "precio": "89.00"
+        "precio": "89.90"
     },
     {
         "titulo": "Tsurezure Children",
@@ -93,7 +93,7 @@
         "rutaArchivo": "PDF/Tsurezure Children.pdf",
         "imagenURL": "Imagenes/Children.jpg",
         "id": "8",
-        "precio": "89.00"
+        "precio": "89.90"
     },
     {
         "titulo": "ReLife",

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const cargarDatos = function(){
-    var botones = document.getElementsByClassName('btn-dark');
+    var botones = document.getElementsByClassName('btn-dark btn');
     for(var i = 0; i < botones.length; i++){
         var btn = botones[i];
         for(var j = 0; j < biblioteca.length; j++){
@@ -56,14 +56,18 @@ const leerDatos = async() => {
 };
 
 const llenarCarrito = function(datos){
+    var precioEtiqueta = document.getElementById('precioTotal');
+    var precioTotal = 0;
     for(item of datos){
         nuevoManga = new Manga(item.titulo, item.autor, 
                             item.generos, item.rangoEdad, 
                             item.rutaArchivo, item.imagenURL, 
                             item.id, item.precio);
         carrito.push(nuevoManga);
+        precioTotal += eval(item.precio);
     }
     console.log(carrito);
+    precioEtiqueta.innerHTML = "Total: $"+precioTotal.toFixed(2);
 };
 
 const pintarCards = function(datos){
@@ -97,15 +101,20 @@ const setbiblioteca = objeto => {
     //     autor: objeto.querySelector('p').textContent
     // }
 
-    var btn = objeto.querySelector('.btn');
-    btn.style.backgroundColor =  "#419641";
-    btn.innerText =  "Añadido a mi biblioteca";
-    btn.disabled = false;
+    var exist = biblioteca.find(mangaExistente => mangaExistente.titulo == manga.titulo);
 
-    //  Hacemos una copia del producto
-    biblioteca.push({...manga});
-    console.log(biblioteca);
+    //  Significa que el elemento ya existe
+    if(exist == null) {
+        var btn = objeto.querySelector('.btn');
+        btn.style.backgroundColor =  "#419641";
+        btn.innerText =  "Añadido a mi biblioteca";
+        btn.disabled = false;
 
-    localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
+        //  Hacemos una copia del producto
+        biblioteca.push({...manga});
+        console.log(biblioteca);
+
+        localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
+    }
 
 };
