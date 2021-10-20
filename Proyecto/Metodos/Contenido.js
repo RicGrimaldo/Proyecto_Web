@@ -1,8 +1,9 @@
 const cards = document.getElementById('cards');
 const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
-let biblioteca = {};
+let biblioteca = [];
 const carrito = [];
+const contador = 0;
 
 function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id) {
     this.titulo = titulo;
@@ -25,10 +26,12 @@ const cargarDatos = function(){
     var botones = document.getElementsByClassName('btn-dark');
     for(var i = 0; i < botones.length; i++){
         var btn = botones[i];
-        if(biblioteca[i+1] != null){
-            btn.style.backgroundColor =  "#419641";
-            btn.innerText =  "Añadido a mi biblioteca";
-            btn.disabled = false;
+        for(var j = 0; j < biblioteca.length; j++){
+            if(biblioteca[j].id == btn.dataset.id){
+                btn.style.backgroundColor =  "#419641";
+                btn.innerText =  "Añadido a mi biblioteca";
+                btn.disabled = false;
+            }
         }
     }
 };
@@ -98,7 +101,7 @@ const setbiblioteca = objeto => {
     btn.disabled = false;
 
     //  Hacemos una copia del producto
-    biblioteca[manga.id] = {...manga};
+    biblioteca.push({...manga});
     console.log(biblioteca);
 
     localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
