@@ -146,8 +146,6 @@ nav a{
     color: #ffffff;
     text-align: center;
     transition: 0.5s;
-    
-
 }
 
 nav a:hover{
@@ -157,19 +155,17 @@ nav a:hover{
         
 }
 
-
 .header #carrito{
     background-color: #5086c1;
 }
 
-
 /*Estilos para boton modo oscuro*/
 
 :root {
-    --color-green: #172841;
-    --color-red: #b2dafa;
+    --color-1: #172841;
+    --color-2: #b2dafa;
     --color-button: #5086c1;
-    --color-black: #000;
+    --color-3: #000;
 }
 #switch-button {
     display: inline-block;
@@ -178,7 +174,7 @@ nav a:hover{
     display: none;
 }
 #switch-button .switch-button__label {
-    background-color: var(--color-red);
+    background-color: var(--color-2);
     width: 45px;
     height: 25px;
     border-radius: 25px;
@@ -194,14 +190,17 @@ nav a:hover{
     background-color: var(--color-button);
     content: '';
     border-radius: 50%;
-    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+    box-shadow: inset 0px 0px 0px 1px var(--color-3);
 }
 #switch-button .switch-button__checkbox:checked + .switch-button__label {
-    background-color: var(--color-green);
+    background-color: var(--color-1);
 }
+
 #switch-button .switch-button__checkbox:checked + .switch-button__label:before {
     transform: translateX(20px);
 }
+
+
 
 /*estilos para barra de busqueda*/
 #form{
@@ -225,11 +224,6 @@ nav a:hover{
 .btn img{
     width: 30px;
 }
-
-/*.btn:hover{
-    background-color: #66bde6;
-    color: #f3f3f3;
-}*/
 
 /*estilos para footer*/
 .footer a{
