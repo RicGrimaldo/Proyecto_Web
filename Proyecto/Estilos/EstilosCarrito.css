@@ -15,6 +15,10 @@ body{
     background:linear-gradient(#88a7d0af,#CAECF1);
 }
 
+.row{
+    clear: both;
+}
+
 .btn{
     background-color: #416d96;
     border: none;
