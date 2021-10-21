@@ -6,7 +6,7 @@
             "acción", "aventura", "drama", "romance"
         ],
         "rangoEdad": "18 años en adelante",
-        "rutaArchivo": "PDF/Akame.pdf",
+        "rutaArchivo": "PDF/Akame Ga Kill.pdf",
         "imagenURL": "Imagenes/Akame.jpg",
         "id": "1",
         "precio": "109.00"
@@ -66,7 +66,7 @@
             "recuentos de vida", "comedia", "romance", "escolar"
         ],
         "rangoEdad": "13 años en adelante",
-        "rutaArchivo": "PDF/Karakai Jouzu no Takagi-san.pdf",
+        "rutaArchivo": "PDF/Karakai Jozu no Takagi-san.pdf",
         "imagenURL": "Imagenes/Takagi.jpg",
         "id": "6",
         "precio": "109.00"
@@ -78,7 +78,7 @@
             "recuentos de vida", "comedia", "romance"
         ],
         "rangoEdad": "13 años en adelante",
-        "rutaArchivo": "PDF/Karakai Jouzu no (Moto) Takagi-san.pdf",
+        "rutaArchivo": "PDF/Karakai Jouzu No (Moto) Takagi-san.pdf",
         "imagenURL": "Imagenes/TakagiMoto.jpg",
         "id": "7",
         "precio": "89.90"
