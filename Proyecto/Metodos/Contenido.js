@@ -1,6 +1,8 @@
 const cards = document.getElementById('cards');
 const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
+const precioEtiqueta = document.getElementById('precioTotal');
+var precioTotal = 0;
 let biblioteca = [];
 const carrito = [];
 
@@ -55,18 +57,14 @@ const leerDatos = async() => {
 };
 
 const llenarCarrito = function(datos){
-    var precioEtiqueta = document.getElementById('precioTotal');
-    var precioTotal = 0;
     for(item of datos){
         nuevoManga = new Manga(item.titulo, item.autor, 
                             item.generos, item.rangoEdad, 
                             item.rutaArchivo, item.imagenURL, 
                             item.id, item.precio);
         carrito.push(nuevoManga);
-        precioTotal += eval(item.precio);
     }
     console.log(carrito);
-    precioEtiqueta.innerHTML = "Total: $"+precioTotal.toFixed(2);
 };
 
 const pintarCards = function(datos){
@@ -106,8 +104,11 @@ const setbiblioteca = objeto => {
     if(exist == null) {
         var btn = objeto.querySelector('.btn');
         btn.style.backgroundColor =  "#419641";
-        btn.innerText =  "Añadido a mi biblioteca";
+        btn.innerText =  "Agregado";
         btn.disabled = false;
+
+        precioTotal += eval(manga.precio);
+        precioEtiqueta.innerHTML = "Pagar: $"+precioTotal.toFixed(2);
 
         //  Hacemos una copia del producto
         biblioteca.push({...manga});
