@@ -11,6 +11,19 @@ html, body {
     min-height: 100%;
 }
 
+.buttonCheckout{
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: #416d96;
+    color: white;
+    border: 2px solid #325474 ;
+    transition-duration: 0.4s;
+    right: 15px;
+    bottom: 15px;
+}
+
 body{
     background:linear-gradient(#88a7d0af,#CAECF1);
 }

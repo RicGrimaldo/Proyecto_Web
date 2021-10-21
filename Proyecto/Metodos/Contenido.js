@@ -3,7 +3,6 @@ const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
 let biblioteca = [];
 const carrito = [];
-const contador = 0;
 
 function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id, precio) {
     this.titulo = titulo;
@@ -103,7 +102,7 @@ const setbiblioteca = objeto => {
 
     var exist = biblioteca.find(mangaExistente => mangaExistente.titulo == manga.titulo);
 
-    //  Significa que el elemento ya existe
+    //  Significa que el elemento aún no existe
     if(exist == null) {
         var btn = objeto.querySelector('.btn');
         btn.style.backgroundColor =  "#419641";
