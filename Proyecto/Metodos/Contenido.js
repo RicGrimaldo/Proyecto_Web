@@ -31,7 +31,7 @@ const cargarDatos = function(){
         for(var j = 0; j < biblioteca.length; j++){
             if(biblioteca[j].id == btn.dataset.id){
                 btn.style.backgroundColor =  "#419641";
-                btn.innerText =  "Añadido a mi biblioteca";
+                btn.innerText =  "Agregado";
                 btn.disabled = false;
                 precioTotal += eval(biblioteca[j].precio);
                 precioBoton.innerHTML = "Pagar: $"+precioTotal.toFixed(2);
