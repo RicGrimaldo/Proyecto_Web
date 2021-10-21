@@ -1,7 +1,7 @@
 const cards = document.getElementById('cards');
 const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
-const precioEtiqueta = document.getElementById('precioTotal');
+const precioBoton = document.getElementById('precioTotal');
 var precioTotal = 0;
 let biblioteca = [];
 const carrito = [];
@@ -33,9 +33,20 @@ const cargarDatos = function(){
                 btn.style.backgroundColor =  "#419641";
                 btn.innerText =  "Añadido a mi biblioteca";
                 btn.disabled = false;
+                precioTotal += eval(biblioteca[j].precio);
+                precioBoton.innerHTML = "Pagar: $"+precioTotal.toFixed(2);
             }
         }
     }
+};
+
+precioBoton.addEventListener('click', function(){
+    vaciarComprados();
+});
+
+const vaciarComprados = function(){
+    //  Aquí falta por implementar, y es que los mangas almacenados en el localStorage se eliminarán del carrito
+    //  Así, cuando se recargue la página, ya no se visualizarán
 };
 
 cards.addEventListener('click', e =>{
@@ -108,7 +119,7 @@ const setbiblioteca = objeto => {
         btn.disabled = false;
 
         precioTotal += eval(manga.precio);
-        precioEtiqueta.innerHTML = "Pagar: $"+precioTotal.toFixed(2);
+        precioBoton.innerHTML = "Pagar: $"+precioTotal.toFixed(2);
 
         //  Hacemos una copia del producto
         biblioteca.push({...manga});
