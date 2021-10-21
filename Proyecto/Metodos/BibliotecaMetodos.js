@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         Swal.fire({
             icon: 'warning',
             title: '¡No tienes nada agregado a la biblioteca!',
-            footer: '<a href="Carrito.html">Ir a mi carrito</a>'
+            showConfirmButton: false,
+            footer: '<a href="Carrito.html" class="button">Ir a mi carrito</a>'
         })
     }
 
@@ -89,7 +90,7 @@ const descargarPDF = objeto => {
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
-        timer: 2000,
+        timer: 1500,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)

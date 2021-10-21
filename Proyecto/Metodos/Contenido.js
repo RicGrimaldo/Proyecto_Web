@@ -46,8 +46,24 @@ precioBoton.addEventListener('click', function(){
 });
 
 const vaciarComprados = function(){
-    //  Aquí falta por implementar, y es que los mangas almacenados en el localStorage se eliminarán del carrito
-    //  Así, cuando se recargue la página, ya no se visualizarán
+    Swal.fire({
+        text: '¿Deseas realizar tu compra?',
+        title: "Total a pagar: $"+precioTotal.toFixed(2),
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: "Cancelar",
+        confirmButtonText: 'Sí'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                '¡Compra realizada!',
+                '¡Gracias por tu compra!',
+                'success'
+            )
+        }
+    })
 };
 
 cards.addEventListener('click', e =>{
