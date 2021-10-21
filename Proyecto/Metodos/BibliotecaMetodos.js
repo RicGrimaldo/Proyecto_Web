@@ -2,6 +2,7 @@ const cards = document.getElementById('cards');
 const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
 let biblioteca = [];
+let descargados = [];
 
 function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id) {
     this.titulo = titulo;
@@ -11,8 +12,11 @@ function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id) {
     this.rutaArchivo = rutaArchivo;
     this.imagenURL = imagenURL;
     this.id = id;
+    this.descargado = false;
 }
 
+//  Falta recorrer todo de nuevo y registrar elementos que ya hayan sido descargados
+//  Para inhabilitar el botón, aunque también se puede preguntar "desea descargar de nuevo?" o algo así
 document.addEventListener('DOMContentLoaded', function() {
     if(localStorage.getItem('biblioteca')) {
         biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
@@ -50,13 +54,34 @@ const descargarClick = e =>{
 const descargarPDF = objeto => {
     //Buscamos el manga que fue seleccionado
     let manga = biblioteca.find(manga => manga.titulo === objeto.querySelector('h5').textContent);
+    var exist = descargados.find(mangaExistente => mangaExistente.titulo === manga.titulo);
+    console.log(manga.descargado);
 
+    var span = objeto.querySelector('span');
     var btn = objeto.querySelector('.button');
+    console.log(manga.descargado);
+
+    if(manga.descargado == false){    
+        btn.innerHTML =  `<span class="icon-check"></span>Descargado`;
+        btn.className = "buttonDescargado";
+        manga.descargado = true;
     
-    btn.innerHTML =  `<span class="icon-check"></span>Descargado`;
-    btn.className = "buttonDescargado";
-    
-    btn.setAttribute("href",manga.rutaArchivo);
-    btn.setAttribute("download",manga.titulo);
+        descargados.push(manga);
+        
+        btn.setAttribute("href",manga.rutaArchivo);
+        btn.setAttribute("download",manga.titulo);
+
+        Swal.fire({
+            icon: 'success',
+            title: '¡'+manga.titulo+' se ha descargado con éxito!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
+        localStorage.setItem('Descargados',JSON.stringify(descargados));
+    }
+    else{
+        console.log("Ya existe");
+    }
 
 };

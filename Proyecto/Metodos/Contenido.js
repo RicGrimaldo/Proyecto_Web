@@ -15,6 +15,7 @@ function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id, pr
     this.imagenURL = imagenURL;
     this.id = id;
     this.precio = precio;
+    this.descargado = false;
 }
 
 document.addEventListener('DOMContentLoaded', function() {

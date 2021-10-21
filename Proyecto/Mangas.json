@@ -3,7 +3,7 @@
         "titulo": "Akame Ga Kill!",
         "autor": "Takahiro",
         "generos": [
-            "acción", "aventura", "drama", "romance"
+            "18+","acción", "aventura", "drama", "romance"
         ],
         "rangoEdad": "18 años en adelante",
         "rutaArchivo": "PDF/Akame Ga Kill.pdf",
@@ -17,7 +17,7 @@
         "generos": [
             "recuentos de vida", "comedia", "escolar"
         ],
-        "rangoEdad": "todas las edades",
+        "rangoEdad": "Todas las edades",
         "rutaArchivo": "PDF/K-on.pdf",
         "imagenURL": "Imagenes/Kon.jpg",
         "id": "2",
@@ -29,7 +29,7 @@
         "generos": [
             "recuentos de vida", "comedia", "romance", "drama"
         ],
-        "rangoEdad": "todas las edades",
+        "rangoEdad": "Todas las edades",
         "rutaArchivo": "PDF/High Score Girl.pdf",
         "imagenURL": "Imagenes/HighScoreGirl.jpg",
         "id": "3",
@@ -99,7 +99,7 @@
         "titulo": "ReLife",
         "autor": "Yayoiso",
         "generos": [
-            "recuentos de vida", "drama", "romance", "escolar"
+            "18+","recuentos de vida", "drama", "romance", "escolar"
         ],
         "rangoEdad": "18 años en adelante",
         "rutaArchivo": "PDF/ReLife.pdf",
@@ -111,7 +111,7 @@
         "titulo": "Seitokai Yakuindomo",
         "autor": "Tozen Ujiie",
         "generos": [
-            "recuentos de vida", "comedia", "escolar"
+            "18+","recuentos de vida", "comedia", "escolar"
         ],
         "rangoEdad": "18 años en adelante",
         "rutaArchivo": "PDF/Seitokai Yakuindomo.pdf",
