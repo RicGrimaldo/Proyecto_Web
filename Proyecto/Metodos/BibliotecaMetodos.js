@@ -22,9 +22,32 @@ document.addEventListener('DOMContentLoaded', function() {
         biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
         pintarCards();
     } else{
-        alert('No se ha agregado ningún manga.');
+        Swal.fire({
+            icon: 'warning',
+            title: '¡No tienes nada agregado a la biblioteca!',
+            footer: '<a href="Carrito.html">Ir a mi carrito</a>'
+        })
+    }
+
+    if(localStorage.getItem('Descargados')){
+        descargados = JSON.parse(localStorage.getItem('Descargados'));
+        cargarDescargados();
     }
 });
+
+const cargarDescargados = function(){
+    var botones = document.getElementsByClassName('button');
+    for(var i = 0; i < botones.length; i++){
+        var btn = botones[i];
+        let manga = descargados.find(manga => manga.id === btn.dataset.id);
+        if(manga != null){
+            btn.innerHTML =  `<span class="icon-check"></span>Descargado`;
+            btn.className = "buttonDescargado";
+            i--;
+        }
+
+    }
+}
 
 const pintarCards = function(){
     for(var i = 0; i < biblioteca.length; i++){
@@ -54,34 +77,47 @@ const descargarClick = e =>{
 const descargarPDF = objeto => {
     //Buscamos el manga que fue seleccionado
     let manga = biblioteca.find(manga => manga.titulo === objeto.querySelector('h5').textContent);
-    var exist = descargados.find(mangaExistente => mangaExistente.titulo === manga.titulo);
-    console.log(manga.descargado);
 
-    var span = objeto.querySelector('span');
     var btn = objeto.querySelector('.button');
-    console.log(manga.descargado);
 
-    if(manga.descargado == false){    
-        btn.innerHTML =  `<span class="icon-check"></span>Descargado`;
-        btn.className = "buttonDescargado";
-        manga.descargado = true;
-    
-        descargados.push(manga);
-        
-        btn.setAttribute("href",manga.rutaArchivo);
-        btn.setAttribute("download",manga.titulo);
+    btn.innerHTML =  `<span class="icon-check"></span>Descargado`;
+    btn.className = "buttonDescargado";
 
-        Swal.fire({
-            icon: 'success',
-            title: '¡'+manga.titulo+' se ha descargado con éxito!',
-            showConfirmButton: false,
-            timer: 1500
+    descargados.push(manga);
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+
+    Toast.fire({
+        icon: 'success',
+        title: '¡'+manga.titulo+' se ha descargado con éxito!'
+    })
+
+    axios({
+        url: manga.rutaArchivo,
+        method: 'GET',
+        responseType: 'blob'
+    })
+        .then((response) => {
+            const url = window.URL
+                    .createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', manga.titulo+'.pdf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         })
 
-        localStorage.setItem('Descargados',JSON.stringify(descargados));
-    }
-    else{
-        console.log("Ya existe");
-    }
+    localStorage.setItem('Descargados',JSON.stringify(descargados));
 
 };
