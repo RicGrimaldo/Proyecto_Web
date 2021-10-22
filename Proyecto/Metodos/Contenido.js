@@ -2,6 +2,7 @@ const cards = document.getElementById('cards');
 const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
 const precioBoton = document.getElementById('precioTotal');
+const btnVaciarCarrito = document.getElementById('btnVaciar');
 var precioTotal = 0;
 let biblioteca = [];
 const carrito = [];
@@ -42,7 +43,18 @@ const cargarDatos = function(){
 };
 
 precioBoton.addEventListener('click', function(){
-    vaciarComprados();
+    if(biblioteca.length){
+        vaciarComprados();
+    }
+    else{
+        Swal.fire({
+            icon: 'warning',
+            title: '¡No tienes nada agregado a la biblioteca!',
+            confirmButtonText: 'Entendido',
+            confirmButtonColor: '#419641',
+            iconColor: '#b80000'
+        })
+    }
 });
 
 const vaciarComprados = function(){
@@ -51,17 +63,20 @@ const vaciarComprados = function(){
         title: "Total a pagar: $"+precioTotal.toFixed(2),
         icon: 'question',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
+        confirmButtonColor: '#419641',
         cancelButtonColor: '#d33',
         cancelButtonText: "Cancelar",
-        confirmButtonText: 'Sí'
+        confirmButtonText: 'Confirmar'
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire(
-                '¡Compra realizada!',
-                '¡Gracias por tu compra!',
-                'success'
-            )
+            Swal.fire({
+                title: '¡Compra realizada!',
+                text: '¡Gracias por tu compra!',
+                icon: 'success',
+                confirmButtonColor: '#419641',
+                confirmButtonText: 'Entendido'
+            })
+            localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
         }
     })
 };
@@ -69,6 +84,31 @@ const vaciarComprados = function(){
 cards.addEventListener('click', e =>{
     addbiblioteca(e);
 });
+
+btnVaciarCarrito.addEventListener('click', function(){
+    Swal.fire({
+        title: '¿Estás seguro de querer vaciar el carrito?',
+        text: "¡Perderás todo lo que guardaste!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#419641',
+        cancelButtonColor: '#d33',
+        cancelButtonText: "Cancelar",
+        confirmButtonText: 'Confirmar',
+        iconColor: '#eaec41'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: '¡Carrito vaciado!',
+                text: 'Puedes ir en busca de nuevos mangas para agregar a tu carrito.',
+                icon: 'success',
+                confirmButtonColor: '#419641',
+                confirmButtonText: 'Entendido'
+            })
+            carrito = [];
+        }
+    })
+})
 
 const leerDatos = async() => {
     const xhttp = new XMLHttpRequest();
@@ -141,8 +181,6 @@ const setbiblioteca = objeto => {
         //  Hacemos una copia del producto
         biblioteca.push({...manga});
         console.log(biblioteca);
-
-        localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
     }
 
 };

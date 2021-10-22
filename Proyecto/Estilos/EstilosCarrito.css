@@ -32,6 +32,7 @@ h1:hover{
     right: 15px;
     bottom: 15px;
     cursor: pointer;
+    margin: 4px 2px;
 }
 
 .btn-Total:hover{
