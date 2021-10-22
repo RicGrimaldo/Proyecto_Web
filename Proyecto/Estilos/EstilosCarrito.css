@@ -11,6 +11,10 @@ html, body {
     min-height: 100%;
 }
 
+.titulos{
+    display: inline;
+}
+
 .titulos h1{
     color: #15466b;
     transition: all 300ms;
@@ -72,4 +76,28 @@ body{
 .card:hover{
     transform: scale(1.02);
     background-color: #afc1c4;
+}
+
+@media only screen and (max-width:768px){
+    .titulos h1{
+        font-size: 35px;
+    }
+    .btn-Total{
+        font-size: 14.5px;
+        padding: 7px 15px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .titulos h1{
+        font-size: 27px;
+    }
+    .btn-Total{
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .card:hover{
+        transform: scale(1.01);
+    }
 }
