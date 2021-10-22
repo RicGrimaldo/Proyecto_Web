@@ -201,5 +201,27 @@
         "imagenURL": "Imagenes/Yojouhan Isekai Kouryuu Ki.jpg",
         "id": "16",
         "precio": "99.90"
+    },
+
+    {
+        "titulo":"Danshi Koukousei no Nichijou",
+        "autor":"Yasunobu Yamauchi",
+        "generos":["comedia","escolar","recuentos de vida"],
+        "sinopsis": "Tadakuni, Hidenori y Yoshietake son tres estudiantes de la Preparatoria Sanada del Norte, sólo para hombres. Al no haber chicas, los chicos se encuentran desinhibidos, por lo cual suelen hacer tonterías, contar historias o a planear cómo conseguir novia. La serie también evalúa algunos mitos presentes en el instituto: ¿serán las chicas realmente más ordenadas, limpias y tranquilas que los chicos?",
+        "rutaArchivo":"PDF/Danshi Koukousei no Nichijou.pdf",
+        "imagenURL":"Imagenes/Danshi Koukousei no Nichijou.jpg",
+        "id":"17",
+        "precio":"79.00"
+    },
+
+    {
+        "titulo": "Nichijou",
+        "autor": "Keiichi Arawi",
+        "generos":["comedia","escolar","recuentos de vida"],
+        "sinopsis": "La serie sigue las vidas de un grupo de estudiantes y su escuela. Aparecen varios elementos absurdos, como una chica robótica creada por una científica de 8 años, un chico que conduce una cabra para ir al instituto con su mayordomo, una chica que puede conseguir armas de fuego de la nada, un gato que habla y un viejo director que es un luchador experto. A pesar de esto, los estudiantes siguen llevando vidas normales.",
+        "rutaArchivo": "PDF/Nichijou.pdf",
+        "imagenURL": "Imagenes/Nichijou.jpg",
+        "id": "18",
+        "precio": "89.90"
     }
 ]
