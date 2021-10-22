@@ -55,6 +55,7 @@ body{
     background-color: #416d96;
     border: none;
     border-radius: 4px;
+    color: white;
 }
 
 .btn-Click{
@@ -65,6 +66,7 @@ body{
 
 .btn:hover{
     background-color: #1d3f5e;
+    color: rgb(212, 212, 212);
 }
 
 .card{
@@ -80,11 +82,11 @@ body{
 
 @media only screen and (max-width:768px){
     .titulos h1{
-        font-size: 35px;
+        font-size: 32px;
     }
     .btn-Total{
-        font-size: 14.5px;
-        padding: 7px 15px;
+        font-size: 14px;
+        padding: 7px 10px;
     }
 }
 
@@ -94,7 +96,8 @@ body{
     }
     .btn-Total{
         font-size: 13px;
-        padding: 7px 10px;
+        padding: 3px 5px;
+        margin: 1px;
     }
 
     .card:hover{

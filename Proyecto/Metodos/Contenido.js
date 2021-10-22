@@ -3,7 +3,9 @@ const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
 const precioBoton = document.getElementById('precioTotal');
 const btnVaciarCarrito = document.getElementById('btnVaciar');
+const btnQuitarSeleccion = document.getElementById('btnQuitarSeleccion');
 var precioTotal = 0;
+var seleccion = false;
 let biblioteca = [];
 const carrito = [];
 
@@ -47,12 +49,15 @@ precioBoton.addEventListener('click', function(){
         vaciarComprados();
     }
     else{
-        Swal.fire({
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        Toast.fire({
             icon: 'warning',
-            title: '¡No tienes nada agregado a la biblioteca!',
-            confirmButtonText: 'Entendido',
-            confirmButtonColor: '#419641',
-            iconColor: '#b80000'
+            title: '¡No tienes nada agregado a la biblioteca!'
         })
     }
 });
@@ -74,12 +79,49 @@ const vaciarComprados = function(){
                 text: '¡Gracias por tu compra!',
                 icon: 'success',
                 confirmButtonColor: '#419641',
-                confirmButtonText: 'Entendido'
+                confirmButtonText: 'Entendido',
+                footer: '<a href="Biblioteca.html" class="btn">Ir a mi biblioteca</a>'
             })
             localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
         }
     })
 };
+
+btnQuitarSeleccion.addEventListener('click', function(){
+    quitarSeleccionados();
+});
+
+const quitarSeleccionados = function(){
+    if(seleccion){
+        Swal.fire({
+            title: '¿Estás seguro de quitar los mangas seleccionados?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#419641',
+            cancelButtonColor: '#d33',
+            cancelButtonText: "Cancelar",
+            confirmButtonText: 'Confirmar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                biblioteca = [];
+                localStorage.removeItem('biblioteca');
+                window.location.reload();
+            }
+        })
+    }
+    else{
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        Toast.fire({
+            icon: 'warning',
+            title: '¡No tienes ningún manga seleccionado!'
+        })
+    }
+}
 
 cards.addEventListener('click', e =>{
     addbiblioteca(e);
@@ -158,13 +200,11 @@ const addbiblioteca = e =>{
 
 //  Para capturar los elementos
 const setbiblioteca = objeto => {
-    //Buscamos el manga que fue seleccionado
+    
+    seleccion = true;
+    
+    //  Buscamos el manga que fue seleccionado
     let manga = carrito.find(manga => manga.titulo === objeto.querySelector('h5').textContent);
-    // const nuevoManga = {
-    //     id: objeto.querySelector('.btn-dark').dataset.id,
-    //     titulo: objeto.querySelector('h5').textContent,
-    //     autor: objeto.querySelector('p').textContent
-    // }
 
     var exist = biblioteca.find(mangaExistente => mangaExistente.titulo == manga.titulo);
 

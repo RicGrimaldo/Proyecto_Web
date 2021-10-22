@@ -154,5 +154,52 @@
         "id": "12",
         "precio": "109.00",
         "sinopsis": "La historia de un Otaku Gamer y una Fujoshi que fueron amigos en la escuela media, se vuelven a reunir después de tanto tiempo en el mismo trabajo. Espera.. ¿Ahora empiezan a Salir?, ¿Que sucederá con esta extraña pareja?"
+    },
+    {
+        "titulo":"Delivery of the dead",
+        "autor":"Yusuke Hiro" ,
+        "generos": ["18+","comedia", "drama", "ecchi", "gore", "horror" 
+        ],
+        "sinopsis":"Bienvenido a un mundo donde los muertos vivientes se pueden comprar por un precio que rasca cualquier picor que tengas. Ya sea sexual o no, estas chicas te tienen cubierto.",
+        "rutaArchivo": "PDF/Delivery of the dead.pdf",
+        "imagenURL": "Imagenes/Delivery of the dead.jpg",
+        "id": "13",
+        "precio": "129.00"
+    },
+
+    {
+        "titulo":"Pikari-chan wa Nakanaka Shinanai",
+        "autor":"Sanbu Bebe" ,
+        "generos": ["comedia","recuentos de vida"
+        ],
+        "sinopsis":"Naruto Shiohito, un joven cocinero de una tienda de ramen que no es muy conocida, se ha visto afectado por una cucaracha... ¡Que se ha transformado en una chica cucaracha!",
+        "rutaArchivo": "PDF/Pikari-chan wa Nakanaka Shinanai.pdf",
+        "imagenURL": "Imagenes/Pikari.jpg",
+        "id": "14",
+        "precio": "79.00" 
+    },
+
+    {
+        "titulo":"Isekai ni Tobasareta Ossan wa Doko e Iku?",
+        "autor":"Ci Garette" ,
+        "generos": ["fantasía", "magia", "sobrenatural","ciencia ficcion","recuentos de vida","aventura"
+        ],
+        "sinopsis":"¿Qué pasará con esta Ossan después de ser lanzada a otro mundo? Junto con su amigo lobo, vive una vida relajante. Él no ha luchado mucho, pero este Ossan era fuerte originalmente. Odia a la gente autoimportante.",
+        "rutaArchivo": "PDF/Isekai ni Tobasareta Ossan wa Doko e Iku?.pdf",
+        "imagenURL": "Imagenes/Isekai ni Tobasareta.jpg",
+        "id": "15",
+        "precio": "119.00" 
+    },
+
+    {
+        "titulo":"Yojouhan Isekai Kouryuu Ki",
+        "autor":"Yamaguchi Mikoto" ,
+        "generos": ["comedia","fantasía","sobrenatural"
+        ],
+        "sinopsis":"Bienvenidos al primer programa de intercambio a otro mundo. Un encuentro con la vida diaria de personas de otro mundo en una sala de tatami de 4.5.",
+        "rutaArchivo": "PDF/Yojouhan Isekai Kouryuu Ki.pdf",
+        "imagenURL": "Imagenes/Yojouhan Isekai Kouryuu Ki.jpg",
+        "id": "16",
+        "precio": "99.90"
     }
 ]
