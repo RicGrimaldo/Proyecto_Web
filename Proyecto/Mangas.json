@@ -218,7 +218,7 @@
         "autor": "Tatsuya Matsuki",
         "generos":["drama","recuentos de vida"],
         "sinopsis": "La historia se centra en Kei Yonagi, una chica de secundaria que se esfuerza por convertirse en actriz. Ella está a cargo de sus dos hermanos menores, después de que su padre los abandonó y su madre murió. Kei tiene un talento extremo para la actuación de método, hasta el punto de que pierde la noción de la realidad cuando actúa. En una audición, los productores especulan que actuar en esta intensidad podría ser autodestructivo, y citan esto como una razón para rechazarla. Sin embargo, Kei llama la atención del aclamado director Sumiji Kuroyama, quien da un paso adelante con la intención de sacar todo su potencial.",
-        "rutaArchivo": "PDF/Act Agre.pdf",
+        "rutaArchivo": "PDF/Act Age.pdf",
         "imagenURL": "Imagenes/Act Age.jpg",
         "id": "19",
         "precio": "189.90"
@@ -241,7 +241,7 @@
         "generos":["acción","comedia","fantasía", "sobrenatural"],
         "sinopsis": "Rin Okumura es un joven que ha heredado sangre demoniaca. Ante él se aparece Satán declarando que es su padre e intenta llevárselo a Gehenna, el mundo donde viven los demonios. Su padre adoptivo, que es un destacado exorcista, lo protege con su vida y muere. Rin siente coraje por su incompetencia ¡y decide con gran determinación convertirse en exorcista para combatir a Satán!",
         "rutaArchivo": "PDF/Ao No Exorcist.pdf",
-        "imagenURL": "Imagenes/Ao No Exorcist.jpg",
+        "imagenURL": "Imagenes/Ao no Exorcist.jpg",
         "id": "21",
         "precio": "99.90"
     },
@@ -251,7 +251,7 @@
         "autor": "Kazue Kato",
         "generos":["acción","ciencia-ficción", "drama", "misterio"],
         "sinopsis": "Ryōta Sakamoto es un joven desempleado de 22 años de edad que vive con su madre y su padrastro. En el mundo real, puede no haber nada realmente especial acerca de él, pero en línea, es uno de los mejores jugadores del mundo del juego de combate llamado Btooom!. Un día, se despierta en lo que parece ser una isla tropical, aunque él no recuerda nada de cómo o por qué ha llegado a estar allí. Mientras inspecciona el lugar, Ryōta ve a alguien y pide ayuda. El extraño responde lanzándole bombas e intentando asesinarlo, en ese momento se da cuenta de que su vida está en peligro y que de alguna manera ha quedado atrapado en una versión real de su juego favorito, donde deberá escoger entre matar a sus oponentes o buscar una forma de salir de allí y salvar a quienes pueda.",
-        "rutaArchivo": "PDF/Btooom.pdf",
+        "rutaArchivo": "PDF/Btoom.pdf",
         "imagenURL": "Imagenes/Btooom.jpg",
         "id": "22",
         "precio": "129.90"
@@ -285,18 +285,18 @@
         "generos":["comedia","romance", "drama", "recuentos de vida"],
         "sinopsis": "Futaro Uesugi es un chico de segundo año de instituto que lleva una vida muy dura debido a la deuda de su padre. Con el objetivo de sobresalir en la vida, es el número uno en calificaciones. De repente, le llega una propuesta muy bien remunerada de ser el tutor privado de unas chicas que resultan ser sus compañeras de escuela y, además, hermanas quintillizas. Ellas odian el estudio y tratan de ahuyentarlo, pero él está dispuesto a guiarlas hasta la graduación. Ellas le irán enseñando a él que la vida no solo trata de estudio.",
         "rutaArchivo": "PDF/Go Tobun no Hanayome.pdf",
-        "imagenURL": "Imagenes/Go Tobun no Hanayome.jpg",
+        "imagenURL": "Imagenes/Go Toubun no Hanayome.jpg",
         "id": "25",
         "precio": "109.00"
     },
 
     {
-        "titulo": "Gobling Slayer",
+        "titulo": "Goblin Slayer",
         "autor": "Kumo Kagyu",
         "generos":["18+", "acción","aventura", "fantasía"],
         "sinopsis": "En un mundo de fantasía, los aventureros de todas partes se unen al Gremio, a fin de completar contratos de cualquier trabajo disponible que incluya la caza de diversos tipos de monstruos que vagan por la tierra u otro tipo de misión que sea ofrecida. Una sacerdotisa inexperta junto a un grupo de novatos forman su primer grupo de aventuras, aceptando un contrato para destruir un nido de goblins, sin embargo la falta de experiencia y exceso de confianza de los integrantes les juega una mala pasada y el resto de su grupo es eliminado. Sorpresivamente, ella es salvada por un hombre conocido como Goblin Slayer, un aventurero cuyo único propósito es la erradicación de los goblins con una dedicación extrema.",
-        "rutaArchivo": "PDF/Gobling Slayer.pdf",
-        "imagenURL": "Imagenes/Gobling Slayer.jpg",
+        "rutaArchivo": "PDF/Goblin Slayer.pdf",
+        "imagenURL": "Imagenes/Goblin Slayer.jpg",
         "id": "26",
         "precio": "129.90"
     },
@@ -307,7 +307,7 @@
         "generos":["acción","aventura", "fantasía", "misterio"],
         "sinopsis": "La historia se desarrolla en el área de Ikebukuro en Tokio, y se centra en un chico llamado Yamato, quien está preocupado por su relación con su hermano menor. Yamato también está preocupado pues descubrió que siente algo por su amiga de la infancia. Sin embargo, un incidente los involucrará a los tres.",
         "rutaArchivo": "PDF/Gofun Go no Sekai.pdf",
-        "imagenURL": "Imagenes/Gofun Go no Sekai.jpg",
+        "imagenURL": "Imagenes/Gofun fo no Sekai.jpg",
         "id": "27",
         "precio": "89.90"
     },
