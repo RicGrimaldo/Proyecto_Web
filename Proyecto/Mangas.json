@@ -5,12 +5,11 @@
         "generos": [
             "18+","acción", "aventura", "drama", "romance"
         ],
-        "rangoEdad": "18 años en adelante",
+        "sinopsis": "La historia se centra en Tatsumi, un joven aldeano que viaja a la capital para recaudar dinero para su hogar sólo para descubrir una fuerte corrupción en el país. Night Raid, un grupo asesino recluta al joven para ayudarles en su lucha contra el Imperio para luchar contra la corrupción como uno de sus asesinos.",
         "rutaArchivo": "PDF/Akame Ga Kill.pdf",
         "imagenURL": "Imagenes/Akame.jpg",
         "id": "1",
-        "precio": "109.00",
-        "sinopsis": "La historia se centra en Tatsumi, un joven aldeano que viaja a la capital para recaudar dinero para su hogar sólo para descubrir una fuerte corrupción en el país. Night Raid, un grupo asesino recluta al joven para ayudarles en su lucha contra el Imperio para luchar contra la corrupción como uno de sus asesinos."
+        "precio": "109.00"
     },
     {
         "titulo": "K-on",
@@ -18,12 +17,11 @@
         "generos": [
             "recuentos de vida", "comedia", "escolar"
         ],
-        "rangoEdad": "Todas las edades",
+        "sinopsis": "En la escuela femenina Sakuragaoka un grupo de chicas deciden intentar revivir el club de música ligera, no porque deseen ganar torneos, obtener fama, ni nada algo realmente importante que de grandes méritos para su escuela. Bajo el nombre de Houkago Tea Time o La hora del té después de la escuela, estas chicas simplemente desean disfrutar de su juventud con sus amigas, divirtiéndose después de clases mientras tocan sus instrumentos o simplemente comen pasteles.",
         "rutaArchivo": "PDF/K-on.pdf",
         "imagenURL": "Imagenes/Kon.jpg",
         "id": "2",
-        "precio": "89.90",
-        "sinopsis": "En la escuela femenina Sakuragaoka un grupo de chicas deciden intentar revivir el club de música ligera, no porque deseen ganar torneos, obtener fama, ni nada algo realmente importante que de grandes méritos para su escuela. Bajo el nombre de Houkago Tea Time o La hora del té después de la escuela, estas chicas simplemente desean disfrutar de su juventud con sus amigas, divirtiéndose después de clases mientras tocan sus instrumentos o simplemente comen pasteles."
+        "precio": "89.90"
     },
     {
         "titulo": "High Score Girl",
@@ -31,12 +29,11 @@
         "generos": [
             "recuentos de vida", "comedia", "romance", "drama"
         ],
-        "rangoEdad": "Todas las edades",
+        "sinopsis": "Ambientada en la década de los '90, la historia gira en torno a la vida del jugador Haruo Yaguchi y su relación con los videojuegos y con su compañera de clases Akira Oono, conociendose por el juego de Street Fighter II, buscan ser los jugadores profesionales en las máquinas arcade. Juntos emprenden viajes para buscar los mejores juegos de las empresas más famosas de videojuegos, que hay en las máquinas arcades de esos tiempos, y sus evoluciones de aquellas, con el fin de ser los número 1 en ser los mejores en las máquinas arcade.",
         "rutaArchivo": "PDF/High Score Girl.pdf",
         "imagenURL": "Imagenes/HighScoreGirl.jpg",
         "id": "3",
-        "precio": "129.00",
-        "sinopsis": "Ambientada en la década de los '90, la historia gira en torno a la vida del jugador Haruo Yaguchi y su relación con los videojuegos y con su compañera de clases Akira Oono, conociendose por el juego de Street Fighter II, buscan ser los jugadores profesionales en las máquinas arcade. Juntos emprenden viajes para buscar los mejores juegos de las empresas más famosas de videojuegos, que hay en las máquinas arcades de esos tiempos, y sus evoluciones de aquellas, con el fin de ser los número 1 en ser los mejores en las máquinas arcade."
+        "precio": "129.00"
     },
     {
         "titulo": "Magi: The Labyrinth of Magic",
@@ -44,12 +41,11 @@
         "generos": [
             "acción", "aventura", "comedia", "fantasía"
         ],
-        "rangoEdad": "13 años en adelante",
+        "sinopsis": "Una infinidad de encuentros y despedidas en el transcurso de sus aventuras. Existen misterios ocultos en un mundo desconocido. También un joven maravilloso llamado Aladdin. Una aventura llena de magia y tesoros valiosos está a punto de comenzar. ¡No te puedes perder esta divertida historia mágica!.",
         "rutaArchivo": "PDF/Magi.pdf",
         "imagenURL": "Imagenes/Magi.jpg",
         "id": "4",
-        "precio": "99.90",
-        "sinopsis": "Una infinidad de encuentros y despedidas en el transcurso de sus aventuras. Existen misterios ocultos en un mundo desconocido. También un joven maravilloso llamado Aladdin. Una aventura llena de magia y tesoros valiosos está a punto de comenzar. ¡No te puedes perder esta divertida historia mágica!."
+        "precio": "99.90"
     },
     {
         "titulo": "Kaguya-sama: Love is war",
@@ -57,12 +53,11 @@
         "generos": [
             "recuentos de vida", "comedia", "romance", "escolar"
         ],
-        "rangoEdad": "13 años en adelante",
+        "sinopsis": "¡Ya sea gente educada o de buena familia, la academia Shuchiin reúne a los mayores genios! En el consejo estudiantil del centro se conocen Kaguya Shinomiya, vicepresidenta del consejo, y Miyuki Shirogane, el presidente. Parece que se gustan, pero... ¡ha pasado medio año sin que suceda nada! Son tan orgullosos que se niegan a confesar sus sentimientos, así que esperan que sea el otro el que dé el paso, y para ello planean las más complejas estrategias. ¡¡Disfruten hasta que se confiesen su amor!! ¡¡Empieza una divertida guerra psicológica!",
         "rutaArchivo": "PDF/Kaguya Sama.pdf",
         "imagenURL": "Imagenes/Kaguya.jpg",
         "id": "5",
-        "precio": "119.00",
-        "sinopsis": "¡Ya sea gente educada o de buena familia, la academia Shuchiin reúne a los mayores genios! En el consejo estudiantil del centro se conocen Kaguya Shinomiya, vicepresidenta del consejo, y Miyuki Shirogane, el presidente. Parece que se gustan, pero... ¡ha pasado medio año sin que suceda nada! Son tan orgullosos que se niegan a confesar sus sentimientos, así que esperan que sea el otro el que dé el paso, y para ello planean las más complejas estrategias. ¡¡Disfruten hasta que se confiesen su amor!! ¡¡Empieza una divertida guerra psicológica!"
+        "precio": "119.00"
     },
     {
         "titulo": "Karakai Jouzu no Takagi-san",
@@ -70,12 +65,11 @@
         "generos": [
             "recuentos de vida", "comedia", "romance", "escolar"
         ],
-        "rangoEdad": "13 años en adelante",
+        "sinopsis": "Nishikata, un estudiante de preparatoria normal y corriente, pasa sus días obsesionado por las bromas que le gasta continuamente Takagi, su compañera de clase. Día tras día intenta diferentes métodos no solo para que la chica deje de fastidiarle, sino también para lograr sorprenderla a ella por una vez. Pero lo que Nishikata ni siquiera sospecha es que las bromas de Takagi tienen otra razón de ser y es que la joven parece sentir algo más hacia él que una simple amistad.",
         "rutaArchivo": "PDF/Karakai Jozu no Takagi-san.pdf",
         "imagenURL": "Imagenes/Takagi.jpg",
         "id": "6",
-        "precio": "109.00",
-        "sinopsis": "Nishikata, un estudiante de preparatoria normal y corriente, pasa sus días obsesionado por las bromas que le gasta continuamente Takagi, su compañera de clase. Día tras día intenta diferentes métodos no solo para que la chica deje de fastidiarle, sino también para lograr sorprenderla a ella por una vez. Pero lo que Nishikata ni siquiera sospecha es que las bromas de Takagi tienen otra razón de ser y es que la joven parece sentir algo más hacia él que una simple amistad."
+        "precio": "109.00"
     },
     {
         "titulo": "Karakai Jouzu no (Moto) Takagi-san",
@@ -83,12 +77,11 @@
         "generos": [
             "recuentos de vida", "comedia", "romance"
         ],
-        "rangoEdad": "13 años en adelante",
+        "sinopsis": "Spin-off de Karakai Jouzu no Takagi-san! La ahora ex Takagi-san y su hija Chi-chan, nos traen esta comedia bromista casera. ¿El papá aparecerá también?",
         "rutaArchivo": "PDF/Karakai Jouzu No (Moto) Takagi-san.pdf",
         "imagenURL": "Imagenes/TakagiMoto.jpg",
         "id": "7",
-        "precio": "89.90",
-        "sinopsis": "Spin-off de Karakai Jouzu no Takagi-san! La ahora ex Takagi-san y su hija Chi-chan, nos traen esta comedia bromista casera. ¿El papá aparecerá también?"
+        "precio": "89.90"
     },
     {
         "titulo": "Tsurezure Children",
@@ -96,12 +89,11 @@
         "generos": [
             "recuentos de vida", "comedia", "escolar", "romance"
         ],
-        "rangoEdad": "13 años en adelante",
+        "sinopsis": "Esta es la historia de estudiantes comunes de preparatoria que están consumidos por el amor, son inestables, se preocupan, ríen, lloran, le hacen daño a otros, se expresan bien, o fallan en expresarse.",
         "rutaArchivo": "PDF/Tsurezure Children.pdf",
         "imagenURL": "Imagenes/Children.jpg",
         "id": "8",
-        "precio": "89.90",
-        "sinopsis": "Esta es la historia de estudiantes comunes de preparatoria que están consumidos por el amor, son inestables, se preocupan, ríen, lloran, le hacen daño a otros, se expresan bien, o fallan en expresarse."
+        "precio": "89.90"
     },
     {
         "titulo": "ReLife",
@@ -109,12 +101,11 @@
         "generos": [
             "18+","recuentos de vida", "drama", "romance", "escolar"
         ],
-        "rangoEdad": "18 años en adelante",
+        "sinopsis": "Arata Kaizaki es un soltero sin empleo de 27 años de edad quien acaba de perder el apoyo financiero de sus padres.Es incapaz de encontrar un trabajo debido a experiencias anteriores. Una noche luego de beber junto a un amigo de la preparatoria, Arata conoce a Ryō Yoake, un hombre que le ofrece a Arata unas píldoras para devolverlo a una edad de 17 años para así rehacer su vida. Luego de aceptar unirse al experimento, Arata se une a la clase de preparatoria, y conoce a Chizuru Hishiro, una bella chica silenciosa y socialmente torpe que anhela tener amigos. Conectándose con ella y otros compañeros, Arata debe encontrar qué le hace falta para vivir una vida feliz en el mundo real con un tiempo límite de un año.",
         "rutaArchivo": "PDF/ReLife.pdf",
         "imagenURL": "Imagenes/ReLife.jpg",
         "id": "9",
-        "precio": "129.00",
-        "sinopsis": "Arata Kaizaki es un soltero sin empleo de 27 años de edad quien acaba de perder el apoyo financiero de sus padres.Es incapaz de encontrar un trabajo debido a experiencias anteriores. Una noche luego de beber junto a un amigo de la preparatoria, Arata conoce a Ryō Yoake, un hombre que le ofrece a Arata unas píldoras para devolverlo a una edad de 17 años para así rehacer su vida. Luego de aceptar unirse al experimento, Arata se une a la clase de preparatoria, y conoce a Chizuru Hishiro, una bella chica silenciosa y socialmente torpe que anhela tener amigos. Conectándose con ella y otros compañeros, Arata debe encontrar qué le hace falta para vivir una vida feliz en el mundo real con un tiempo límite de un año."
+        "precio": "129.00"
     },
     {
         "titulo": "Seitokai Yakuindomo",
@@ -122,12 +113,11 @@
         "generos": [
             "18+","recuentos de vida", "comedia", "escolar"
         ],
-        "rangoEdad": "18 años en adelante",
+        "sinopsis": "Takatoshi Tsuda es un adolescente japonés común, quien se une a una escuela que anteriormente había sido exclusiva para mujeres, donde es forzado a unirse al consejo estudiantil como vicepresidente y representante masculino. Se encuentra agobiado por el constante trabajo debido a su puesto en el consejo, teniendo además que soportar las locas conversaciones de las demás integrantes de este y alumnas del colegio.",
         "rutaArchivo": "PDF/Seitokai Yakuindomo.pdf",
         "imagenURL": "Imagenes/Seitokai.png",
         "id": "10",
-        "precio": "79.00",
-        "sinopsis": "Takatoshi Tsuda es un adolescente japonés común, quien se une a una escuela que anteriormente había sido exclusiva para mujeres, donde es forzado a unirse al consejo estudiantil como vicepresidente y representante masculino. Se encuentra agobiado por el constante trabajo debido a su puesto en el consejo, teniendo además que soportar las locas conversaciones de las demás integrantes de este y alumnas del colegio."
+        "precio": "79.00"
     },
     {
         "titulo": "Tonikaku Kawaii",
@@ -135,12 +125,11 @@
         "generos": [
             "18+", "recuentos de vida", "comedia", "romance"
         ],
-        "rangoEdad": "18 años en adelante",
+        "sinopsis": "Nasa Yuzaki, un joven genio con un peculiar nombre, es atropellado por un camión el día de sus exámenes de ingreso a la preparatoria. Para su sorpresa, una joven lo salva poniéndose delante de Nasa para reducir el impacto, ya que esta pensó que iba a suicidarse, por lo que decide perseguir a la chica que lo salvó, confesando su amor por ella en una parada de autobús (cuando estaba malherido). La joven, Tsukasa Tsukuyomi, acepta convertirse en su novia, pero solo si se casan primero. Cuando Nasa cumple 18 años, todavía está pensando en la promesa que hizo ese día. De repente, Tsukasa aparece en su puerta con un formulario de matrimonio, comenzando así su relación y su matrimonio. A medida que se desarrolla la relación de Nasa y Tsukasa, comienzan a ser más íntimos, puesto que la pareja comienza a tomarse de las manos, a abrazarse y a besarse.",
         "rutaArchivo": "PDF/Tonikaku Kawaii.pdf",
         "imagenURL": "Imagenes/Tonikaku.jpg",
         "id": "11",
-        "precio": "89.90",
-        "sinopsis": "Nasa Yuzaki, un joven genio con un peculiar nombre, es atropellado por un camión el día de sus exámenes de ingreso a la preparatoria. Para su sorpresa, una joven lo salva poniéndose delante de Nasa para reducir el impacto, ya que esta pensó que iba a suicidarse, por lo que decide perseguir a la chica que lo salvó, confesando su amor por ella en una parada de autobús (cuando estaba malherido). La joven, Tsukasa Tsukuyomi, acepta convertirse en su novia, pero solo si se casan primero. Cuando Nasa cumple 18 años, todavía está pensando en la promesa que hizo ese día. De repente, Tsukasa aparece en su puerta con un formulario de matrimonio, comenzando así su relación y su matrimonio. A medida que se desarrolla la relación de Nasa y Tsukasa, comienzan a ser más íntimos, puesto que la pareja comienza a tomarse de las manos, a abrazarse y a besarse."
+        "precio": "89.90"
     },
     {
         "titulo": "Wotaku ni Koi wa Muzukashi",
@@ -148,12 +137,11 @@
         "generos": [
             "recuentos de vida", "comedia", "romance"
         ],
-        "rangoEdad": "13 años en adelante",
+        "sinopsis": "La historia de un Otaku Gamer y una Fujoshi que fueron amigos en la escuela media, se vuelven a reunir después de tanto tiempo en el mismo trabajo. Espera.. ¿Ahora empiezan a Salir?, ¿Que sucederá con esta extraña pareja?",
         "rutaArchivo": "PDF/Wotaku ni Koi wa Muzukashi.pdf",
         "imagenURL": "Imagenes/Wotaku.jpg",
         "id": "12",
-        "precio": "109.00",
-        "sinopsis": "La historia de un Otaku Gamer y una Fujoshi que fueron amigos en la escuela media, se vuelven a reunir después de tanto tiempo en el mismo trabajo. Espera.. ¿Ahora empiezan a Salir?, ¿Que sucederá con esta extraña pareja?"
+        "precio": "109.00"
     },
     {
         "titulo":"Delivery of the dead",
