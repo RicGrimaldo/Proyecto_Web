@@ -1,6 +1,6 @@
 [
     {
-        "titulo": "Akame Ga Kill!",
+        "titulo": "Akame Ga Kill",
         "autor": "Takahiro",
         "generos": [
             "18+","acción", "aventura", "drama", "romance"
@@ -13,7 +13,7 @@
         "sinopsis": "La historia se centra en Tatsumi, un joven aldeano que viaja a la capital para recaudar dinero para su hogar sólo para descubrir una fuerte corrupción en el país. Night Raid, un grupo asesino recluta al joven para ayudarles en su lucha contra el Imperio para luchar contra la corrupción como uno de sus asesinos."
     },
     {
-        "titulo": "K-on!",
+        "titulo": "K-on",
         "autor": "Kakifly",
         "generos": [
             "recuentos de vida", "comedia", "escolar"
@@ -237,12 +237,12 @@
     },
 
     {
-        "titulo": "Akame Ga Kill! Zero",
+        "titulo": "Akame Ga Kill Zero",
         "autor": "Takahiro",
         "generos":["acción","drama","aventura"],
         "sinopsis": "Spin off de Akame Ga Kill! En esta precuela, antes de convertirse en miembro del Night Raid, Akame se entrenó con cuerpos de élite del Imperio para convertirse en una asesina despiadada. En esta nueva serie conocemos a una joven Akame que mata pensando que así trae la felicidad a todos los habitantes...",
-        "rutaArchivo": "PDF/Akame Ga Kill! Zero.pdf",
-        "imagenURL": "Imagenes/Akame Ga Kill! Zero.jpg",
+        "rutaArchivo": "PDF/Akame Ga Kill Zero.pdf",
+        "imagenURL": "Imagenes/Akame Ga Kill Zero.jpg",
         "id": "20",
         "precio": "179.90"
     },
@@ -315,7 +315,7 @@
 
     {
         "titulo": "Gofun Go no Sekai",
-        "autor": "Hiroshi Fukuda,",
+        "autor": "Hiroshi Fukuda",
         "generos":["acción","aventura", "fantasía", "misterio"],
         "sinopsis": "La historia se desarrolla en el área de Ikebukuro en Tokio, y se centra en un chico llamado Yamato, quien está preocupado por su relación con su hermano menor. Yamato también está preocupado pues descubrió que siente algo por su amiga de la infancia. Sin embargo, un incidente los involucrará a los tres.",
         "rutaArchivo": "PDF/Gofun Go no Sekai.pdf",
@@ -326,7 +326,7 @@
 
     {
         "titulo": "Hunter x Hunter",
-        "autor": "Yoshihiro Togashi,",
+        "autor": "Yoshihiro Togashi",
         "generos":["acción","aventura", "fantasía", "comedia"],
         "sinopsis": "Esta es la historia de Gon Freecss, un muchacho que vive en la Isla Kujira, y aspirante a ser cazador. Fascinado por la naturaleza y los animales exóticos, decide atrapar a la bestia del pantano de su isla para que Mito, su tía, le permita presentar la prueba de cazador. Gon no conoce a sus padres, ellos dejaron a Gon al cuidado de Mito y su abuela desde que pequeño. Así es como este muchacho emprende la travesía por mar y tierra para lograr su sueño: ser un hunter.",
         "rutaArchivo": "PDF/Hunter x Hunter.pdf",
