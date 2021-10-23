@@ -13,11 +13,10 @@ function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id) {
     this.rutaArchivo = rutaArchivo;
     this.imagenURL = imagenURL;
     this.id = id;
-    this.descargado = false;
 }
 
 //  Falta recorrer todo de nuevo y registrar elementos que ya hayan sido descargados
-//  Para inhabilitar el botón, aunque también se puede preguntar "desea descargar de nuevo?" o algo así
+//  Para inhabilitar el botón, aunque también se puede preguntar "desea descargar de nuevo?" o similar
 document.addEventListener('DOMContentLoaded', function() {
     if(localStorage.getItem('biblioteca')) {
         biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
@@ -37,6 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+//  Para pintar las cartas a partir de los mangas almacenados en la biblioteca
+const pintarCards = function(){
+    for(var i = 0; i < biblioteca.length; i++){
+        templateCard.querySelector('h5').textContent = biblioteca[i].titulo;
+        templateCard.querySelector('img').setAttribute('src', biblioteca[i].imagenURL);
+        templateCard.querySelector('.button').dataset.id = biblioteca[i].id;
+        const clone = templateCard.cloneNode(true);
+        fragment.appendChild(clone);
+    }
+    cards.appendChild(fragment);
+}
+
+//  Carga los mangas que ya hayan sido descargados y cambia su botón por 'descargado'
 const cargarDescargados = function(){
     var botones = document.getElementsByClassName('button');
     for(var i = 0; i < botones.length; i++){
@@ -51,17 +63,7 @@ const cargarDescargados = function(){
     }
 }
 
-const pintarCards = function(){
-    for(var i = 0; i < biblioteca.length; i++){
-        templateCard.querySelector('h5').textContent = biblioteca[i].titulo;
-        templateCard.querySelector('img').setAttribute('src', biblioteca[i].imagenURL);
-        templateCard.querySelector('.button').dataset.id = biblioteca[i].id;
-        const clone = templateCard.cloneNode(true);
-        fragment.appendChild(clone);
-    }
-    cards.appendChild(fragment);
-}
-
+//  Cuando se haga referencia a una carta
 cards.addEventListener('click', e =>{
     descargarClick(e);
 });
@@ -77,16 +79,20 @@ const descargarClick = e =>{
 
 //  Para capturar los elementos
 const descargarPDF = objeto => {
-    //Buscamos el manga que fue seleccionado
+    //  Buscamos el manga que fue seleccionado
     let manga = biblioteca.find(manga => manga.titulo === objeto.querySelector('h5').textContent);
 
+    //  También hacemos referencia al botón de descarga
     var btn = objeto.querySelector('.button');
 
+    //  Tanto el contenido como la clase cambiará de 'Descargar' a 'Descargado'
     btn.innerHTML =  `<span class="icon-check"></span>Descargado`;
     btn.className = "buttonDescargado";
 
+    //  Almacenamos el manga descargado al array de Descargados
     descargados.push(manga);
 
+    //  Para un alert mostrando el éxito de la descarga del pdf del manga seleccionado
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -104,6 +110,7 @@ const descargarPDF = objeto => {
         title: '¡'+manga.titulo+' se ha descargado con éxito!'
     })
 
+    //  Para descargar el manga y no vuelva a poder ser descargado
     axios({
         url: manga.rutaArchivo,
         method: 'GET',
@@ -120,6 +127,7 @@ const descargarPDF = objeto => {
             document.body.removeChild(link);
         })
 
+        //  Se guarda el array de descargados en localStorage
     localStorage.setItem('Descargados',JSON.stringify(descargados));
 
 };
