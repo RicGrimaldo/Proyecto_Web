@@ -4,6 +4,7 @@ const fragment = document.createDocumentFragment();
 const precioBoton = document.getElementById('precioTotal');
 const btnVaciarCarrito = document.getElementById('btnVaciar');
 const btnQuitarSeleccion = document.getElementById('btnQuitarSeleccion');
+const btnCambiarOscuro = document.getElementById('btnCambiarOscuro');
 var precioTotal = 0;
 var seleccion = false;
 let biblioteca = [];
@@ -103,8 +104,6 @@ const quitarSeleccionados = function(){
             confirmButtonText: 'Confirmar'
         }).then((result) => {
             if (result.isConfirmed) {
-                biblioteca = [];
-                localStorage.removeItem('biblioteca');
                 window.location.reload();
             }
         })
@@ -224,3 +223,7 @@ const setbiblioteca = objeto => {
     }
 
 };
+
+btnCambiarOscuro.addEventListener('click', function(){
+    document.body.classList.toggle('dark');
+});

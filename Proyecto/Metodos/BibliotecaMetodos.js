@@ -1,6 +1,7 @@
 const cards = document.getElementById('cards');
 const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
+const btnCambiarOscuro = document.getElementById('btnCambiarOscuro');
 let biblioteca = [];
 let descargados = [];
 
@@ -122,3 +123,8 @@ const descargarPDF = objeto => {
     localStorage.setItem('Descargados',JSON.stringify(descargados));
 
 };
+
+//  Para agregar la clase que cambia al modo oscuro
+btnCambiarOscuro.addEventListener('click', function(){
+    document.body.classList.toggle('dark');
+});
