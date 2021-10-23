@@ -151,3 +151,7 @@ body.dark .btn:hover{
     background-color: #416d96;
     color: #ffffff;
 }
+
+body.dark .btn-Click{
+    background-color: #154e1a;
+}
