@@ -172,7 +172,7 @@
         "generos": ["fantasía", "magia", "sobrenatural","ciencia ficcion","recuentos de vida","aventura"
         ],
         "sinopsis":"¿Qué pasará con esta Ossan después de ser lanzada a otro mundo? Junto con su amigo lobo, vive una vida relajante. Él no ha luchado mucho, pero este Ossan era fuerte originalmente. Odia a la gente autoimportante.",
-        "rutaArchivo": "PDF/Isekai ni Tobasareta Ossan wa Doko e Iku?.pdf",
+        "rutaArchivo": "PDF/Isekai ni Tobasareta.pdf",
         "imagenURL": "Imagenes/Isekai ni Tobasareta.jpg",
         "id": "15",
         "precio": "119.00" 
@@ -455,90 +455,14 @@
     },
     
     {
-        "titulo":"kissxSis",
-        "autor":"Bow Ditama" ,
-        "generos": ["+18", "Comedia", "Romance"],
-        "sinopsis":"Keita Suminoe, es un estudiante de tercer año de secundaria quien se prepara para los exámenes de admisión para entrar a la preparatoria. Keita vive con sus dos hermanastras gemelas mayores, Ako y Riko, quienes lo acosan de distintas maneras posibles, hasta llegar al punto de mostrar su amor por él en público. A pesar de no compartir lazos sanguíneos con él, él las ve como hermanas. Estas le ayudan a prepararse para los exámenes de admisión. Al principio, a él le molesta el acoso proporcionado por parte de ellas, pero, poco a poco, se va acostumbrando y se va sintiendo atraído por ellas.",
-        "rutaArchivo":"PDF/KissxSis.pdf" ,
-        "imagenURL":"Imagenes/kissxkis opcion 2.jpg" ,
-        "id": "41",
-        "precio":"99.90"
-    },
-    
-    {
-        "titulo":"Shumatsu no Harem",
-        "autor":"Kotaro Shono" ,
-        "generos": ["+18", "Harem"],
-        "sinopsis":"El virus Man-Killer: una enfermedad letal que ha erradicado el 99.9% de la población masculina del mundo. Mizuhara Reito ha estado en el sueño criogénico durante los últimos cinco años, dejando atrás a Tachibana Erisa, la chica de sus sueños. Cuando Reito despierta de la congelación emerge en un nuevo mundo enloquecido por el sexo donde él mismo es recurso más preciado del planeta. Reito y otros cuatro hombres se dan vidas de lujo y una misión simple: ¡repoblar el mundo impregnando tantas mujeres como sea posible! Todo lo que Reito quiere, sin embargo, es encontrar a su amada Erisa que desapareció hace tres años. ¿Puede Reito resistir la tentación y encontrar su único amor verdadero?",
-        "rutaArchivo":"PDF/Shumatsu no Harem.pdf" ,
-        "imagenURL":"Imagenes/Shuumatsu no harem.jpg" ,
-        "id": "42",
-        "precio":"119.90"
-    },
-{
-        "titulo":"Shinmai Maou no Testament",
-        "autor":"Testsuto Uesu" ,
-        "generos": ["+18", "Accion", "Harem", "Sobrenatural"],
-        "sinopsis":"\"Hey dijiste que querías una hermana menor, verdad\" el padre de Toujo Basara, estudiante de primer año de preparatoria, se lo preguntó sorpresívamente haciéndolo caer en pánico. Encima de eso, el excéntrico padre le dice que se ha vuelto a casar. Él entonces viaja al extranjero después de llevarle a Basara 2 hermosas hermanastras. Las cosas no son lo que aparentan en esta serie, así es como Basara descubre que su nueva “familia” tiene algunos secretos que debe averiguar.",
-        "rutaArchivo":"PDF/Shinmai Maou no Testament.pdf" ,
-        "imagenURL":"Imagenes/Shinmai Maou.jpg" ,
-        "id": "43",
-        "precio":"119.90"
-    },
-    
-    {
         "titulo":"Parallel Paradise",
         "autor":"Lynn Okamoto" ,
         "generos": ["+18", "Fantasia", "Harem"],
         "sinopsis":"Un mundo de espadas y hechicería de mujeres acaba de convocar a su único hombre humano: ¡un estudiante desconcertado de la Tierra! Tada Youta, un joven aparentemente normal con experiencia en artes marciales, tiene su vida trastornada cuando una criatura aterradora lo arrastra a otro mundo. Se sorprende al encontrarse en una tierra con castillos y dragones y lunas de colores en el cielo, ¡donde los únicos humanos que deambulan son mujeres! Youta no solo es el primer hombre en este mundo durante siglos, sino que su toque puede activar un poderoso deseo dentro de las mujeres que lo rodean. Guiado a esta extraña tierra nueva por un hermoso paladín, ¡Youta está a punto de embarcarse en su última aventura de fantasía!",
         "rutaArchivo":"PDF/Parallel Paradise.pdf" ,
         "imagenURL":"Imagenes/Parallel paradise.jpg" ,
-        "id": "44",
+        "id": "41",
         "precio":"179.90"
-    },
-    
-    {
-        "titulo":"Isekai Meikyuu De Dorei Harem Wo",
-        "autor":"Shachi Sogano" ,
-        "generos": ["+18", "Harem", "Fantasia"],
-        "sinopsis":"Michio Kaga quiere despedirse del mundo, el cual lo ha tratado mal y piensa en el suicidio, cuando encuentra un sitio que le pregunta: si no te gusta este mundo: ¿Por que no abandonarlo e ir a otro?",
-        "rutaArchivo":"PDF/isekai meikyuu de dorei harem wo.pdf" ,
-        "imagenURL":"Imagenes/Isekai meikyuu de dorie harem wo.jpg" ,
-        "id": "45",
-        "precio":"99.90"
-    },
-    
-    {
-        "titulo":"Kaifuku Jutsushi no Yarinaoshi",
-        "autor":"Rui Tsukiyo" ,
-        "generos": ["+18", "Harem", "Fantasia"],
-        "sinopsis":"Yo había determinado que los magos sanadores sólo son capaces de sanar. Yo había admitido que son una existencia que no puede hacer nada por sí mismos. No pueden luchar si no confían en alguien, y porque son ese tipo de existencia, son explotados por otros. Siendo explotado repetidamente, he llegado a este punto, y para cuando me di cuenta de mi error, era demasiado tarde. Mi vida había terminado. Por eso voy a empezar de nuevo. Así, utilizando la magia curativa en el mundo mismo para retroceder cuatro años, decidí rehacer todo.",
-        "rutaArchivo":"PDF/Kaifuku Jutsushi no Yarinaoshi.pdf" ,
-        "imagenURL":"Imagenes/Kaifuku.jpg" ,
-        "id": "46",
-        "precio":"99.90"
-    },
-    
-    {
-        "titulo":"High School DxD Full Color",
-        "autor":"Ichiei Ishibumi" ,
-        "generos": ["+18", "Comedia", "Harem", "Romance"],
-        "sinopsis":"Issei Hyoudou, un estudiante de preparatoria sin éxito con las mujeres, ¡milagrosamente consiguió su primera novia! O al menos eso creía. De repente, ¡¿su novia lo asesinó?! Parecía que Issei tenía muy mala suerte, pero fue rescatado de las garras de la muerte por Rias, la chica más bella de la Academia. Lo que Rias le contó después fue de verdad impactante: \"¡Renacerás como demonio y trabajarás para mí!\" ¡Aquí comienza la vida de Issei como demonio esclavizado! ¿Logrará tener su harén?",
-        "rutaArchivo":"PDF/High School DxD Full Color.pdf" ,
-        "imagenURL":"Imagenes/High School Dxd.jpg" ,
-        "id": "48",
-        "precio":"99.90"
-    },
-    
-    {
-        "titulo":"To Love Ru Darkness",
-        "autor":"Saki Hasemi" ,
-        "generos": ["+18", "Harem", "Comedia", "Romance"],
-        "sinopsis":"¡La vida de Rito está a punto de complicarse aún más! Como si no tuviera que lidiar con suficientes embrollos, Momo decide fundar un harem para él a fin de incluir a Lala y a ciertas candidatas potenciales: Haruna, Yami. ¡e incluso la recatada Yui! Sin embargo, alguien observa desde las sombras y envía a Mea, una chica que dice ser hermana de Yami, a vigilar detenidamente a Rito.",
-        "rutaArchivo":"PDF/To Love Ru Darkness.pdf" ,
-        "imagenURL":"Imagenes/To Love Ru Darkness.jpg" ,
-        "id": "49",
-        "precio":"119.90"
     },
     
     {
@@ -548,7 +472,7 @@
         "sinopsis":"Seikon no Qwaser transcurre en la Academia San Mikhailov, un colegio japonés afecto a la religión ortodoxa del este, cuyos alumnos forman parte de la guerra entre la Iglesia y los “Adeptos”, una secta de individuos que manejan los elementos. Aleksander (o Sasha) es uno de ellos y este chico ruso, de cabellos plateados, puede manipular el metal. En el manga se mezcla el género de las “magical girls” (yo diría “magical boys”) con mucha violencia y fanservice extremo. Por ejemplo, la sustancia que nutre a los “qwaser”, se llama Soma y no es más que leche, la cual deben tomar directamente del pecho de una mujer.",
         "rutaArchivo":"PDF/Seikon no Qwaser.pdf" ,
         "imagenURL":"Imagenes/Seikon no Qwaser.jpg" ,
-        "id": "50",
+        "id": "42",
         "precio":"119.90"
     },
     
@@ -559,7 +483,7 @@
         "sinopsis":"Cuando el mundo está siendo devorado por ellos, solo hay una lección que importa. Copiar, robar, matar. todo se vale en esta escuela, pues aprobar no es sacar 10, sino sobrevivir. Un grupo de estudiantes y una enfermera están listos para este terrorífico examen en Highschool of the Dead #1.",
         "rutaArchivo":"PDF/Highschool of the Dead.pdf" ,
         "imagenURL":"Imagenes/High School of the Dead.jpg" ,
-        "id": "51",
+        "id": "43",
         "precio":"179.90"
     },
 
@@ -570,7 +494,7 @@
         "sinopsis": "El agente de policía Shintarô Jagasaki lleva una pacífica vida junto a su novia. Si todo sigue su curso, lo más probable es que acaben casándose y teniendo hijos... Un estilo de vida de lo más anodino. Hasta que un día, ¡un Fracturado se manifiesta ante él y su brazo derecho se transforma...!",
         "rutaArchivo": "PDF/Jagaaan.pdf",
         "imagenURL": "Imagenes/jaaagan.png",
-        "id": "52",
+        "id": "44",
         "precio": "109.00"
     },
 
@@ -581,7 +505,7 @@
         "sinopsis": "La historia se centra en Keima Katsuragi, un estudiante de preparatoria muy bueno en los videojuegos bishoujo, quien acepta por error un contrato para convertirse en un colaborador para atrapar espíritus prófugos del infierno. Keima ahora deberá utilizar su capacidad de análisis y experiencias en los juegos para conquistar -y así liberar- a aquellas chicas que sean contenedores de los espíritus.",
         "rutaArchivo": "PDF/Kami nomi zo Shiru Sekai.pdf",
         "imagenURL": "Imagenes/Kami nomi zo Shiru Sekai.jpg",
-        "id": "53",
+        "id": "45",
         "precio": "129.90"
     },
 
@@ -592,7 +516,7 @@
         "sinopsis": "Tanjirou Kamado es un chico alegre y trabajador que vive felizmente junto a su familia, hasta que un fatídico día un demonio llamado Muzan irrumpe en su vida matando a sus padres y maldice a su hermana pequeña convirtiéndola en demonio. Tras este incidente, y con el propósito de vengar a sus padres y devolver a su hermana Nezuko a la normalidad, decide convertirse en un asesino de demonios. Para ello, acude en ayuda de Sakonji Urokodaki, uno de los asesinos de demonios más fuertes del mundo...　Entre samuráis, afiladas katanas, demonios y otros seres mitológicos del folclore japonés, este manga es una apuesta segura para los amantes del género.",
         "rutaArchivo": "PDF/Kimetsu no Yaiba.pdf",
         "imagenURL": "Imagenes/Kimetsu no Yaiba.jpg",
-        "id": "54",
+        "id": "46",
         "precio": "119.90"
     },
 
@@ -603,7 +527,7 @@
         "sinopsis": "Yukiteru Amano es un chico que se dedica a ser un simple observador, y a anotar todo lo que pasa en su entorno en el “diario” de su teléfono, pero un día dicho diario comienza a mostrarle su futuro; él en un principio lo utiliza para beneficio propio, pero no sabe que esto es parte de un juego de supervivencia controlado por el dios del espacio y tiempo. Ahora junto con Yuno, una chica que está obsesionada con él, tratará se sobrevivir a las trampas que le han puesto los dueños de otros diarios.",
         "rutaArchivo": "PDF/Mirai Nikki.pdf",
         "imagenURL": "Imagenes/Mirai Nikki.jpg",
-        "id": "55",
+        "id": "47",
         "precio": "109.90"
     },
 
@@ -614,7 +538,7 @@
         "sinopsis": "Shigeo Kageyama, alias Mob, es un estudiante de segundo curso de secundaria que tiene una particularidad: es un psíquico. Trabaja como ayudante de Arataka Reigen, un farsante que se hace pasar por psíquico, y pasa sus tardes exorcizando malvados espíritus. Sin embargo, las dudas propias de la pubertad empiezan a asaltarle. Entre los miembros del club de telepatía y sus experiencias con una extraña religión, las emociones de Mob empiezan a estar a flor de piel.",
         "rutaArchivo": "PDF/Mob Psycho 100.pdf",
         "imagenURL": "Imagenes/Mob Psycho 100.jpg",
-        "id": "56",
+        "id": "48",
         "precio": "89.90"
     },
 
@@ -625,19 +549,8 @@
         "sinopsis": "Esta es la gran Era Pirata. Gold Roger, el legendario \"Rey de los piratas\" ha dejado el \"One Piece\" - su legendario Tesoro - escondido en una zona del mundo llamada “GRAND LINE” y los piratas más fuertes compiten por hallarlo. Un niño llamado Luffy idolatraba a los piratas, en especial a Shanks, el líder de una tripulación que visitó su villa. Un día, por accidente, Luffy comió una “fruta del diablo” del botín de Shanks. Gracias a esa fruta, su cuerpo se ha vuelto de goma pero nunca podrá nadar. El día que los piratas abandonaron la villa, Shanks le obsequió a Luffy su mas preciada posesión: su sombrero de paja. Diez años han pasado desde ese día y Luffy ha salido al mar buscando convertirse en el nuevo \"Rey de los piratas\". ¡Aquí inicia la gran aventura de Luffy!.",
         "rutaArchivo": "PDF/One Piece.pdf",
         "imagenURL": "Imagenes/One Piece.jpg",
-        "id": "57",
+        "id": "49",
         "precio": "129.90"
-    },
-
-    {
-        "titulo": "Plunderer",
-        "autor": "Suu Minazuki",
-        "generos":["Acción", "Fantasía"],
-        "sinopsis": "Año 305 del calendario Alcián, el mundo se encuentra controlado por los \"numeros\". Cada ser humano que nace es marcado con un \"Contador\". Este contador puede subir con cualquier acción; ya sea la cantidad de Kilómetros recorridos, o si alguna persona dice que su comida es sabrosa. Pero si su cuenta se reduce a 0, será enviado al abismo. Antes que la cuenta de la madre de Hina llegará a 0, su ultima voluntad fue que buscara al Legendario Rey Caido...",
-        "rutaArchivo": "PDF/Plunderer.pdf",
-        "imagenURL": "Imagenes/Plunderer.jpg",
-        "id": "58",
-        "precio": "109.90"
     },
 
     {
@@ -647,7 +560,7 @@
         "sinopsis": "Chihiro Furuya es un joven amante de los zombis que está destinado a encontrarse con la señorita Sanka Rea. ¡Después de conocerse por una extraña coincidencia, ambos logran hacer una poción de resurrección! ¡Así comienza la increíble historia de amor y putrefacción de nuestra protagonista, quien ahora es una chica zombi!",
         "rutaArchivo": "PDF/Sankarea.pdf",
         "imagenURL": "Imagenes/Sankarea.jpg",
-        "id": "59",
+        "id": "50",
         "precio": "129.90"
     },
 
@@ -658,7 +571,7 @@
         "sinopsis": "Ha pasado un año desde el \"incidente SAO\". El espadachín negro, Kirito, también conocido como Kazuto Kirigaya, atiende un llamado por parte del oficial de gobierno Seijiro Kikuoka. Este le pide ayuda para investigar un incidente que está ocurriendo en el VRMMO Gun Gale Online: los jugadores que reciben disparos, aparecen muertos en la realidad.\"Este es un juego con el que no se juega\". Akihito Kayaba\"El escenario donde se desarrolla este juego es Aincrad, un castillo que flota en el cielo azul.\" \"El NerveGear\", creado en el año 2022, volvió tangible la realidad virtual. ¡Comenzar enlace.\" Kirito",
         "rutaArchivo": "PDF/SAO Phantom Bullet.pdf",
         "imagenURL": "Imagenes/SAO Phantom Bullet.jpg",
-        "id": "60",
+        "id": "51",
         "precio": "99.90"
     },
 
@@ -669,7 +582,7 @@
         "sinopsis": "Hace varios cientos de años, los titanes casi exterminaron a los humanos. Los titanes suelen tener varios pisos de altura, parecen no tener inteligencia, devoran seres humanos y, lo peor de todo, parecen hacerlo por placer más que como fuente de alimento. Un pequeño porcentaje de la humanidad sobrevivió al amurallarse en una ciudad protegida por muros extremadamente altos, incluso más altos que el más grande de los Titanes. Avance al presente y el distrito sur de Shinganshina no ha visto un Titán en más de 100 años. El adolescente Eren y su hermana adoptiva Mikasa son testigos de algo horrible cuando uno de los muros exteriores del distrito es dañado por un Titán de 60 metros (196,85 pies) que causa una brecha en el muro. Mientras los Titanes más pequeños inundan la ciudad, los dos niños ven con horror los trágicos eventos que siguen, mientras los Titanes devoran a la gente sin ser molestados. Eren jura que acabará con todos los titán y se vengará de toda la humanidad.",
         "rutaArchivo": "PDF/Shingeki no Kyojin.pdf",
         "imagenURL": "Imagenes/Shingeki no Kyojin.jpg",
-        "id": "61",
+        "id": "52",
         "precio": "129.90"
     },
 
@@ -680,7 +593,7 @@
         "sinopsis": "Frieren es miembro del grupo del héroe que derrotó al rey demonio. Tanto maga como elfa, hay algo que la separa de los otros tres miembros.",
         "rutaArchivo": "PDF/Sousou no Frieren.pdf",
         "imagenURL": "Imagenes/Sousou no Frieren.jpg",
-        "id": "62",
+        "id": "53",
         "precio": "99.90"
     },
 
@@ -691,7 +604,7 @@
         "sinopsis": "El habíl espía Tasogare se dedicaba diariamente a cumplir misiones especiales por un mundo mejor. Un día recibe un complicado desafio... Su deber es crear una familia falsa y comenzar una nueva vida para poder cumplir la misión, ¿¡pero...!? ¡¡Un Espía × Acción × Comedia de una familia peculiarl!",
         "rutaArchivo": "PDF/Spy x Family.pdf",
         "imagenURL": "Imagenes/Spy x Family.jpg",
-        "id": "63",
+        "id": "54",
         "precio": "109.90"
     },
     
@@ -702,7 +615,7 @@
         "sinopsis": "Un hombre que al tratar de salvar a su compañero de trabajo y su novia fue apuñalado por un ladrón que escapaba. Mientras moría desangrado escuchó una voz extraña. Esta voz escuchó su lamento de haber muerto virgen y a causa de eso le dio la Habilidad Única \"Gran Sabio\" ¿Fue esto una burla? Ahora él ha reencarnado como un Slime en otro mundo, ¿Será este el inicio de una emocionante aventura?",
         "rutaArchivo": "PDF/Tensei Shitar Slime Datta Ken.pdf",
         "imagenURL": "Imagenes/Tensei Shitar Slime Datta Ken.jpg",
-        "id": "64",
+        "id": "55",
         "precio": "119.90"
     },
 
@@ -713,7 +626,7 @@
         "sinopsis": "Emma, Norman y Ray son tres huérfanos que viven felices en el idílico orfanato Grace Field House, esperando el momento en el que se les asignará una familia adoptiva. Todo cambia cuando descubren accidentalmente la horrorosa realidad de su existencia, así que deciden rebelarse y luchar hasta las últimas consecuencias en una oscura y aterradora aventura. Pero su tiempo se acaba…",
         "rutaArchivo": "PDF/The Promised Neverland.pdf",
         "imagenURL": "Imagenes/The Promise Neverland.jpg",
-        "id": "65",
+        "id": "56",
         "precio": "119.90"
     },
 
@@ -724,7 +637,7 @@
         "sinopsis": "Un sol negro brilla sobre el cielo de Tokio, y solo Arata Kasuga parece darse cuenta. En un instante, su vida diaria, junto con su prima Hijiri, se esfuma. Una extraña magia llamada “fenómeno de ruptura” destruye la ciudad y Hijiri desaparece frente a los ojos de Arata. Para buscarla, Arata se inscribe a la Real Academia de Magia Biblia, donde debe buscar a las Trinity Seven, ¡las siete hechiceras más poderosas y hermosas del mundo!",
         "rutaArchivo": "PDF/Trinity Seven.pdf",
         "imagenURL": "Imagenes/Trinity Seven.jpg",
-        "id": "66",
+        "id": "57",
         "precio": "89.90"
     },
 
@@ -733,9 +646,9 @@
         "autor": "Yoshiaki Sukeno",
         "generos":["Acción", "Romance","Drama"],
         "sinopsis": "Los \"Exorcistas de las Estrellas Gemelas\" están destinados a producir el niño profetizado que pondrá fin a la guerra con el monstruoso Kegare ... Pero, ¿podrán Rokuro y Benio llevarse bien durante cinco minutos, y mucho menos salvar el mundo?",
-        "rutaArchivo": "PDF/Twin Star Exorcist.pdf",
+        "rutaArchivo": "PDF/Twin Star Exorcists.pdf",
         "imagenURL": "Imagenes/Twin Star Exorcists.jpeg",
-        "id": "67",
+        "id": "58",
         "precio": "89.90"
     },
 
@@ -746,19 +659,8 @@
         "sinopsis": "La escuela privada Hachimitsu para señoritas empieza a admitir varones a partir del presente año, pero solo cinco hombres se inscribieron. Entre ellos está Kiyoshi Fujino, quien se siente abrumado al estar rodeado de mujeres; aunque antes de entrar, estaba emocionado por el futuro sin saber lo que sucedería...",
         "rutaArchivo": "PDF/Prision School.pdf",
         "imagenURL": "Imagenes/Prision School.jpg",
-        "id": "68",
+        "id": "59",
         "precio": "99.90"
-    },
-
-    {
-        "titulo":"Tsumuji Magari x Spring",
-        "autor":"Yumeno Tanuki" ,
-        "generos": ["18+","comedia","romance","sobrenatural"],
-        "sinopsis":"Esta es una misteriosa fuente termal donde se reúnen los Yokia de todo Japón. ¡¿Izumi Onsui, un estudiante de primer año de secundaria, se reúne con una chica Yokai en una fuente termal dirigida por su difunto abuelo...?",
-        "rutaArchivo":"PDF/Tsumuji Magari x Spring.pdf",
-        "imagenURL": "Imagenes/img_Tsumuji x Spring.jpg",
-        "id": "69",
-        "precio": "99.99"
     },
 
     {
@@ -768,7 +670,7 @@
         "sinopsis":"El mundo está en un estado de aislamiento. La causa se ​​debe a misteriosas entidades de aguas profundas que la marina ha apodado la Flota del Mar Profundo. Negarse a sentarse de brazos cruzados y dejar que la Flota del Mar Profundo tiene su manera, todos los países del mundo unen sus recursos para hacer una nueva arma para luchar contra ellos ... un arma que es comparable en potencia a la de un acorazado .. . y su nombre es: Las chicas de la Flota.",
         "rutaArchivo":"PDF/Shimakaze Tsumujikaze no Shoujo.pdf",
         "imagenURL":"Imagenes/img_Shimakaze Tsumujikaze no Shoujojpg.jpg",
-        "id":"70",
+        "id":"60",
         "precio": "99.99"
     },
 
@@ -779,7 +681,7 @@
 	"sinopsis":"Eyama Aito, un estudiante de secundaria, es una víctima de acoso u hostigamiento diario. Un día, le llega una extraña carta invitándole a un Juego de Cautiverio. Él puede elegir a una persona para mantenerla cautiva durante un mes con la oportunidad de ganar una gran cantidad de dinero. Él elige a la cabecilla de sus matones: Aya Kirishima. ¡Y la única regla del juego es NO matarla, todo lo demás es juego limpio! ¡La venganza de Eyama comienza!",
         "rutaArchivo":"PDF/Kangoku Jikken.pdf",
         "imagenURL":"Imagenes/img_Kangoku Jikken.jpg",
-        "id":"71",
+        "id":"61",
         "precio": "119.99"
     },
 
@@ -790,7 +692,7 @@
         "sinopsis":"Los bebés son escaneados al nacer, y se encuentra su probabilidad de ser criminal en un futuro. Todo está bien si no están inclinados criminalmente. Sin embargo, si sus números son demasiado arriesgados, se eliminan de la sociedad. Para muchos, un grupo de pecadores es una causa de ruptura de corazón que ahora está luchando por su derecho a intentarlo y no solo a ser etiquetado al nacer",
         "rutaArchivo":"PDF/Sinner.pdf",
         "imagenURL":"Imagenes/img_Sinner.jpg",
-        "id":"72",
+        "id":"62",
         "precio": "99.99"
     },
 
@@ -801,7 +703,7 @@
 	"sinopsis":"Después de que un agente patógeno creado por el hombre conocido como el virus K se libera accidentalmente de los Laboratorios Fieldwar en el corazón de Tokio, la ciudad es invadida por zombis devoradores de carne. Con la esperanza de salvar a los últimos supervivientes de este apocalipsis, una organización conocida como Madara envía a su miembro novato en un último esfuerzo para encontrar una cura.",
         "rutaArchivo":"PDF/Tokyo Undead.pdf",
         "imagenURL":"Imagenes/img_Tokyo Undead.jpg",
-        "id":"73",
+        "id":"63",
         "precio": "119.99"
     },
 
@@ -812,7 +714,7 @@
         "sinopsis":"Un amor especial que sea capaz de elevarte y a la vez hacerte sentir cálida, todo eso es lo que busca Koito Yuu. Con el nuevo año escolar comenzando y uniéndose como ayudante del Consejo Estudiantil, aprenderá todo lo que significa tener a una persona especial en su vida gracias a Nanami Touko, una misteriosa y popular chica que casualmente también está dentro del Consejo.",
         "rutaArchivo":"PDF/Yagate Kimi ni Naru.pdf",
         "imagenURL":"Imagenes/img_Yagate Kimi ni Naru.jpg",
-        "id":"74",
+        "id":"64",
         "precio": "79.99"
     }
 
