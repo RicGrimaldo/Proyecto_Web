@@ -109,7 +109,7 @@ h1:hover{
 
 /*Modo nocturno*/
 body.dark {
-    background:linear-gradient(#022047,#050c29);
+    background:linear-gradient(#081324,#040912);
 }
 
 body.dark .titulos h1{

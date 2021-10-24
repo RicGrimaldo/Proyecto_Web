@@ -87,7 +87,7 @@ h1:hover{
 
 /*Modo nocturno*/
 body.dark {
-    background:linear-gradient(#022047,#050c29);
+    background:linear-gradient(#081324,#040912);
 }
 
 
@@ -95,7 +95,7 @@ body.dark h1 {
     color: #62abe7;
     transition: all 300ms;
     border-left: 6px solid #264969;
-    background:linear-gradient(to right,#022047,#050c29);
+    background:linear-gradient(to right,#081324,#040912);
     border-radius: 0px 0px 5px 5px;
 }
 
