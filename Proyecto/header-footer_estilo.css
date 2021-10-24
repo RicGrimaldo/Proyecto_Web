@@ -3,6 +3,16 @@
     margin: 0px;
 }
 
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:linear-gradient(#88a7d0af,#CAECF1);
+}
+
 /*estilos para header*/
 
 .header{
@@ -25,6 +35,8 @@
     text-align: center;
     padding: 8px;
 }
+
+
 
 
 
@@ -193,12 +205,12 @@ header .lbl:hover{
     font-size: 20px;
 }
 
-.header #carrito{
+/*.header #carrito{
     background-color: #5086c1;
    
-}
+}*/
 
-/*Estilos para boton modo oscuro*/
+/*Estilos para boton modo oscuro
 
 :root {
     --color-1: #172841;
@@ -237,9 +249,86 @@ header .lbl:hover{
 
 #switch-button .switch-button__checkbox:checked + .switch-button__label:before {
     transform: translateX(20px);
+}*/
+
+.darkModeSwitch{
+    background: #000;
+    display:flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.darkModeSwitch span{
+    width:30px;
+    height: 27px;
+    line-height:30px;
+    display:block;
+    color:#fff;
+    background: none;
+}
 
+.darkModeSwitch::after{
+    
+    display:block;
+    background: #fffbf5;
+    width: 30px;
+    height:30px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 3rem;
+    transition: all .5s ease;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+    content: "";
+}
+
+.darkModeSwitch.active{
+    
+    background: orange;
+  }
+.darkModeSwitch.active::after{
+    left:unset;
+    right:0;
+}
+
+/*darkmode*/
+body.dark .header{
+    background: #34587e; /*5085*/
+}
+
+body.dark .item-flex-header{
+    background: #4e77a8; /*6a9*/
+
+}
+
+body.dark header .lbl{
+    background: #34587e;
+}
+
+body.dark .menu{
+    background: #4e77a8;
+}
+
+body.dark #carrito img{
+    background: #34587e;
+}
+
+body.dark .menuNav ul{
+    background: #34587e;
+}
+
+body.dark .footer{
+    background: #34587e;
+}
+body.dark {
+    background:linear-gradient(#081324,#040912);
+}
 
 
 /*estilos para barra de busqueda*/
@@ -494,5 +583,9 @@ header .lbl:hover{
         text-align: center;
         background-color: #5086c1;
     
+    }
+
+    body.dark .menu li a{
+        background: #4e77a8;
     }
 }

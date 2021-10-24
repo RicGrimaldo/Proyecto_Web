@@ -3,13 +3,12 @@
 
 <head>
   <title>MangaWeb</title>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </head>
-
-<link rel="stylesheet" href="header-footer_estilo.css" type="text/css" media="screen">
 <link rel="stylesheet" href="registro-estilos.css">
+<link rel="stylesheet" href="header-footer_estilo.css" type="text/css" media="screen">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<body class="f">
+<body>
   <header class="header">
     <div class="item-flex-header" id="logo">
       <a href="#"><img src="imagenes/logo.png" alt="MangaWeb Logo"></a>
@@ -42,16 +41,19 @@
 
     </div>
 
-
     <input type="checkbox" id="btn-menu">
     <label for="btn-menu" class="lbl"><img src="Imagenes/hamicon.png" alt="menu"></label>
     <nav class="menuNav">
       <ul>
         <li><a><div class="boton-text">
           <div  id="switch-button">
-            <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+            <button class="darkModeSwitch" id="switchb">
+              <span><i class="fa fa-sun-o"></i></span>   
+              <span><i class="fa fa-moon-o"></i></span>
+            </button>
+            <!--<input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
             <label for="switch-label" class="switch-button__label"></label>
-            <img src="Imagenes/moon.png" alt="moon">
+            <img src="Imagenes/moon.png" alt="moon">-->
           </div>
         </div></a></li>
         <li class="li"><a href="#">Inicio</a></li>
@@ -108,8 +110,6 @@
 
 </main>
 
-
-
 </body>
 
 <footer class="footer">
@@ -150,6 +150,6 @@
 
 </footer>
 
-<script src="login-registro.js"></script>
 <script src="dark-mode.js"></script>
+<script src="login-registro.js"></script>
 </html>

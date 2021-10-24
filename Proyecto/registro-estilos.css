@@ -149,6 +149,23 @@ main{
     background-repeat: no-repeat;
     background-position: left center;
 }
+/*Darkmode*/
+body.dark .caja__trasera{
+    background: #34587e;
+}
+
+body.dark .contenedor__login-register form h2{
+    color: #34587e;
+}
+
+body.dark .contenedor__login-register form button{
+    background: #34587e;
+
+}
+
+body.dark .contenedor__login-register form{
+    background: #8da2aa;
+}
 
 /*responsive*/
 
