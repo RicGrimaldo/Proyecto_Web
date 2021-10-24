@@ -321,5 +321,456 @@
         "imagenURL": "Imagenes/Hunter x Hunter.jpg",
         "id": "28",
         "precio": "99.00"
+    },
+
+    {
+        "titulo":"20th Century Boys",
+        "autor":"Naoki Urasawa" ,
+        "generos": ["Misterio"],
+        "sinopsis":"Del autor de Monster, llega 20th Century Boys, un manga de ciencia ficción escrito y dibujado por Naoki Urosawa. En esta historia conoceremos a Kenji, el encargado de una pequeña tienda de conveniencia, quien se encarga de criar a Kanna, la bebé que su hermana dejó antes de desaparecer. Un día, Kenji encuentra en la calle un misterioso símbolo que cree conocer de algún lado, y que se relaciona con la organización secreta de un tal \"Amigo\". Mientras tanto, una ola de sangrientos crímenes ocurre en Tokio. ¡Ayuda a Kenji a resolver este misterio!",
+        "rutaArchivo":"PDF/20th Century Boys.pdf" ,
+        "imagenURL":"Imagenes/20th Century Boys.jpg" ,
+        "id": "29",
+        "precio":"179.90"
+    },
+
+    {
+        "titulo":"Isekai Ojisan, Uncle from Another World",
+        "autor":"Hotondoshindeiru" ,
+        "generos": ["Misterio", "Fantasía", "Romance"],
+        "sinopsis":"Después de haber sobrevivido en un isekai por 17 años, el Ojisan (tío) de 34 años regresa al Japón moderno. Takafumi, el sobrino del Ojisan, ahora es testigo de lo que ocurre al arrojar a un fanático de Sega en un isekai durante 17 años, cómo hizo varias cosas y cómo conoció a varias personas, tanto en el pasado como en el presente.",
+        "rutaArchivo":"PDF/Isekai Ojisan.pdf" ,
+        "imagenURL":"Imagenes/Isekai ojisan.jpg" ,
+        "id": "30",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"Kaiju NO 8",
+        "autor":"Naoya Matsumoto" ,
+        "generos": ["Acción", "Sobrenatural"],
+        "sinopsis":" ¡Un hombre, descontento con el trabajo que ha tenido que hacer en la vida, se ve envuelto en un acontecimiento inesperado...! ¡Se convierte en un kaiju, una criatura monstruosa, dándole así una nueva oportunidad de lograr lo que siempre soñó!",
+        "rutaArchivo":"PDF/Kaijuu No 8.pdf" ,
+        "imagenURL":"Imagenes/Kaiju No 8.jpg" ,
+        "id": "31",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"Overlord",
+        "autor":"Kugane Maruyama" ,
+        "generos": ["Fantasía", "Acción"],
+        "sinopsis":"La historia comienza con Yggdrasil, un juego en línea popular que se cerró discretamente en su último día. Nuestro protagonista Momonga decidió quedarse hasta el último momento en su querido juego y esperar a que se saliera. Inesperadamente, el servidor no se cerró y Momonga se ha quedado atascado en su cuerpo esqueleto y fue transferido a otro mundo.",
+        "rutaArchivo":"PDF/Overlord.pdf" ,
+        "imagenURL":"Imagenes/Overlord.jpg" ,
+        "id": "32",
+        "precio":"99.90"
+    },
+
+    {
+        "titulo":"Jitsu wa Watashi wa",
+        "autor":"Eiji Masuda" ,
+        "generos": ["Romance", "Comedia", "Escolar", "Harem"],
+        "sinopsis":"Conoce Kuromine Asahi, 'el hombre que no puede mentir'. En el camino a casa, se acaba de enterar de un importante secreto. Que su amor platónico, Shiragami Youko, es en realidad un vampiro! Puede Asahi realmente mantener su secreto? ",
+        "rutaArchivo":"PDF/Jitsu wa Watashi wa.pdf" ,
+        "imagenURL":"Imagenes/jitsu wa watashi wa.jpg" ,
+        "id": "33",
+        "precio":"179.90"
+    },
+    
+    {
+        "titulo":"RE Monster",
+        "autor":"Kanekiru kogitsune" ,
+        "generos": ["Fantasia", "Accion"],
+        "sinopsis":"Tomokui Kanata es un esper que tras ser asesinado, reencarna como un goblin, la raza más débil, en otro mundo. Conservando los recuerdos de su vida pasada y su peculiar habilidad que le permite obtener las habilidades de las criaturas que devore. En este nuevo mundo en donde solo sobrevive el más apto, ¿Podrá un equipo de goblins convertirse en los héroes de este mundo, en un encantador giro de tu escenario habitual?",
+        "rutaArchivo":"PDF/Re Monster.pdf" ,
+        "imagenURL":"Imagenes/Re Monster.jpg" ,
+        "id": "34",
+        "precio":"119.90"
+    },
+    
+    {
+        "titulo":"One Punch Man",
+        "autor":"Yusuke Murata" ,
+        "generos": ["Accion", "Comedia"],
+        "sinopsis":"¡Sigue la vida de un héroe promedio que gana todas sus peleas con un solo puño! Esto le causa un montón de frustración, ahora ya no siente la adrenalina y la emoción de una dura pelea. Tal vez ese riguroso entrenamiento para volverse fuerte no valió la pena. Después de todo, ¿qué tiene de bueno tener un poder tan aplastante?",
+        "rutaArchivo":"PDF/One Punch Man.pdf" ,
+        "imagenURL":"Imagenes/One Punch Man.jpg" ,
+        "id": "35",
+        "precio":"119.90"
+    },
+    
+    {
+        "titulo":"Kumo desu ga, Nani ka?",
+        "autor":"Okina Baba" ,
+        "generos": ["Fantasia", "Aventura", "Comedia"],
+        "sinopsis":"El mundo donde el héroe y el rey demonio siguen oponiéndose entre si. La gran magia del héroe y el rey demonio cruzaron los mundos y exploto en el aula de una cierta escuela secundaria.",
+        "rutaArchivo":"PDF/Kumo desu ga Nani ka.pdf" ,
+        "imagenURL":"Imagenes/Kumo Desu ga.jpg" ,
+        "id": "36",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"Hatsukoi Zombie",
+        "autor":"Ryou Minenami" ,
+        "generos": ["Comedia", "Romance"],
+        "sinopsis":"De acuerdo con su amigo de la infancia, Eijiro Kurome no esta interesado en el amor. Un día Eijiro es golpeado en la cabeza por una bola dejandolo inconsciente. Cuando despierta hay una chica flotando en frente de él. ¿Qué le a pasado a Eijiro? ¿Quien es esta misteriosa chica? Descúbrelo en esta nueva serie romántica.",
+        "rutaArchivo":"PDF/Hatsukoi Zombie.pdf" ,
+        "imagenURL":"Imagenes/Hatsukoi Zombie.jpg" ,
+        "id": "37",
+        "precio":"89.90"
+    },
+    
+    {
+        "titulo":"Chainsaw Man",
+        "autor":"Tatsuki Fujimoto" ,
+        "generos": ["+18", "Accion", "Comedia"],
+        "sinopsis":"Cuando su padre murió, Denji se vio obligado a saldar una gran deuda y no había forma de pagarla. Pero gracias a la ayuda de un Demonio Perro que salvó llamado Pochita, Denji es capaz de sobrevivir convirtiéndose en un Cazador de demonios a sueldo, haciendo trabajos para los Yakuza.",
+        "rutaArchivo":"PDF/Chainsaw Man.pdf" ,
+        "imagenURL":"Imagenes/Chainsaw Man.jpg" ,
+        "id": "38",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"Kage no Jitsuryokusha ni Naritakute!",
+        "autor":"Daisuke Aizawa, Tozai" ,
+        "generos": ["Fantasia", "Harem"],
+        "sinopsis":"Tal cual como todos adoraban héroes en su niñez, cierto adolescente adoraba los poderes que se esconden en las sombras. Tras haber ocultado su fuerza y viviendo la vida mediocre de un mob durante el día y entrenando descontroladamente por la noche, él finalmente reencarna en un mundo diferente y gana el poder definitivo.",
+        "rutaArchivo":"PDF/Kage no Jitsuryokusha ni Naritakute!.pdf" ,
+        "imagenURL":"Imagenes/Kage no Jitsuryokusha ni Naritakute.jpg" ,
+        "id": "39",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"Houseki no kuni",
+        "autor":"Haruko Ichikawa" ,
+        "generos": ["Misterio"],
+        "sinopsis":"Trata de la vida de Fosfofilita (Phosphophyllite) en su día a día en una tierra habitada por seres de su misma especie llamados Houseki (Gemas) y su continua lucha contra los Lunarianos.",
+        "rutaArchivo":"PDF/Houseki no kuni.pdf" ,
+        "imagenURL":"Imagenes/Houseki no kuni.jpg" ,
+        "id": "40",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"kissxSis",
+        "autor":"Bow Ditama" ,
+        "generos": ["+18", "Comedia", "Romance"],
+        "sinopsis":"Keita Suminoe, es un estudiante de tercer año de secundaria quien se prepara para los exámenes de admisión para entrar a la preparatoria. Keita vive con sus dos hermanastras gemelas mayores, Ako y Riko, quienes lo acosan de distintas maneras posibles, hasta llegar al punto de mostrar su amor por él en público. A pesar de no compartir lazos sanguíneos con él, él las ve como hermanas. Estas le ayudan a prepararse para los exámenes de admisión. Al principio, a él le molesta el acoso proporcionado por parte de ellas, pero, poco a poco, se va acostumbrando y se va sintiendo atraído por ellas.",
+        "rutaArchivo":"PDF/KissxSis.pdf" ,
+        "imagenURL":"Imagenes/kissxkis opcion 2.jpg" ,
+        "id": "41",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"Shumatsu no Harem",
+        "autor":"Kotaro Shono" ,
+        "generos": ["+18", "Harem", "Ecchi"],
+        "sinopsis":"El virus Man-Killer: una enfermedad letal que ha erradicado el 99.9% de la población masculina del mundo. Mizuhara Reito ha estado en el sueño criogénico durante los últimos cinco años, dejando atrás a Tachibana Erisa, la chica de sus sueños. Cuando Reito despierta de la congelación emerge en un nuevo mundo enloquecido por el sexo donde él mismo es recurso más preciado del planeta. Reito y otros cuatro hombres se dan vidas de lujo y una misión simple: ¡repoblar el mundo impregnando tantas mujeres como sea posible! Todo lo que Reito quiere, sin embargo, es encontrar a su amada Erisa que desapareció hace tres años. ¿Puede Reito resistir la tentación y encontrar su único amor verdadero?",
+        "rutaArchivo":"PDF/Shumatsu no Harem.pdf" ,
+        "imagenURL":"Imagenes/Shuumatsu no harem.jpg" ,
+        "id": "42",
+        "precio":"119.90"
+    },
+{
+        "titulo":"Shinmai Maou no Testament",
+        "autor":"Testsuto Uesu" ,
+        "generos": ["+18", "Accion", "Harem", "Sobrenatural"],
+        "sinopsis":"\"Hey dijiste que querías una hermana menor, verdad\" el padre de Toujo Basara, estudiante de primer año de preparatoria, se lo preguntó sorpresívamente haciéndolo caer en pánico. Encima de eso, el excéntrico padre le dice que se ha vuelto a casar. Él entonces viaja al extranjero después de llevarle a Basara 2 hermosas hermanastras. Las cosas no son lo que aparentan en esta serie, así es como Basara descubre que su nueva “familia” tiene algunos secretos que debe averiguar.",
+        "rutaArchivo":"PDF/Shinmai Maou no Testament.pdf" ,
+        "imagenURL":"Imagenes/Shinmai Maou.jpg" ,
+        "id": "43",
+        "precio":"119.90"
+    },
+    
+    {
+        "titulo":"Parallel Paradise",
+        "autor":"Lynn Okamoto" ,
+        "generos": ["+18", "Fantasia", "Harem", "Ecchi"],
+        "sinopsis":"Un mundo de espadas y hechicería de mujeres acaba de convocar a su único hombre humano: ¡un estudiante desconcertado de la Tierra! Tada Youta, un joven aparentemente normal con experiencia en artes marciales, tiene su vida trastornada cuando una criatura aterradora lo arrastra a otro mundo. Se sorprende al encontrarse en una tierra con castillos y dragones y lunas de colores en el cielo, ¡donde los únicos humanos que deambulan son mujeres! Youta no solo es el primer hombre en este mundo durante siglos, sino que su toque puede activar un poderoso deseo dentro de las mujeres que lo rodean. Guiado a esta extraña tierra nueva por un hermoso paladín, ¡Youta está a punto de embarcarse en su última aventura de fantasía!",
+        "rutaArchivo":"PDF/Parallel Paradise.pdf" ,
+        "imagenURL":"Imagenes/Parallel paradise.jpg" ,
+        "id": "44",
+        "precio":"179.90"
+    },
+    
+    {
+        "titulo":"Isekai Meikyuu De Dorei Harem Wo",
+        "autor":"Shachi Sogano" ,
+        "generos": ["+18", "Harem", "Fantasia"],
+        "sinopsis":"Michio Kaga quiere despedirse del mundo, el cual lo ha tratado mal y piensa en el suicidio, cuando encuentra un sitio que le pregunta: si no te gusta este mundo: ¿Por que no abandonarlo e ir a otro?",
+        "rutaArchivo":"PDF/isekai meikyuu de dorei harem wo.pdf" ,
+        "imagenURL":"Imagenes/Isekai meikyuu de dorei harem wo.jpg" ,
+        "id": "45",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"Kaifuku Jutsushi no Yarinaoshi",
+        "autor":"Rui Tsukiyo" ,
+        "generos": ["+18", "Harem", "Fantasia", "Ecchi"],
+        "sinopsis":"Yo había determinado que los magos sanadores sólo son capaces de sanar. Yo había admitido que son una existencia que no puede hacer nada por sí mismos. No pueden luchar si no confían en alguien, y porque son ese tipo de existencia, son explotados por otros. Siendo explotado repetidamente, he llegado a este punto, y para cuando me di cuenta de mi error, era demasiado tarde. Mi vida había terminado. Por eso voy a empezar de nuevo. Así, utilizando la magia curativa en el mundo mismo para retroceder cuatro años, decidí rehacer todo.",
+        "rutaArchivo":"PDF/Kaifuku Jutsushi no Yarinaoshi.pdf" ,
+        "imagenURL":"Imagenes/Kaifuku.jpg" ,
+        "id": "46",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"Desuraba",
+        "autor":"Kazutaka, Tomohiro Kai" ,
+        "generos": ["+18", "Ecchi", "Misterio"],
+        "sinopsis":"Nuestro protagonista, Fujishirou Kousuke, es un chico de secundaria antipático y poco sociable. Desde que era chico, su amiga de la infancia, Sayaka, le prometió que cuando crecieran ambos contraerían matrimonio.Un día, Kousuke es secuestrado y llevado a un lugar totalmente fuera de lo común, parecido a una prisión... pero lo que no sabe, es que ésta \"prisión\" la resguardan mujeres... muy voluptuosas.¿Podrá Kousuke mantenerse virgen para poder cumplir la promesa?",
+        "rutaArchivo":"PDF/Desuraba.pdf" ,
+        "imagenURL":"Imagenes/Desuraba.jpg" ,
+        "id": "47",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"High School DxD Full Color",
+        "autor":"Ichiei Ishibumi" ,
+        "generos": ["+18", "Comedia", "Harem", "Romance"],
+        "sinopsis":"Issei Hyoudou, un estudiante de preparatoria sin éxito con las mujeres, ¡milagrosamente consiguió su primera novia! O al menos eso creía. De repente, ¡¿su novia lo asesinó?! Parecía que Issei tenía muy mala suerte, pero fue rescatado de las garras de la muerte por Rias, la chica más bella de la Academia. Lo que Rias le contó después fue de verdad impactante: \"¡Renacerás como demonio y trabajarás para mí!\" ¡Aquí comienza la vida de Issei como demonio esclavizado! ¿Logrará tener su harén?",
+        "rutaArchivo":"PDF/High School DxD Full Color.pdf" ,
+        "imagenURL":"Imagenes/High School Dxd.jpg" ,
+        "id": "48",
+        "precio":"99.90"
+    },
+    
+    {
+        "titulo":"To Love Ru Darkness",
+        "autor":"Saki Hasemi" ,
+        "generos": ["+18", "Harem", "Comedia", "Romance"],
+        "sinopsis":"¡La vida de Rito está a punto de complicarse aún más! Como si no tuviera que lidiar con suficientes embrollos, Momo decide fundar un harem para él a fin de incluir a Lala y a ciertas candidatas potenciales: Haruna, Yami. ¡e incluso la recatada Yui! Sin embargo, alguien observa desde las sombras y envía a Mea, una chica que dice ser hermana de Yami, a vigilar detenidamente a Rito.",
+        "rutaArchivo":"PDF/To Love Ru Darkness.pdf" ,
+        "imagenURL":"Imagenes/To Love Ru Darkness.jpg" ,
+        "id": "49",
+        "precio":"119.90"
+    },
+    
+    {
+        "titulo":"Seikon no Qwaser",
+        "autor":"Hiroyuki Yoshino, Kenutsu Sato" ,
+        "generos": ["+18", "Romance", "Sobrenatural"],
+        "sinopsis":"Seikon no Qwaser transcurre en la Academia San Mikhailov, un colegio japonés afecto a la religión ortodoxa del este, cuyos alumnos forman parte de la guerra entre la Iglesia y los “Adeptos”, una secta de individuos que manejan los elementos. Aleksander (o Sasha) es uno de ellos y este chico ruso, de cabellos plateados, puede manipular el metal. En el manga se mezcla el género de las “magical girls” (yo diría “magical boys”) con mucha violencia y fanservice extremo. Por ejemplo, la sustancia que nutre a los “qwaser”, se llama Soma y no es más que leche, la cual deben tomar directamente del pecho de una mujer.",
+        "rutaArchivo":"PDF/Seikon no Qwaser.pdf" ,
+        "imagenURL":"Imagenes/Seikon no Qwaser.jpg" ,
+        "id": "50",
+        "precio":"119.90"
+    },
+    
+    {
+        "titulo":"High School of the Dead",
+        "autor":"Daisuke Sato" ,
+        "generos": ["+18", "Accion", "Suspenso"],
+        "sinopsis":"Cuando el mundo está siendo devorado por ellos, solo hay una lección que importa. Copiar, robar, matar. todo se vale en esta escuela, pues aprobar no es sacar 10, sino sobrevivir. Un grupo de estudiantes y una enfermera están listos para este terrorífico examen en Highschool of the Dead #1.",
+        "rutaArchivo":"PDF/Highschool of the Dead.pdf" ,
+        "imagenURL":"Imagenes/High School of the Dead.jpg" ,
+        "id": "51",
+        "precio":"179.90"
+    },
+
+    {
+        "titulo": "Jagaaan",
+        "autor": "Kensuke Nishida, Muneyuki Kaneshiro",
+        "generos":["+18", "Terror"],
+        "sinopsis": "El agente de policía Shintarô Jagasaki lleva una pacífica vida junto a su novia. Si todo sigue su curso, lo más probable es que acaben casándose y teniendo hijos... Un estilo de vida de lo más anodino. Hasta que un día, ¡un Fracturado se manifiesta ante él y su brazo derecho se transforma...!",
+        "rutaArchivo": "PDF/Jagaaan.pdf",
+        "imagenURL": "Imagenes/Jagaaan.jpg",
+        "id": "52",
+        "precio": "109.00"
+    },
+
+    {
+        "titulo": "Kami nomi zo Shiru Sekai",
+        "autor": "Hideyuki Kurata",
+        "generos":["Comedia", "Fantasía", "Romance", "Harem", "Vida Escolar"],
+        "sinopsis": "La historia se centra en Keima Katsuragi, un estudiante de preparatoria muy bueno en los videojuegos bishoujo, quien acepta por error un contrato para convertirse en un colaborador para atrapar espíritus prófugos del infierno. Keima ahora deberá utilizar su capacidad de análisis y experiencias en los juegos para conquistar -y así liberar- a aquellas chicas que sean contenedores de los espíritus.",
+        "rutaArchivo": "PDF/Kami nomi zo Shiru Sekai.pdf",
+        "imagenURL": "Imagenes/Kami nomi zo Shiru Sekai.jpg",
+        "id": "53",
+        "precio": "129.90"
+    },
+
+    {
+        "titulo": "Kimetsu no Yaiba",
+        "autor": "Koyoharu Gotouge",
+        "generos":["+18", "Aventura", "Acción"],
+        "sinopsis": "Tanjirou Kamado es un chico alegre y trabajador que vive felizmente junto a su familia, hasta que un fatídico día un demonio llamado Muzan irrumpe en su vida matando a sus padres y maldice a su hermana pequeña convirtiéndola en demonio. Tras este incidente, y con el propósito de vengar a sus padres y devolver a su hermana Nezuko a la normalidad, decide convertirse en un asesino de demonios. Para ello, acude en ayuda de Sakonji Urokodaki, uno de los asesinos de demonios más fuertes del mundo...　Entre samuráis, afiladas katanas, demonios y otros seres mitológicos del folclore japonés, este manga es una apuesta segura para los amantes del género.",
+        "rutaArchivo": "PDF/Kimetsu no Yaiba.pdf",
+        "imagenURL": "Imagenes/Kimetsu no Yaiba.jpg",
+        "id": "54",
+        "precio": "119.90"
+    },
+
+    {
+        "titulo": "Mirai Nikki",
+        "autor": "Sakae Esuno",
+        "generos":["+18", "Misterio", "Thriller"],
+        "sinopsis": "Yukiteru Amano es un chico que se dedica a ser un simple observador, y a anotar todo lo que pasa en su entorno en el “diario” de su teléfono, pero un día dicho diario comienza a mostrarle su futuro; él en un principio lo utiliza para beneficio propio, pero no sabe que esto es parte de un juego de supervivencia controlado por el dios del espacio y tiempo. Ahora junto con Yuno, una chica que está obsesionada con él, tratará se sobrevivir a las trampas que le han puesto los dueños de otros diarios.",
+        "rutaArchivo": "PDF/Mirai Nikki.pdf",
+        "imagenURL": "Imagenes/Mirai Nikki.jpg",
+        "id": "55",
+        "precio": "109.90"
+    },
+
+    {
+        "titulo": "Mob Psycho 100",
+        "autor": "One",
+        "generos":["Acción", "Comedia"],
+        "sinopsis": "Shigeo Kageyama, alias Mob, es un estudiante de segundo curso de secundaria que tiene una particularidad: es un psíquico. Trabaja como ayudante de Arataka Reigen, un farsante que se hace pasar por psíquico, y pasa sus tardes exorcizando malvados espíritus. Sin embargo, las dudas propias de la pubertad empiezan a asaltarle. Entre los miembros del club de telepatía y sus experiencias con una extraña religión, las emociones de Mob empiezan a estar a flor de piel.",
+        "rutaArchivo": "PDF/Mob Psycho 100.pdf",
+        "imagenURL": "Imagenes/Mob Psycho 100.jpg",
+        "id": "56",
+        "precio": "89.90"
+    },
+
+    {
+        "titulo": "One Piece",
+        "autor": "Eiichiro Oda",
+        "generos":["Acción", "Aventura", "Comedia"],
+        "sinopsis": "Esta es la gran Era Pirata. Gold Roger, el legendario \"Rey de los piratas\" ha dejado el \"One Piece\" - su legendario Tesoro - escondido en una zona del mundo llamada “GRAND LINE” y los piratas más fuertes compiten por hallarlo. Un niño llamado Luffy idolatraba a los piratas, en especial a Shanks, el líder de una tripulación que visitó su villa. Un día, por accidente, Luffy comió una “fruta del diablo” del botín de Shanks. Gracias a esa fruta, su cuerpo se ha vuelto de goma pero nunca podrá nadar. El día que los piratas abandonaron la villa, Shanks le obsequió a Luffy su mas preciada posesión: su sombrero de paja. Diez años han pasado desde ese día y Luffy ha salido al mar buscando convertirse en el nuevo \"Rey de los piratas\". ¡Aquí inicia la gran aventura de Luffy!.",
+        "rutaArchivo": "PDF/One Piece.pdf",
+        "imagenURL": "Imagenes/One Piece.jpg",
+        "id": "57",
+        "precio": "129.90"
+    },
+
+    {
+        "titulo": "Plunderer",
+        "autor": "Suu Minazuki",
+        "generos":["Acción", "Fantasía"],
+        "sinopsis": "Año 305 del calendario Alcián, el mundo se encuentra controlado por los \"numeros\". Cada ser humano que nace es marcado con un \"Contador\". Este contador puede subir con cualquier acción; ya sea la cantidad de Kilómetros recorridos, o si alguna persona dice que su comida es sabrosa. Pero si su cuenta se reduce a 0, será enviado al abismo. Antes que la cuenta de la madre de Hina llegará a 0, su ultima voluntad fue que buscara al Legendario Rey Caido...",
+        "rutaArchivo": "PDF/Plunderer.pdf",
+        "imagenURL": "Imagenes/Plunderer.jpg",
+        "id": "58",
+        "precio": "109.90"
+    },
+
+    {
+        "titulo": "Prision School",
+        "autor": "Akira Hiramoto",
+        "generos":["+18", "Ecchi", "Comedia"],
+        "sinopsis": "La escuela privada Hachimitsu para señoritas empieza a admitir varones a partir del presente año, pero solo cinco hombres se inscribieron. Entre ellos está Kiyoshi Fujino, quien se siente abrumado al estar rodeado de mujeres; aunque antes de entrar, estaba emocionado por el futuro sin saber lo que sucedería...",
+        "rutaArchivo": "PDF/Prision School.pdf",
+        "imagenURL": "Imagenes/Prision School.jpg",
+        "id": "58",
+        "precio": "99.90"
+    },
+
+    {
+        "titulo": "Sankarea",
+        "autor": "Mitsuru Hattori",
+        "generos":["Romance", "Misterio"],
+        "sinopsis": "Chihiro Furuya es un joven amante de los zombis que está destinado a encontrarse con la señorita Sanka Rea. ¡Después de conocerse por una extraña coincidencia, ambos logran hacer una poción de resurrección! ¡Así comienza la increíble historia de amor y putrefacción de nuestra protagonista, quien ahora es una chica zombi!",
+        "rutaArchivo": "PDF/Sankarea.pdf",
+        "imagenURL": "Imagenes/Sankarea.jpg",
+        "id": "59",
+        "precio": "129.90"
+    },
+
+    {
+        "titulo": "SAO Phantom Bullet",
+        "autor": "Reki Kawahara",
+        "generos":["Acción"],
+        "sinopsis": "Ha pasado un año desde el \"incidente SAO\". El espadachín negro, Kirito, también conocido como Kazuto Kirigaya, atiende un llamado por parte del oficial de gobierno Seijiro Kikuoka. Este le pide ayuda para investigar un incidente que está ocurriendo en el VRMMO Gun Gale Online: los jugadores que reciben disparos, aparecen muertos en la realidad.\"Este es un juego con el que no se juega\". Akihito Kayaba\"El escenario donde se desarrolla este juego es Aincrad, un castillo que flota en el cielo azul.\" \"El NerveGear\", creado en el año 2022, volvió tangible la realidad virtual. ¡Comenzar enlace.\" Kirito",
+        "rutaArchivo": "PDF/SAO Phantom Bullet.pdf",
+        "imagenURL": "Imagenes/SAO Phantom Bullet.jpg",
+        "id": "60",
+        "precio": "99.90"
+    },
+
+    {
+        "titulo": "Shingeki no Kyojin",
+        "autor": "Hajime Isayama",
+        "generos":["Acción","Drama"],
+        "sinopsis": "Hace varios cientos de años, los titanes casi exterminaron a los humanos. Los titanes suelen tener varios pisos de altura, parecen no tener inteligencia, devoran seres humanos y, lo peor de todo, parecen hacerlo por placer más que como fuente de alimento. Un pequeño porcentaje de la humanidad sobrevivió al amurallarse en una ciudad protegida por muros extremadamente altos, incluso más altos que el más grande de los Titanes. Avance al presente y el distrito sur de Shinganshina no ha visto un Titán en más de 100 años. El adolescente Eren y su hermana adoptiva Mikasa son testigos de algo horrible cuando uno de los muros exteriores del distrito es dañado por un Titán de 60 metros (196,85 pies) que causa una brecha en el muro. Mientras los Titanes más pequeños inundan la ciudad, los dos niños ven con horror los trágicos eventos que siguen, mientras los Titanes devoran a la gente sin ser molestados. Eren jura que acabará con todos los titán y se vengará de toda la humanidad.",
+        "rutaArchivo": "PDF/Shingeki no Kyojin.pdf",
+        "imagenURL": "Imagenes/Shingeki no Kyojin.jpg",
+        "id": "61",
+        "precio": "129.90"
+    },
+
+    {
+        "titulo": "Shingeki no Kyojin",
+        "autor": "Hajime Isayama",
+        "generos":["Acción","Drama"],
+        "sinopsis": "Hace varios cientos de años, los titanes casi exterminaron a los humanos. Los titanes suelen tener varios pisos de altura, parecen no tener inteligencia, devoran seres humanos y, lo peor de todo, parecen hacerlo por placer más que como fuente de alimento. Un pequeño porcentaje de la humanidad sobrevivió al amurallarse en una ciudad protegida por muros extremadamente altos, incluso más altos que el más grande de los Titanes. Avance al presente y el distrito sur de Shinganshina no ha visto un Titán en más de 100 años. El adolescente Eren y su hermana adoptiva Mikasa son testigos de algo horrible cuando uno de los muros exteriores del distrito es dañado por un Titán de 60 metros (196,85 pies) que causa una brecha en el muro. Mientras los Titanes más pequeños inundan la ciudad, los dos niños ven con horror los trágicos eventos que siguen, mientras los Titanes devoran a la gente sin ser molestados. Eren jura que acabará con todos los titán y se vengará de toda la humanidad.",
+        "rutaArchivo": "PDF/Shingeki no Kyojin.pdf",
+        "imagenURL": "Imagenes/Shingeki no Kyojin.jpg",
+        "id": "62",
+        "precio": "149.90"
+    },
+
+    {
+        "titulo": "Sousou no Frieren",
+        "autor": "Kanehito Yamada, Abe Tsukasa",
+        "generos":["Aventuras", "Drama", "Fantasia"],
+        "sinopsis": "Frieren es miembro del grupo del héroe que derrotó al rey demonio. Tanto maga como elfa, hay algo que la separa de los otros tres miembros.",
+        "rutaArchivo": "PDF/Sousou no Frieren.pdf",
+        "imagenURL": "Imagenes/Sousou no Frieren.jpg",
+        "id": "63",
+        "precio": "99.90"
+    },
+
+    {
+        "titulo": "Spy x Family",
+        "autor": "Endo Tatsuya",
+        "generos":["Comedia", "Acción"],
+        "sinopsis": "El habíl espía Tasogare se dedicaba diariamente a cumplir misiones especiales por un mundo mejor. Un día recibe un complicado desafio... Su deber es crear una familia falsa y comenzar una nueva vida para poder cumplir la misión, ¿¡pero...!? ¡¡Un Espía × Acción × Comedia de una familia peculiarl!",
+        "rutaArchivo": "PDF/Spy x Family.pdf",
+        "imagenURL": "Imagenes/Spy x Family.jpg",
+        "id": "64",
+        "precio": "109.90"
+    },
+    
+    {
+        "titulo": "Tensei Shitar Slime Datta Ken",
+        "autor": "Fuse",
+        "generos":["Aventura", "Fantasía", "Comedia"],
+        "sinopsis": "Un hombre que al tratar de salvar a su compañero de trabajo y su novia fue apuñalado por un ladrón que escapaba. Mientras moría desangrado escuchó una voz extraña. Esta voz escuchó su lamento de haber muerto virgen y a causa de eso le dio la Habilidad Única \"Gran Sabio\" ¿Fue esto una burla? Ahora él ha reencarnado como un Slime en otro mundo, ¿Será este el inicio de una emocionante aventura?",
+        "rutaArchivo": "PDF/Tensei Shitar Slime Datta Ken.pdf",
+        "imagenURL": "Imagenes/Tensei Shitar Slime Datta Ken.jpg",
+        "id": "65",
+        "precio": "119.90"
+    },
+
+    {
+        "titulo": "The Promised Neverland",
+        "autor": "Kaiu Shirai",
+        "generos":["+18","Triller", "Misterio", "Terror"],
+        "sinopsis": "Emma, Norman y Ray son tres huérfanos que viven felices en el idílico orfanato Grace Field House, esperando el momento en el que se les asignará una familia adoptiva. Todo cambia cuando descubren accidentalmente la horrorosa realidad de su existencia, así que deciden rebelarse y luchar hasta las últimas consecuencias en una oscura y aterradora aventura. Pero su tiempo se acaba…",
+        "rutaArchivo": "PDF/The Promised Neverland.pdf",
+        "imagenURL": "Imagenes/The Promised Neverland.jpg",
+        "id": "66",
+        "precio": "119.90"
+    },
+
+    {
+        "titulo": "Trinity Seven",
+        "autor": "Kenki Saitou",
+        "generos":["+18", "Aventura", "Harem"],
+        "sinopsis": "Un sol negro brilla sobre el cielo de Tokio, y solo Arata Kasuga parece darse cuenta. En un instante, su vida diaria, junto con su prima Hijiri, se esfuma. Una extraña magia llamada “fenómeno de ruptura” destruye la ciudad y Hijiri desaparece frente a los ojos de Arata. Para buscarla, Arata se inscribe a la Real Academia de Magia Biblia, donde debe buscar a las Trinity Seven, ¡las siete hechiceras más poderosas y hermosas del mundo!",
+        "rutaArchivo": "PDF/Trinity Seven.pdf",
+        "imagenURL": "Imagenes/Trinity Seven.jpg",
+        "id": "67",
+        "precio": "89.90"
+    },
+
+    {
+        "titulo": "Twin Star Exorcist",
+        "autor": "Yoshiaki Sukeno",
+        "generos":["Acción", "Romance","Drama"],
+        "sinopsis": "Los \"Exorcistas de las Estrellas Gemelas\" están destinados a producir el niño profetizado que pondrá fin a la guerra con el monstruoso Kegare ... Pero, ¿podrán Rokuro y Benio llevarse bien durante cinco minutos, y mucho menos salvar el mundo?",
+        "rutaArchivo": "PDF/Trinity Seven.pdf",
+        "imagenURL": "Imagenes/Trinity Seven.jpg",
+        "id": "67",
+        "precio": "89.90"
     }
+
 ]
