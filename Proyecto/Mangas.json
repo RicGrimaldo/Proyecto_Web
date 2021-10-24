@@ -146,8 +146,7 @@
     {
         "titulo":"Delivery of the dead",
         "autor":"Yusuke Hiro" ,
-        "generos": ["18+","comedia", "drama", "ecchi", "gore", "horror" 
-        ],
+        "generos": ["18+","comedia", "drama","gore", "horror"],
         "sinopsis":"Bienvenido a un mundo donde los muertos vivientes se pueden comprar por un precio que rasca cualquier picor que tengas. Ya sea sexual o no, estas chicas te tienen cubierto.",
         "rutaArchivo": "PDF/Delivery of the dead.pdf",
         "imagenURL": "Imagenes/Delivery of the dead.jpg",
@@ -469,7 +468,7 @@
     {
         "titulo":"Shumatsu no Harem",
         "autor":"Kotaro Shono" ,
-        "generos": ["+18", "Harem", "Ecchi"],
+        "generos": ["+18", "Harem"],
         "sinopsis":"El virus Man-Killer: una enfermedad letal que ha erradicado el 99.9% de la población masculina del mundo. Mizuhara Reito ha estado en el sueño criogénico durante los últimos cinco años, dejando atrás a Tachibana Erisa, la chica de sus sueños. Cuando Reito despierta de la congelación emerge en un nuevo mundo enloquecido por el sexo donde él mismo es recurso más preciado del planeta. Reito y otros cuatro hombres se dan vidas de lujo y una misión simple: ¡repoblar el mundo impregnando tantas mujeres como sea posible! Todo lo que Reito quiere, sin embargo, es encontrar a su amada Erisa que desapareció hace tres años. ¿Puede Reito resistir la tentación y encontrar su único amor verdadero?",
         "rutaArchivo":"PDF/Shumatsu no Harem.pdf" ,
         "imagenURL":"Imagenes/Shuumatsu no harem.jpg" ,
@@ -490,7 +489,7 @@
     {
         "titulo":"Parallel Paradise",
         "autor":"Lynn Okamoto" ,
-        "generos": ["+18", "Fantasia", "Harem", "Ecchi"],
+        "generos": ["+18", "Fantasia", "Harem"],
         "sinopsis":"Un mundo de espadas y hechicería de mujeres acaba de convocar a su único hombre humano: ¡un estudiante desconcertado de la Tierra! Tada Youta, un joven aparentemente normal con experiencia en artes marciales, tiene su vida trastornada cuando una criatura aterradora lo arrastra a otro mundo. Se sorprende al encontrarse en una tierra con castillos y dragones y lunas de colores en el cielo, ¡donde los únicos humanos que deambulan son mujeres! Youta no solo es el primer hombre en este mundo durante siglos, sino que su toque puede activar un poderoso deseo dentro de las mujeres que lo rodean. Guiado a esta extraña tierra nueva por un hermoso paladín, ¡Youta está a punto de embarcarse en su última aventura de fantasía!",
         "rutaArchivo":"PDF/Parallel Paradise.pdf" ,
         "imagenURL":"Imagenes/Parallel paradise.jpg" ,
@@ -512,7 +511,7 @@
     {
         "titulo":"Kaifuku Jutsushi no Yarinaoshi",
         "autor":"Rui Tsukiyo" ,
-        "generos": ["+18", "Harem", "Fantasia", "Ecchi"],
+        "generos": ["+18", "Harem", "Fantasia"],
         "sinopsis":"Yo había determinado que los magos sanadores sólo son capaces de sanar. Yo había admitido que son una existencia que no puede hacer nada por sí mismos. No pueden luchar si no confían en alguien, y porque son ese tipo de existencia, son explotados por otros. Siendo explotado repetidamente, he llegado a este punto, y para cuando me di cuenta de mi error, era demasiado tarde. Mi vida había terminado. Por eso voy a empezar de nuevo. Así, utilizando la magia curativa en el mundo mismo para retroceder cuatro años, decidí rehacer todo.",
         "rutaArchivo":"PDF/Kaifuku Jutsushi no Yarinaoshi.pdf" ,
         "imagenURL":"Imagenes/Kaifuku.jpg" ,
@@ -523,7 +522,7 @@
     {
         "titulo":"Desuraba",
         "autor":"Kazutaka, Tomohiro Kai" ,
-        "generos": ["+18", "Ecchi", "Misterio"],
+        "generos": ["+18","Misterio"],
         "sinopsis":"Nuestro protagonista, Fujishirou Kousuke, es un chico de secundaria antipático y poco sociable. Desde que era chico, su amiga de la infancia, Sayaka, le prometió que cuando crecieran ambos contraerían matrimonio.Un día, Kousuke es secuestrado y llevado a un lugar totalmente fuera de lo común, parecido a una prisión... pero lo que no sabe, es que ésta \"prisión\" la resguardan mujeres... muy voluptuosas.¿Podrá Kousuke mantenerse virgen para poder cumplir la promesa?",
         "rutaArchivo":"PDF/Desuraba.pdf" ,
         "imagenURL":"Imagenes/Desuraba.jpg" ,
@@ -765,12 +764,90 @@
     {
         "titulo": "Prision School",
         "autor": "Akira Hiramoto",
-        "generos":["+18", "Ecchi", "Comedia"],
+        "generos":["+18","Comedia"],
         "sinopsis": "La escuela privada Hachimitsu para señoritas empieza a admitir varones a partir del presente año, pero solo cinco hombres se inscribieron. Entre ellos está Kiyoshi Fujino, quien se siente abrumado al estar rodeado de mujeres; aunque antes de entrar, estaba emocionado por el futuro sin saber lo que sucedería...",
         "rutaArchivo": "PDF/Prision School.pdf",
         "imagenURL": "Imagenes/Prision School.jpg",
         "id": "69",
         "precio": "99.90"
+    },
+
+    {
+        "titulo":"Tsumuji Magari x Spring",
+        "autor":"Yumeno Tanuki" ,
+        "generos": ["18+","comedia","romance","sobrenatural"],
+        "sinopsis":"Esta es una misteriosa fuente termal donde se reúnen los Yokia de todo Japón. ¡¿Izumi Onsui, un estudiante de primer año de secundaria, se reúne con una chica Yokai en una fuente termal dirigida por su difunto abuelo...?",
+        "rutaArchivo":"PDF/Tsumuji Magari x Spring.pdf",
+        "imagenURL": "Imagenes/img_Tsumuji Magari x Spring.jpg",
+        "id": "70",
+        "precio": "99.99"
+    },
+
+    {
+        "titulo":"Shimakaze Tsumujikaze no Shoujo ",
+        "autor":"Yamazaki Kazuma" ,
+        "generos": ["acción","comedia"],
+        "sinopsis":"El mundo está en un estado de aislamiento. La causa se ​​debe a misteriosas entidades de aguas profundas que la marina ha apodado la Flota del Mar Profundo. Negarse a sentarse de brazos cruzados y dejar que la Flota del Mar Profundo tiene su manera, todos los países del mundo unen sus recursos para hacer una nueva arma para luchar contra ellos ... un arma que es comparable en potencia a la de un acorazado .. . y su nombre es: Las chicas de la Flota.",
+        "rutaArchivo":"PDF/Shimakaze Tsumujikaze no Shoujo.pdf",
+        "imagenURL":"Imagenes/img_Shimakaze Tsumujikaze no Shoujo.jpg",
+        "id":"71",
+        "precio": "99.99"
+    },
+
+    {
+        "titulo":"Kangoku Jikken",
+        "autor":"Kantetsu" ,
+        "generos": ["18+","drama","horror","misterio","tragedia"],
+	"sinopsis":"Eyama Aito, un estudiante de secundaria, es una víctima de acoso u hostigamiento diario. Un día, le llega una extraña carta invitándole a un Juego de Cautiverio. Él puede elegir a una persona para mantenerla cautiva durante un mes con la oportunidad de ganar una gran cantidad de dinero. Él elige a la cabecilla de sus matones: Aya Kirishima. ¡Y la única regla del juego es NO matarla, todo lo demás es juego limpio! ¡La venganza de Eyama comienza!",
+        "rutaArchivo":"PDF/Kangoku Jikken.pdf",
+        "imagenURL":"Imagenes/img_Kangoku Jikken.jpg",
+        "id":"72",
+        "precio": "119.99"
+    },
+
+    {
+        "titulo":"Sinner",
+        "autor":"Kye" ,
+        "generos": ["tragedia","accion","drama"],
+        "sinopsis":"Los bebés son escaneados al nacer, y se encuentra su probabilidad de ser criminal en un futuro. Todo está bien si no están inclinados criminalmente. Sin embargo, si sus números son demasiado arriesgados, se eliminan de la sociedad. Para muchos, un grupo de pecadores es una causa de ruptura de corazón que ahora está luchando por su derecho a intentarlo y no solo a ser etiquetado al nacer",
+        "rutaArchivo":"PDF/Sinner.pdf",
+        "imagenURL":"Imagenes/img_Sinner.jpg",
+        "id":"73",
+        "precio": "99.99"
+    },
+
+    {
+        "titulo":"Tokyo Undead",
+        "autor":"SHIGEO NAKAYAMA" ,
+        "generos": ["18+","gore","tragedia","horror"],
+	"sinopsis":"Después de que un agente patógeno creado por el hombre conocido como el virus K se libera accidentalmente de los Laboratorios Fieldwar en el corazón de Tokio, la ciudad es invadida por zombis devoradores de carne. Con la esperanza de salvar a los últimos supervivientes de este apocalipsis, una organización conocida como Madara envía a su miembro novato en un último esfuerzo para encontrar una cura.",
+        "rutaArchivo":"PDF/Tokyo Undead.pdf",
+        "imagenURL":"Imagenes/img_Tokyo Undead.jpg",
+        "id":"74",
+        "precio": "119.99"
+    },
+
+    {
+        "titulo":"Yagate Kimi ni Naru",
+        "autor":"Nakatani Nio" ,
+        "generos": ["drama","recuentos de vida","romance"],
+        "sinopsis":"Un amor especial que sea capaz de elevarte y a la vez hacerte sentir cálida, todo eso es lo que busca Koito Yuu. Con el nuevo año escolar comenzando y uniéndose como ayudante del Consejo Estudiantil, aprenderá todo lo que significa tener a una persona especial en su vida gracias a Nanami Touko, una misteriosa y popular chica que casualmente también está dentro del Consejo.",
+        "rutaArchivo":"PDF/Yagate Kimi ni Naru.pdf",
+        "imagenURL":"Imagenes/img_Yagate Kimi ni Naru",
+        "id":"75",
+        "precio": "79.99"
+    },
+
+    
+    {
+        "titulo":"Risou no Himo Seikatsu",
+        "autor":"Watanabe Tsunehiko" ,
+        "generos": ["18+","comedia","romance","fantasía"],
+        "sinopsis":"Invocado por una hermosa mujer en un mundo diferente, a Yamai Zenjiro se le pide que se case con ella y tengan un hijo. ¿Dejara aun lado su vida en su mundo para vivir a expensas de una hermosa mujer?",
+        "rutaArchivo":"PDF/Risou no Himo Seikatsu.pdf",
+        "imagenURL":"Imagenes/img_Risou no Himo Seikatsu.jpg",
+        "id":"76",
+        "precio": "119.99"
     }
 
 ]
