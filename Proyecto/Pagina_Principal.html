@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="PrincipalCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                touch: true,
+                pauseOnAction: false,
+                pauseOnHover: false,
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="contenedor1">
+
+        <div class="lateral1">
+            <div class="imagen1">
+                <img src="Img Separador/publicidad.jpg" alt="">
+            </div>
+
+            <div class="imagen2">
+                <img src="Img Separador/publicidad3.jpg" alt="">
+            </div>
+        </div>
+        <div class="contenedor2">
+
+            <div class="contenedor3">
+                <div class="slider">
+                    <div class="flexslider">
+                        <!-- <h1>Top Ventas</h1>-->
+                        <h1>Conoce más</h1>
+                        <ul class="slides" id="cards-slide">
+
+                            <li id="slide">
+                                <img src="Imagenes/20th Century Boys.jpg" alt="" id="img-slide">
+                                <div class="flex-caption">
+                                    <p id="titulo-slide">20th Century Boys</p>
+                                </div>
+                                <div class="flex-caption-descripcion">
+                                    <p id="sinopsis-slide"> En esta historia conoceremos a Kenji, el encargado de una
+                                        pequeña tienda de conveniencia, quien se encarga de criar a Kanna, la bebé que
+                                        su hermana dejó antes de desaparecer. Un día, Kenji encuentra en la calle un
+                                        misterioso símbolo que cree conocer de algún lado, y que se relaciona con la
+                                        organización secreta de un tal "Amigo". Mientras tanto, una ola de sangrientos
+                                        crímenes ocurre en Tokio. ¡Ayuda a Kenji a resolver este misterio!
+                                    </p>
+                                </div>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <template id="template-card-slide">
+                <li id="slide">
+                    <img src="" alt="" id="img-slide">
+                    <div class="flex-caption">
+                        <p id="titulo-slide"></p>
+                    </div>
+                    <div class="flex-caption-descripcion">
+                        <p id="sinopsis-slide"> </p>
+                    </div>
+                </li>
+
+
+            </template>
+
+
+            <div class="catalogo_productos">
+                <div class="title_catalogo">
+                    <h1>Nuevos Lanzamientos</h1>
+                </div>
+
+                <div class="row" id="cards"></div>
+
+            </div>
+
+
+            <template id="template-card">
+
+                <div class="card">
+                    <div class="imagen">
+                        <img src="" alt="" class="" id="imagen-card">
+                    </div>
+                    <div class="card-body">
+                        <div class="name" id="titulo-card-div">
+                            <p id="titulo-card">Precio</p>
+                        </div>
+                        <div class="precio" id="precio-card"></div>
+
+                    </div>
+                </div>
+
+            </template>
+
+
+
+
+
+            <div class="imagen_Separador">
+                <img src="Img Separador/Imagen_Separador3.png" alt="">
+
+            </div>
+
+
+
+            <div class="contenedor4">
+                <div class="titulo">
+                    <h1>Recomendacion del Dia</h1>
+                </div>
+                <div class="imagen">
+
+                    <img src="Imagenes/Katekyo Hitman Reborn.jpg" alt="">
+
+                </div>
+                <div class="texto">
+                    <h1>Katekyo Hitman Reborn!</h1>
+                    <p>Todos los compañeros de Tsuna lo consideran un perdedor: es malo en los estudios, en los deportes
+                        y con las mujeres… Lo que nadie sabía es que él es el heredero legítimo del liderazgo de los
+                        Vongola, una familia mafiosa. Reborn llega para entrenar a Tsuna para que pueda cumplir con su
+                        destino. Aunque Reborn parece un bebé, es un sicario de primer nivel que no dudará en poner en
+                        peligro la vida de Tsuna para educarlo.</p>
+                    <button class="type3">
+                        Comprar Ahora
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="imagen_separador"></div>
+            <div class="recomendacion_dia">
+                <div class="titulo">
+
+                </div>
+                <div class="imagen"></div>
+                <div class="texto"></div>
+            </div>
+
+        </div>
+
+
+
+        <div class="lateral2">
+
+            <aside class="trending" style="width: 100%;">
+                <div class="LoMasVisto">
+                    <h2>Lo Mas Visto</h2>
+                </div>
+                <div class="contenido">
+                    <ul class="list">
+
+                        <li>
+                            <a href="#">One Piece</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Overlord</a>
+                        </li>
+
+                        <li>
+                            <a href="#">One punch Man</a>
+                        </li>
+                        <li>
+                            <a href="#">Kaijuu No 8</a>
+                        </li>
+                        <li>
+                            <a href="#">High Score Girl</a>
+                        </li>
+                        <li>
+                            <a href="#">Hatsukoi Zombie</a>
+                        </li>
+                        <li>
+                            <a href="#">Dragon Ball</a>
+                        </li>
+
+                        <li>
+                            <a href="#"> K-on!</a>
+                        </li>
+                        <li>
+                            <a href="#">Bakuman</a>
+                        </li>
+                        <li>
+                            <a href="#">Isekai Ojisan</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+
+
+
+    </div>
+
+
+    <button id="btnCambiarOscuro">Cambiar a modo oscuro</button>
+
+    <script src="cards.js"></script>
+
+
+
+</body>
+
+</html>
