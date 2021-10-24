@@ -133,6 +133,6 @@ const descargarPDF = objeto => {
 };
 
 //  Para agregar la clase que cambia al modo oscuro
-btnCambiarOscuro.addEventListener('click', function(){
-    document.body.classList.toggle('dark');
-});
+// btnCambiarOscuro.addEventListener('click', function(){
+//     document.body.classList.toggle('dark');
+// });

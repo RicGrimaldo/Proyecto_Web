@@ -4,7 +4,7 @@ const fragment = document.createDocumentFragment();
 const btnPagar = document.getElementById('precioTotal');
 const btnVaciarCarrito = document.getElementById('btnVaciar');
 const btnQuitarSeleccion = document.getElementById('btnQuitarSeleccion');
-const btnCambiarOscuro = document.getElementById('btnCambiarOscuro');
+// const btnCambiarOscuro = document.getElementById('btnCambiarOscuro');
 var precioTotal = 0;
 var seleccion = false;
 let biblioteca = [];
@@ -244,6 +244,6 @@ btnVaciarCarrito.addEventListener('click', function(){
 })
 
 //  Para agregar o quitar la clase dark al body 
-btnCambiarOscuro.addEventListener('click', function(){
-    document.body.classList.toggle('dark');
-});
+// btnCambiarOscuro.addEventListener('click', function(){
+//     document.body.classList.toggle('dark');
+// });
