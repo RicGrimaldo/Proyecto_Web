@@ -653,17 +653,6 @@
     },
 
     {
-        "titulo": "Prision School",
-        "autor": "Akira Hiramoto",
-        "generos":["+18", "Ecchi", "Comedia"],
-        "sinopsis": "La escuela privada Hachimitsu para señoritas empieza a admitir varones a partir del presente año, pero solo cinco hombres se inscribieron. Entre ellos está Kiyoshi Fujino, quien se siente abrumado al estar rodeado de mujeres; aunque antes de entrar, estaba emocionado por el futuro sin saber lo que sucedería...",
-        "rutaArchivo": "PDF/Prision School.pdf",
-        "imagenURL": "Imagenes/Prision School.jpg",
-        "id": "58",
-        "precio": "99.90"
-    },
-
-    {
         "titulo": "Sankarea",
         "autor": "Mitsuru Hattori",
         "generos":["Romance", "Misterio"],
@@ -769,8 +758,19 @@
         "sinopsis": "Los \"Exorcistas de las Estrellas Gemelas\" están destinados a producir el niño profetizado que pondrá fin a la guerra con el monstruoso Kegare ... Pero, ¿podrán Rokuro y Benio llevarse bien durante cinco minutos, y mucho menos salvar el mundo?",
         "rutaArchivo": "PDF/Trinity Seven.pdf",
         "imagenURL": "Imagenes/Trinity Seven.jpg",
-        "id": "67",
+        "id": "68",
         "precio": "89.90"
-    }
+    },
+
+    {
+        "titulo": "Prision School",
+        "autor": "Akira Hiramoto",
+        "generos":["+18", "Ecchi", "Comedia"],
+        "sinopsis": "La escuela privada Hachimitsu para señoritas empieza a admitir varones a partir del presente año, pero solo cinco hombres se inscribieron. Entre ellos está Kiyoshi Fujino, quien se siente abrumado al estar rodeado de mujeres; aunque antes de entrar, estaba emocionado por el futuro sin saber lo que sucedería...",
+        "rutaArchivo": "PDF/Prision School.pdf",
+        "imagenURL": "Imagenes/Prision School.jpg",
+        "id": "69",
+        "precio": "99.90"
+    },
 
 ]
