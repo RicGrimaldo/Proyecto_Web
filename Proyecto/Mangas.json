@@ -716,6 +716,103 @@
         "imagenURL":"Imagenes/img_Yagate Kimi ni Naru.jpg",
         "id":"64",
         "precio": "79.99"
+    },
+
+    {
+        "titulo": "Tokyo revengers",
+        "autor": "Ken Wakui",
+        "generos": [
+            "acción","Comedia romántica","drama","escolar","ciencia ficcion"
+        ],
+        "sinopsis": "Takemichi Hanagaki es un desempleado de 26 años que se entera de que la chica llamada Tachibana Hinata, más conocida como Hina, con la que salía en la escuela secundaria ha muerto. Pero sucede un accidente y regresa en el tiempo a sus años de secundaria donde era un delincuente. Él jura que cambiará el futuro y logrará salvar a la chica que era su novia.   ",
+        "rutaArchivo": "PDF/Tokyo Revengers",
+        "imagenURL": "Imagenes/Tokyo Revengers.jpg",
+        "id": "65",
+        "precio": "150.90"
+    },
+    {
+        "titulo": "Death note",
+        "autor": "Tsugumi Oba",
+        "generos": [
+            "misterio", "sobrenatural","thriller" 
+        ],
+        "sinopsis": "Light Yagami es un joven estudiante que un día encuentra un cuaderno llamado Death Note que tiene una macabra propiedad: si el nombre de una persona aparece escrito en él, morirá. Light decide, entonces, embarcarse en una misión para librar al mundo de todos los criminales. Sin embargo, su plan empieza a torcerse cuando L, un brillante detective, intenta descifrar el misterio que rodea a todas estas muertes.",
+        "rutaArchivo": "PDF/Death note.pdf",
+        "imagenURL": "Imagenes/Death note.jpg",
+        "id": "66",
+        "precio": "89.90"
+    },
+    {
+        "titulo": "Neon Genesis Evangelion",
+        "autor": "Hideaki Anno",
+        "generos": [
+            "ciencia ficción","filosófico","psicológico", "horror cósmico","misterio","suspenso","biopunk","mecha", "post-apocaliptico" 
+        ],
+        "sinopsis": "La historia de la obra se da lugar en un mundo futurista en el que una organización paramilitar llamada NERV protege a la humanidad de los ataques de seres de origen y naturaleza desconocidos, los «Ángeles», utilizando para ello bio mechas humanoides llamados Evangelion (acortado a EVA).",
+        "rutaArchivo": "PDF/Neon Genesis Evangelion.pdf",
+        "imagenURL": "Imagenes/Neon Genesis Evangelion.jpg",
+        "id": "67",
+        "precio": "129.00"
+    },
+    {
+        "titulo": "Sword Art Online",
+        "autor": "Reki Kawahara",
+        "generos": [
+            "accón","videojuegos","aventura","ciencia ficcion","drama","fantasía","romance"
+        ],
+        "sinopsis": "Es el año 2022, y se esta lanzando al mercado un nuevo videojuego, que se va a jugar a través del sistema online, y en formato de realidad virtual, el cual tiene por nombre Sword Art Online (SAO). El mismo se usa a través de un casco que tiene por nombre NerveGear, con el cual los cinco sentidos del jugador comienzan a ser estimulados, y los jugadores podrán sentir y experimentar lo que están haciendo los personajes del juego a través de sus mentes.",
+        "rutaArchivo": "PDF/SAO.pdf",
+        "imagenURL": "Imagenes/SAO.jpg",
+        "id": "68",
+        "precio": "99.90"
+    },
+    {
+        "titulo": "Another",
+        "autor": "Yukito Ayatsuji",
+        "generos": [
+            "horror","misterio","thriller","psicológico"
+        ],
+        "sinopsis": "En la primavera de 1998, Koichi de 15 años de edad, se va al extranjero a vivir con su tía Reiko Mikami (Ai Kato), que vive en una región montañosa. No mucho tiempo después de que él va a vivir con su tía, cae en un ataque de neumotórax y lo internan en un hospital local. Un día, en el ascensor en el hospital, Koichi conoce a una chica bonita que llevaba un uniforme y un parche en el ojo. Koichi sólo la mira fijamente.",
+        "rutaArchivo": "PDF/Another.pdf",
+        "imagenURL": "Imagenes/Another.jpg",
+        "id": "69",
+        "precio": "119.00"
+    },
+    {
+        "titulo": "Beastars",
+        "autor": "Paru Itagaki",
+        "generos": [
+            "drama","recuentos de vida"
+        ],
+        "sinopsis": "En un mundo donde donde los carnívoros y herbívoros conviven. Si bien comer carne se considera un delito grave, se produce un -caso de depredación- en el que un estudiante es asesinado en la prestigiosa Academia Cherryton, que es un internado. En la Academia gira la ansiedad y Legoshi el lobo gris, que al contrario de lo que sugiere su \"gran cuerpo\" y sus \"colmillos afilados\" vive en silencio y sin llamar la atención. Sin embargo, el encuentro con una pequeña estudiante coneja llamada Hal, sacude el corazón de Legoshi.",
+        "rutaArchivo": "PDF/Beastars.pdf",
+        "imagenURL": "Imagenes/Beastars.jpg",
+        "id": "70",
+        "precio": "109.00"
+    },
+    {
+        "titulo": "Bungou Stray Dogs",
+        "autor": "Kafka Asagiri",
+        "generos": [
+            "acción","comedia","misterio","sobrenatural"
+        ],
+        "sinopsis": "La Agencia Armada de Detectives investiga una serie de suicidios extraños aparentemente relacionados a una bruma inexplicable.",
+        "rutaArchivo": "PDF/Bungou Stray Dogs.pdf",
+        "imagenURL": "Imagenes/Bungou Stray Dogs.jpg",
+        "id": "71",
+        "precio": "89.90"
+    },
+    {
+        "titulo": "Koe no Katachi",
+        "autor": "Yoshitoki Oima",
+        "generos": [
+            "drama","recuentos de vida"
+        ],
+        "sinopsis": "La historia gira en torno a Shouko Nishimiya, una estudiante de primaria que tiene problemas auditivos. Se traslada a una nueva escuela, donde es acosada por sus compañeros de clase, especialmente Shouya Ishida. Llega al punto en que se traslada a otra escuela y, como resultado, Shouya es excluido y acosado a sí mismo, sin amigos de los que hablar y sin planes para el futuro. Determinado a corregir sus errores, cinco años después, Shouya, ahora un solitario de tercer año de secundaria, se encuentra con Shouko nuevamente. Así comienza la historia del camino de un joven a la redención.",
+        "rutaArchivo": "PDF/Koe no katachi.pdf",
+        "imagenURL": "Imagenes/Koe no katachi.png",
+        "id": "72",
+        "precio": "79.00"
     }
 
 ]
