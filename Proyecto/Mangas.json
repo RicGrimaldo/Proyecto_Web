@@ -813,6 +813,45 @@
         "imagenURL": "Imagenes/Koe no katachi.jpg",
         "id": "72",
         "precio": "79.00"
+    },
+
+    {
+        "titulo": "Horimiya",
+        "autor": "HERO",
+        "generos": [
+            "drama","recuentos de vida", "comedia", "romance"
+        ],
+        "sinopsis": "Hori puede parecer como una adolescente normal, pero ella es una persona completamente diferente después de la escuela. En ausencia de sus padres, que son adictos al trabajo, Hori ha sido como una madre para su hermano pequeño desde niña. Entre el cuidado de su hermano y el trabajo doméstico, Hori no tiene mucho tiempo para una vida social de una adolescente normal. Un día, conoce a otra persona que tampoco muestra su verdadero yo en la escuela: un chico tranquilo y con gafas llamado Miyamura. Ella había asumido que era aficionado a los libros, y posiblemente un otaku, pero Hori no podria estar tan errara. Fuera de la escuela, Miyamura es un chico agradable con numerosos piercings, y no es muy bueno en lo académico. Ahora los dos tienen alguien con quien puedan compartir las dos mitades ocultas de su vida!",
+        "rutaArchivo": "PDF/Horimiya.pdf",
+        "imagenURL": "Imagenes/Horimiya.jpg",
+        "id": "73",
+        "precio": "129.00"
+    },
+
+    {
+        "titulo": "Re : Zero kara Hajimeru Isekai Seikatsu",
+        "autor": "Tappei Nagatsuki",
+        "generos": [
+            "drama","acción", "fantasía", "psicológico", "terror"
+        ],
+        "sinopsis": "Subaru Natsuki fue transportado a un mundo como de videojuego cuando salía de una tienda de abarrotes. Subaru no tiene madera de héroe, pero sabe que en los mundos mágicos todos los personajes tienen algún superpoder, así que trata de descubrir cuál es su habilidad especial luchando contra unos bandidos, pero. Parece que en este mundo sigue siendo solo un vago pobretón. Sin embargo, una bella media-elfa lo rescata y como agradecimiento Subaru le ayuda a encontrar una insignia robada. Logran seguir una pista, pero ambos son asesinados por un desconocido y, cuando todo parece haber terminado. ¡Subaru vuelve a la vida y aparece en el mismo lugar donde se encontraba cuando llegó por primera vez en ese mundo extraño! Por supuesto, cree que todavía está a tiempo para evitar que su heroína muera, pero el tiempo también parece haber reiniciado y esta vez solo consigue conocer a la asesina antes de morir de nuevo. ¡Y revivir en el mismo lugar donde apareció por primera vez en ese mundo extraño!",
+        "rutaArchivo": "PDF/Re Zero.pdf",
+        "imagenURL": "Imagenes/Re Zero.jpg",
+        "id": "74",
+        "precio": "99.00"
+    },
+
+    {
+        "titulo": "Yojo Senki",
+        "autor": "Tappei Nagatsuki",
+        "generos": [
+            "acción", "fantasía", "fantasía", "militar"
+        ],
+        "sinopsis": "Tanya Degurechaff tiene el aspecto de una pequeña niña inocente. Sin embargo, es un ejecutivo japonés ateo que ha sido reencarnado en un mundo alternativo mágico en una época parecida a la Primera Guerra Mundial alternativa en el cuerpo de una niña luego de pelearse con un misterioso ser \"X\" que dice ser Dios. Tanya nace huérfana y reside en un orfanato los primeros años de su vida, hasta que se le da la oportunidad de hacer una prueba de detección de magia, al conocer las grandes habilidades de la niña en este campo, es sacada del orfanato para ser reclutada por el ejército del país en el que vive, el denominado Imperio, con el tiempo, el objetivo de Tanya será poder vivir una vida tranquila en este nuevo mundo, pero las cosas no saldrán como ella espera.",
+        "rutaArchivo": "PDF/Yojo Senki.pdf",
+        "imagenURL": "Imagenes/Yojo Senki.png",
+        "id": "75",
+        "precio": "129.90"
     }
 
 ]
