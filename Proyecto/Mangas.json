@@ -9,6 +9,7 @@
         "rutaArchivo": "PDF/Akame Ga Kill.pdf",
         "imagenURL": "Imagenes/Akame.jpg",
         "id": "1",
+        "status":"new",
         "precio": "109.00"
     },
     {
@@ -21,6 +22,7 @@
         "rutaArchivo": "PDF/K-on.pdf",
         "imagenURL": "Imagenes/Kon.jpg",
         "id": "2",
+        "status":"new",
         "precio": "89.90"
     },
     {
@@ -220,6 +222,7 @@
         "rutaArchivo": "PDF/Act Age.pdf",
         "imagenURL": "Imagenes/Act Age.jpg",
         "id": "19",
+        "status":"new",
         "precio": "189.90"
     },
 
@@ -286,6 +289,7 @@
         "rutaArchivo": "PDF/Go Tobun no Hanayome.pdf",
         "imagenURL": "Imagenes/Go Toubun no Hanayome.jpg",
         "id": "25",
+        "status":"new",
         "precio": "109.00"
     },
 
@@ -341,6 +345,7 @@
         "rutaArchivo":"PDF/Isekai Ojisan.pdf" ,
         "imagenURL":"Imagenes/Isekai ojisan.jpg" ,
         "id": "30",
+        "status":"new",
         "precio":"99.90"
     },
     
@@ -429,6 +434,7 @@
         "rutaArchivo":"PDF/Chainsaw Man.pdf" ,
         "imagenURL":"Imagenes/Chainsaw Man.jpg" ,
         "id": "38",
+        "status":"new",
         "precio":"99.90"
     },
     
@@ -539,6 +545,7 @@
         "rutaArchivo": "PDF/Mob Psycho 100.pdf",
         "imagenURL": "Imagenes/Mob Psycho 100.jpg",
         "id": "48",
+        "status":"new",
         "precio": "89.90"
     },
 
@@ -561,6 +568,7 @@
         "rutaArchivo": "PDF/Sankarea.pdf",
         "imagenURL": "Imagenes/Sankarea.jpg",
         "id": "50",
+        "status":"new",
         "precio": "129.90"
     },
 
@@ -800,6 +808,7 @@
         "rutaArchivo": "PDF/Bungou Stray Dogs.pdf",
         "imagenURL": "Imagenes/Bungou Stray Dogs.jpg",
         "id": "71",
+        "status":"new",
         "precio": "89.90"
     },
     {
