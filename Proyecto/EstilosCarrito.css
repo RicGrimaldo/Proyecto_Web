@@ -26,6 +26,12 @@ body{
     transition: all 300ms;
 }
 
+.botonesCabeceraCarrito{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    float: right;
+}
+
 h1:hover{
     letter-spacing: 1px;
 }
@@ -104,6 +110,21 @@ h1:hover{
 
     .card:hover, body.dark .card:hover{
         transform: scale(1.01);
+    }
+}
+
+@media only screen and (max-width:435px){
+    .botonesCabeceraCarrito{
+        flex-direction: column-reverse;
+    }
+    .btn-Total{
+        font-size: 10px;
+        padding: 3px 5px;
+        margin: 0.5px;
+        right: 0;
+    }
+    .card-body h5, .card-body p, .card-body button{
+        font-size: 16px;
     }
 }
 
