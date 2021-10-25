@@ -1,0 +1,61 @@
+    @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Rubik', sans-serif;
+    }
+
+html, body {
+    min-height: 100%;
+}
+
+body{
+    background:linear-gradient(#88a7d0af,#CAECF1);
+}
+
+h1 {
+    color: #15466b;
+    transition: all 300ms;
+    border-left: 6px solid #264969;
+    background:linear-gradient(to right,#88a7d0af,#CAECF1);
+    border-radius: 0px 0px 5px 5px;
+}
+
+h1:hover{
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width:768px){
+    h1{
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    h1{
+        font-size: 27px;
+    }
+}
+
+/*Modo nocturno*/
+body.dark {
+    background:linear-gradient(#081324,#040912);
+}
+
+
+body.dark h1 {
+    color: #62abe7;
+    transition: all 300ms;
+    border-left: 6px solid #264969;
+    background:linear-gradient(to right,#081324,#040912);
+    border-radius: 0px 0px 5px 5px;
+}
+
+body.dark .card{
+    background-color: #132547;
+    border-radius: 10px;
+    transition: all 300ms;
+    color: #bfdfff;
+}
