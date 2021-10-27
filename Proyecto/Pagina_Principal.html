@@ -18,13 +18,11 @@
             });
         });
     </script>
-
-
+    <script src="prueba.js"></script>
 </head>
 
 <body>
     <div class="contenedor1">
-
         <div class="lateral1">
             <div class="imagen1">
                 <img src="Img Separador/publicidad.jpg" alt="">
@@ -33,43 +31,113 @@
             <div class="imagen2">
                 <img src="Img Separador/publicidad3.jpg" alt="">
             </div>
+
+            <div class="imagen3">
+                <img src="Img Separador/publicidad2.jpg" alt="">
+            </div>
+
+
+
         </div>
+
         <div class="contenedor2">
 
             <div class="contenedor3">
-                <div class="slider">
-                    <div class="flexslider">
-                        <!-- <h1>Top Ventas</h1>-->
-                        <h1>Conoce más</h1>
-                        <ul class="slides" id="cards-slide">
 
-                            <li id="slide">
-                                <img src="Imagenes/20th Century Boys.jpg" alt="" id="img-slide">
-                                <div class="flex-caption">
-                                    <p id="titulo-slide">20th Century Boys</p>
-                                </div>
-                                <div class="flex-caption-descripcion">
-                                    <p id="sinopsis-slide"> En esta historia conoceremos a Kenji, el encargado de una
-                                        pequeña tienda de conveniencia, quien se encarga de criar a Kanna, la bebé que
-                                        su hermana dejó antes de desaparecer. Un día, Kenji encuentra en la calle un
-                                        misterioso símbolo que cree conocer de algún lado, y que se relaciona con la
-                                        organización secreta de un tal "Amigo". Mientras tanto, una ola de sangrientos
-                                        crímenes ocurre en Tokio. ¡Ayuda a Kenji a resolver este misterio!
-                                    </p>
-                                </div>
+                <div class="flexslider">
+                    <h1>Descúbre</h1>
+                    <ul class="slides" id="cards-slide">
+
+                        <li id="slide">
+                            <a href="compra.html" id="referencia_slide1">
+                                <img src="Imagenes/20th Century Boys.jpg" alt="" id="img-slide1">
+                            </a>
+                            <div class="flex-caption" id="titulo-slide1">
+                                <h1 id="titulo1">20th Century Boys</h1>
+                            </div>
+                            <div class="flex-caption-descripcion">
+                                <p id="sinopsis-slide"> En esta historia conoceremos a Kenji, el encargado de una
+                                    pequeña tienda de conveniencia, quien se encarga de criar a Kanna, la bebé que
+                                    su hermana dejó antes de desaparecer. Un día, Kenji encuentra en la calle un
+                                    misterioso símbolo que cree conocer de algún lado, y que se relaciona con la
+                                    organización secreta de un tal "Amigo". Mientras tanto, una ola de sangrientos
+                                    crímenes ocurre en Tokio. ¡Ayuda a Kenji a resolver este misterio!</p>
+                            </div>
+
+                        </li>
+                        <li id="slide">
+                            <a href="compra.html" id="referencia_slide2">
+                                <img src="Imagenes/Nichijou.jpg" alt="" id="img-slide2">
+                            </a>
+                            <div class="flex-caption" id="titulo-slide2">
+                                <h1 id="titulo2">Nichijou</h1>
+                            </div>
+                            <div class="flex-caption-descripcion">
+                                <p id="sinopsis-slide">La serie sigue las vidas de un grupo de estudiantes y su escuela.
+                                    Aparecen varios elementos absurdos, como una chica robótica creada por una
+                                    científica de 8 años, un chico que conduce una cabra para ir al instituto con su
+                                    mayordomo, una chica que puede conseguir armas de fuego de la nada, un gato que
+                                    habla y un viejo director que es un luchador experto. A pesar de esto, los
+                                    estudiantes siguen llevando vidas normales.
+
+                                </p>
+                            </div>
+
+                        </li>
 
 
-                            </li>
+                        <li id="slide">
+                            <a href="compra.html" id="referencia_slide3">
+                                <img src="Imagenes/Spy x Family.jpg" alt="" id="img-slide3">
+                            </a>
+                            <div class="flex-caption" id="titulo-slide3">
+                                <h1 id="titulo3">Spy x Family</h1>
+                            </div>
+                            <div class="flex-caption-descripcion">
+                                <p id="sinopsis-slide">El habíl espía Tasogare se dedicaba diariamente a cumplir
+                                    misiones especiales por un mundo mejor. Un día recibe un complicado desafio... Su
+                                    deber es crear una familia falsa y comenzar una nueva vida para poder cumplir la
+                                    misión, ¿¡pero...!? ¡¡Un Espía × Acción × Comedia de una familia peculiarl!
 
-                        </ul>
-                    </div>
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li id="slide">
+                            <a href="compra.html" id="referencia_slide4">
+                                <img src="Imagenes/One Punch Man.jpg" alt="" id="img-slide4">
+                            </a>
+                            <div class="flex-caption" id="titulo-slide">
+                                <h1 id="titulo4">One Punch Man</h1>
+                            </div>
+                            <div class="flex-caption-descripcion">
+                                <p id="sinopsis-slide">¡Sigue la vida de un héroe promedio que gana todas sus peleas con
+                                    un solo puño! Esto le causa un montón de frustración, ahora ya no siente la
+                                    adrenalina y la emoción de una dura pelea. Tal vez ese riguroso entrenamiento para
+                                    volverse fuerte no valió la pena. Después de todo, ¿qué tiene de bueno tener un
+                                    poder tan aplastante?
+
+
+                                </p>
+                            </div>
+
+                        </li>
+
+
+
+
+                    </ul>
                 </div>
 
-            </div>
 
+            </div>
+            <!--
             <template id="template-card-slide">
                 <li id="slide">
-                    <img src="" alt="" id="img-slide">
+                    <a href="" id="referencia_slide">
+                        <img src="" alt="" id="img-slide">
+                    </a>
                     <div class="flex-caption">
                         <p id="titulo-slide"></p>
                     </div>
@@ -77,36 +145,32 @@
                         <p id="sinopsis-slide"> </p>
                     </div>
                 </li>
-
-
             </template>
-
+-->
 
             <div class="catalogo_productos">
                 <div class="title_catalogo">
                     <h1>Nuevos Lanzamientos</h1>
                 </div>
-
                 <div class="row" id="cards"></div>
-
+                <!--Contiene la tarjetas de los status new-->
             </div>
 
 
             <template id="template-card">
-
-                <div class="card">
-                    <div class="imagen">
-                        <img src="" alt="" class="" id="imagen-card">
-                    </div>
-                    <div class="card-body">
-                        <div class="name" id="titulo-card-div">
-                            <p id="titulo-card">Precio</p>
+                <a href="compra.html">
+                    <div class="card" id="referencia">
+                        <div class="imagen">
+                            <img src="" id="imagen-card" class="imagen-catalogo">
                         </div>
-                        <div class="precio" id="precio-card"></div>
+                        <div class="card-body">
+                            <div class="name" id="titulo-card">
+                            </div>
+                            <div class="precio" id="precio-card"></div>
 
+                        </div>
                     </div>
-                </div>
-
+                </a>
             </template>
 
 
@@ -130,30 +194,30 @@
 
                 </div>
                 <div class="texto">
-                    <h1>Katekyo Hitman Reborn!</h1>
-                    <p>Todos los compañeros de Tsuna lo consideran un perdedor: es malo en los estudios, en los deportes
-                        y con las mujeres… Lo que nadie sabía es que él es el heredero legítimo del liderazgo de los
-                        Vongola, una familia mafiosa. Reborn llega para entrenar a Tsuna para que pueda cumplir con su
-                        destino. Aunque Reborn parece un bebé, es un sicario de primer nivel que no dudará en poner en
-                        peligro la vida de Tsuna para educarlo.</p>
-                    <button class="type3">
-                        Comprar Ahora
-                    </button>
+                    <div class="titulo" id="titulo_recom">
+                        <h1 id="tt">Katekyo Hitman Reborn!</h1>
+                    </div>
+
+                    <div class="parrafo">
+                        <p>Todos los compañeros de Tsuna lo consideran un perdedor: es malo en los estudios, en los
+                            deportes
+                            y con las mujeres… Lo que nadie sabía es que él es el heredero legítimo del liderazgo de los
+                            Vongola, una familia mafiosa. Reborn llega para entrenar a Tsuna para que pueda cumplir con
+                            su
+                            destino. Aunque Reborn parece un bebé, es un sicario de primer nivel que no dudará en poner
+                            en
+                            peligro la vida de Tsuna para educarlo.</p>
+                    </div>
+
+                    <div class="button-div">
+                        <a class="type3" id="boton_estilo" href="compra.html">  Ver Ahora </a>
+                    </div>
                 </div>
 
-            </div>
 
-            <div class="imagen_separador"></div>
-            <div class="recomendacion_dia">
-                <div class="titulo">
-
-                </div>
-                <div class="imagen"></div>
-                <div class="texto"></div>
             </div>
 
         </div>
-
 
 
         <div class="lateral2">
@@ -166,37 +230,57 @@
                     <ul class="list">
 
                         <li>
-                            <a href="#">One Piece</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top1">One Piece</h4>
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#">Overlord</a>
+                            <a href="compra.html" id="topp" class="topp">
+                                <h4 id="top2">Overlord</h4>
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#">One punch Man</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top3">Yojo Senki</h4>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Kaijuu No 8</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top4">Kaiju NO 8</h4>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">High Score Girl</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top5">High Score Girl</h4>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Hatsukoi Zombie</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top6">Hatsukoi Zombie</h4>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Dragon Ball</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top7">Dragon Ball</h4>
+                            </a>
                         </li>
 
                         <li>
-                            <a href="#"> K-on!</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top8">Fire Force</h4>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Bakuman</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top9">Houseki no kuni</h4>
+                            </a>
                         </li>
                         <li>
-                            <a href="#">Isekai Ojisan</a>
+                            <a href="compra.html" id="top">
+                                <h4 id="top10">Another</h4>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -205,13 +289,12 @@
         </div>
 
 
-
     </div>
 
 
     <button id="btnCambiarOscuro">Cambiar a modo oscuro</button>
 
-    <script src="cards.js"></script>
+    <script src="Principal_Scripts.js"></script>
 
 
 
