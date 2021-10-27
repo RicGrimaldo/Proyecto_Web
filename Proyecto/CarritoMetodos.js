@@ -63,7 +63,6 @@ const llenarCarrito = function(datos){
                             item.id, item.precio);
         carrito.push(nuevoManga);
     }
-    console.log(carrito);
 };
 
 
@@ -199,7 +198,6 @@ cards.addEventListener('click', e =>{
 //  Cuando se le haga click al botón, mandamos todo el elemento padre a setbiblioteca
 const addbiblioteca = e =>{
     if(e.target.classList.contains('btn-dark')){
-        console.log(e.target.parentElement);
         setbiblioteca(e.target.parentElement);
     }
     //Detener cualquier posible evento de cards
@@ -229,7 +227,6 @@ const setbiblioteca = objeto => {
 
         //  Hacemos una copia del producto
         biblioteca.push({...manga});
-        console.log(biblioteca);
     }
 
 };

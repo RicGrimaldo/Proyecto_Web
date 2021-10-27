@@ -105,7 +105,6 @@ btnAgregarCarrito.addEventListener('click', function() {
         if(localStorage.getItem('carrito')) {
             carrito = JSON.parse(localStorage.getItem('carrito'));
             carrito.push(manga);
-            console.log(carrito);
             localStorage.setItem('carrito',JSON.stringify(carrito));
         }
         else{
@@ -214,7 +213,6 @@ const descargarPDF = function(){
         icon: 'success',
         title: '¡'+manga.titulo+' se ha descargado con éxito!'
     })
-    console.log(manga.rutaArchivo);
 
     //  Para descargar el manga y no vuelva a poder ser descargado
     axios({

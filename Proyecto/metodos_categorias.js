@@ -61,7 +61,6 @@ const almacenarMangas = function(datos){
                             item.id, item.precio);
         mangas.push(nuevoManga);
     }
-    console.log(mangas);
 }
 
 const pintarCards = function(datos){
@@ -187,7 +186,6 @@ card_aventura.addEventListener('click', e =>{
 
 const cartaMangaClick = e =>{
     if(e.target.classList.contains('card-img')){
-        console.log(e.target.parentElement);
         mandarMangaSeleccionado(e.target.parentElement);
     }
     //Detener cualquier posible evento de cards
