@@ -5,11 +5,10 @@ const btnCambiarOscuro = document.getElementById('btnCambiarOscuro');
 let biblioteca = [];
 let descargados = [];
 
-function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id) {
+function Manga(titulo, autor, generos, rutaArchivo, imagenURL, id) {
     this.titulo = titulo;
     this.autor = autor;
     this.generos = generos;
-    this.rangoEdad = rangoEdad;
     this.rutaArchivo = rutaArchivo;
     this.imagenURL = imagenURL;
     this.id = id;

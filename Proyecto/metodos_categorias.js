@@ -24,7 +24,7 @@ const fragment_misterio = document.createDocumentFragment();
 const fragment_sobrenatural = document.createDocumentFragment();
 const fragment_aventura = document.createDocumentFragment();
 
-
+const mangas = [];
 
 function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, precio) {
     this.titulo = titulo;
@@ -38,7 +38,6 @@ function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, pre
 }
 document.addEventListener('DOMContentLoaded', function() {
     leerDatos();
-   
 });
 
 const leerDatos = async() => {
@@ -47,11 +46,23 @@ const leerDatos = async() => {
         if (this.readyState == 4 && this.status == 200) {
             let datos = JSON.parse(this.responseText);
             pintarCards(datos);
+            almacenarMangas(datos);
         }
     };
-    xhttp.open("GET", "NewMangas_Data.json");
+    xhttp.open("GET", "Mangas.json");
     xhttp.send();
 };
+
+const almacenarMangas = function(datos){
+    for(item of datos){
+        nuevoManga = new Manga(item.titulo, item.autor, 
+                            item.generos, item.sinopsis,
+                            item.rutaArchivo, item.imagenURL, 
+                            item.id, item.precio);
+        mangas.push(nuevoManga);
+    }
+    console.log(mangas);
+}
 
 const pintarCards = function(datos){
 
@@ -130,4 +141,64 @@ const pintarCards = function(datos){
     
 };
 
+card_comedia.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_drama.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_accion.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_fantasia.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_recuentos.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_romance.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_horror.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_tragedia.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_misterio.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_sobrenatural.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_aventura.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+const cartaMangaClick = e =>{
+    if(e.target.classList.contains('card-img')){
+        console.log(e.target.parentElement);
+        mandarMangaSeleccionado(e.target.parentElement);
+    }
+    //Detener cualquier posible evento de cards
+    e.stopPropagation();
+}
+
+const mandarMangaSeleccionado = objeto =>{
+    let manga = mangas.find(manga => manga.imagenURL === objeto.querySelector('img').getAttribute('src'));
+    
+    if(manga){
+        localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));
+    }
+}
 

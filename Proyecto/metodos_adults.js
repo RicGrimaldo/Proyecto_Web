@@ -3,7 +3,6 @@ const card_gore = document.getElementById('cat_gore')
 const card_drama = document.getElementById('cat_drama');
 const card_romance = document.getElementById('cat_romance');
 const card_horror = document.getElementById('cat_horror');
-const card_ecchi = document.getElementById('cat_ecchi');
 const card_tragedia = document.getElementById('cat_tragedia');
 
 const templateCard = document.getElementById('template-card').content;
@@ -13,12 +12,9 @@ const fragment_gore = document.createDocumentFragment();
 const fragment_drama = document.createDocumentFragment();
 const fragment_romance = document.createDocumentFragment();
 const fragment_horror = document.createDocumentFragment();
-const fragment_ecchi = document.createDocumentFragment();
 const fragment_tragedia = document.createDocumentFragment();
 
-
-
-
+const mangas = [];
 
 function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, precio) {
     this.titulo = titulo;
@@ -32,7 +28,6 @@ function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, pre
 }
 document.addEventListener('DOMContentLoaded', function() {
     leerDatos();
-   
 });
 
 const leerDatos = async() => {
@@ -41,11 +36,24 @@ const leerDatos = async() => {
         if (this.readyState == 4 && this.status == 200) {
             let datos = JSON.parse(this.responseText);
             pintarCards(datos);
+            almacenarMangas(datos);
         }
     };
-    xhttp.open("GET", "NewMangas_Data.json");
+    xhttp.open("GET", "Mangas.json");
     xhttp.send();
 };
+
+const almacenarMangas = function(datos){
+    for(item of datos){
+        nuevoManga = new Manga(item.titulo, item.autor, 
+                            item.generos, item.sinopsis,
+                            item.rutaArchivo, item.imagenURL, 
+                            item.id, item.precio);
+        mangas.push(nuevoManga);
+    }
+    console.log(mangas);
+}
+
 
 const pintarCards = function(datos){
 
@@ -70,10 +78,6 @@ const pintarCards = function(datos){
                     const clone3 = templateCard.cloneNode(true);
                     fragment_gore.appendChild(clone3);
                 }
-                if(item.generos[i].toString().toLowerCase()=="ecchi"){
-                   const clone4 = templateCard.cloneNode(true);
-                   fragment_ecchi.appendChild(clone4);
-                }
                 if(item.generos[i].toString().toLowerCase()=="romance"){
                     const clone6 = templateCard.cloneNode(true);
                     fragment_romance.appendChild(clone6);
@@ -89,8 +93,6 @@ const pintarCards = function(datos){
 
             }
 
-        }else{
-            
         }
 
  
@@ -99,10 +101,51 @@ const pintarCards = function(datos){
     card_comedia.appendChild(fragment_comedia);
     card_drama.appendChild(fragment_drama);
     card_gore.appendChild(fragment_gore);
-    card_ecchi.appendChild(fragment_ecchi);
     card_romance.appendChild(fragment_romance);
     card_horror.appendChild(fragment_horror);
     card_tragedia.appendChild(fragment_tragedia);
 
     
 };
+
+card_comedia.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_drama.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_gore.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+
+card_romance.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_horror.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+card_tragedia.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
+const cartaMangaClick = e =>{
+    if(e.target.classList.contains('card-img')){
+        console.log(e.target.parentElement);
+        mandarMangaSeleccionado(e.target.parentElement);
+    }
+    //Detener cualquier posible evento de cards
+    e.stopPropagation();
+}
+
+const mandarMangaSeleccionado = objeto =>{
+    let manga = mangas.find(manga => manga.imagenURL === objeto.querySelector('img').getAttribute('src'));
+    
+    if(manga){
+        localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));
+    }
+}

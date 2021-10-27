@@ -8,14 +8,13 @@ const btnQuitarSeleccion = document.getElementById('btnQuitarSeleccion');
 var precioTotal = 0;
 var seleccion = false;
 let biblioteca = [];
-const carrito = [];
+let carrito = [];
 
 //  Objeto de tipo manga
-function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id, precio) {
+function Manga(titulo, autor, generos, rutaArchivo, imagenURL, id, precio) {
     this.titulo = titulo;
     this.autor = autor;
     this.generos = generos;
-    this.rangoEdad = rangoEdad;
     this.rutaArchivo = rutaArchivo;
     this.imagenURL = imagenURL;
     this.id = id;
@@ -24,9 +23,21 @@ function Manga(titulo, autor, generos, rangoEdad, rutaArchivo, imagenURL, id, pr
 
 //  Método cuando se carga el DOM
 document.addEventListener('DOMContentLoaded', function() {
-    leerDatos();
+    // leerDatos();
     if(localStorage.getItem('biblioteca')) {
         biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
+    }
+    if(localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'));
+        pintarCards();
+        cargarDatos();
+    } else{
+        Swal.fire({
+            icon: 'warning',
+            title: '¡No tienes nada agregado al carrito!',
+            showConfirmButton: false,
+            footer: '<a href="Categorias_Main.html" class="btn">Ir a categorías</a>'
+        })
     }
 });
 
@@ -46,12 +57,12 @@ const leerDatos = async() => {
 };
 
 //  Se pintan los templates (cartas) a partir de los mangas leídos del JSON
-const pintarCards = function(datos){
-    for(let item of datos){
-        templateCard.querySelector('h5').textContent = item.titulo;
-        templateCard.querySelector('p').textContent = "$"  + item.precio;
-        templateCard.querySelector('img').setAttribute('src', item.imagenURL);
-        templateCard.querySelector('.btn-dark').dataset.id = item.id;
+const pintarCards = function(){
+    for(var i = 0; i < carrito.length; i++){
+        templateCard.querySelector('h5').textContent = carrito[i].titulo;
+        templateCard.querySelector('p').textContent = "$"  + carrito[i].precio;
+        templateCard.querySelector('img').setAttribute('src', carrito[i].imagenURL);
+        templateCard.querySelector('.btn-dark').dataset.id = carrito[i].id;
         const clone = templateCard.cloneNode(true);
         fragment.appendChild(clone);
     }
@@ -110,30 +121,64 @@ btnPagar.addEventListener('click', function(){
 
 //  Este método será modificado, pues una vez se compren los mangas, ya no deberían aparecer en la página del carrito
 const vaciarComprados = function(){
-    Swal.fire({
-        text: '¿Deseas realizar tu compra?',
-        title: "Total a pagar: $"+precioTotal.toFixed(2),
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#419641',
-        cancelButtonColor: '#d33',
-        cancelButtonText: "Cancelar",
-        confirmButtonText: 'Confirmar'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire({
-                title: '¡Compra realizada!',
-                text: '¡Gracias por tu compra!',
-                icon: 'success',
-                confirmButtonColor: '#419641',
-                confirmButtonText: 'Entendido',
-                footer: '<a href="Biblioteca.html" class="btn">Ir a mi biblioteca</a>'
-            })
-            //  El array de biblioteca se almacena en localStorage para ser recuperado por la página de Biblioteca
+    if(precioTotal > 0){
+        Swal.fire({
+            text: '¿Deseas realizar tu compra?',
+            title: "Total a pagar: $"+precioTotal.toFixed(2),
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#419641',
+            cancelButtonColor: '#d33',
+            cancelButtonText: "Cancelar",
+            confirmButtonText: 'Confirmar'
+        }).then((result) => {
+            quitarMangasComprados();
+                //  El array de biblioteca se almacena en localStorage para ser recuperado por la página de Biblioteca
             localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
-        }
-    })
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: '¡Compra realizada!',
+                    text: '¡Gracias por tu compra!',
+                    icon: 'success',
+                    confirmButtonColor: '#419641',
+                    confirmButtonText: 'Entendido',
+                    footer: '<a href="Biblioteca.html" class="btn">Ir a mi biblioteca</a>'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.location.reload();
+                    }
+                })
+            }
+        })
+    }else{
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500
+        })
+        Toast.fire({
+            icon: 'warning',
+            title: '¡No tienes ningún manga seleccionado!'
+        })
+    }
 };
+
+const quitarMangasComprados = function(){
+    for(var i = 0; i < biblioteca.length; i++){
+        for(var j = 0; j < carrito.length; j++){
+            if(JSON.stringify(biblioteca[i]) == JSON.stringify(carrito[j])){
+                removeItemFromArr(carrito[j]);
+                console.log(carrito);
+            }
+        }
+        if(carrito.length > 0){
+            localStorage.setItem('carrito',JSON.stringify(carrito));
+        }else{
+            localStorage.removeItem('carrito');
+        }
+    }
+}
 
 //  Método en el que el usuario decide quitar la selección de mangas a comprar
 btnQuitarSeleccion.addEventListener('click', function(){
@@ -181,6 +226,7 @@ cards.addEventListener('click', e =>{
 //  Cuando se le haga click al botón, mandamos todo el elemento padre a setbiblioteca
 const addbiblioteca = e =>{
     if(e.target.classList.contains('btn-dark')){
+        console.log(e.target.parentElement);
         setbiblioteca(e.target.parentElement);
     }
     //Detener cualquier posible evento de cards
@@ -239,9 +285,16 @@ btnVaciarCarrito.addEventListener('click', function(){
                 confirmButtonText: 'Entendido'
             })
             carrito = [];
+            localStorage.removeItem('carrito');
+            document.location.reload();
         }
     })
-})
+});
+
+var removeItemFromArr = ( manga ) => {
+    var i = carrito.indexOf( manga );
+    i !== -1 && carrito.splice( i, 1 );
+};
 
 // const btnSwitch = document.querySelector("#switchb");
 
