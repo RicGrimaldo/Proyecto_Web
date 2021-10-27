@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         pintarCard(mangaSeleccionado);
         insertDatos(mangaSeleccionado);
-        //  En caso de que el manga ya haya sido descargado, se actualizará el botón
-        if(localStorage.getItem('Descargados')){
-            descargados = JSON.parse(localStorage.getItem('Descargados'));
-            cargarDescargado();
+        //  En caso de que haya elementos en la biblioteca, se verificará si el manga actual está almacenado allí
+        if(localStorage.getItem('biblioteca')){
+            biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
+            cargarAgregadoBiblioteca();
         }
     } else{
         Swal.fire({
@@ -53,7 +53,7 @@ const buscarEnCarrito = function(mangaSeleccionado){
         btnAgregarCarrito.style.backgroundColor =  "#419641";
         btnAgregarCarrito.innerText =  "Añadido al carrito";
         btnAgregarCarrito.disabled = false;
-        btnAgregarCarrito.style.cursor = 'default';
+        btnAgregarCarrito.cursor = 'default';
     }
 }
 
@@ -78,18 +78,41 @@ const insertDatos = function(mangaSeleccionado){
     }
 }
 
+const cargarAgregadoBiblioteca = function(){
+    var existe = biblioteca.find(item => item.titulo === manga.titulo);
+    if(existe){
+        var padre1 = btnCompra.parentNode;
+        var nuevoBoton = document.createElement("button");
+        nuevoBoton.setAttribute('id','btnDescargar');
+        nuevoBoton.setAttribute('class','btn btn-primary btn-lg');
+        nuevoBoton.innerText = 'Descargar';
+        padre1.appendChild(nuevoBoton);
+        nuevoBoton.addEventListener('click', function(){
+            descargarPDF();
+        })
+        padre1.removeChild(btnCompra);
+        //  Se remueve el botón de añadir al carrito
+        var padre = btnAgregarCarrito.parentNode;
+        padre.removeChild(btnAgregarCarrito);
+        //  En caso de que el manga ya haya sido descargado, se actualizará el botón
+        if(localStorage.getItem('Descargados')){
+            descargados = JSON.parse(localStorage.getItem('Descargados'));
+            cargarDescargado();
+        }
+    }
+}
+
 //  Método para cambiar el botón en caso de que el manga ya haya sido descargado
 const cargarDescargado = function(){
     var existe = descargados.find(item => item.titulo === manga.titulo);
     if(existe){
-        padre = btnAgregarCarrito.parentNode;
-        padre.removeChild(btnAgregarCarrito);
-        btnCompra.style.borderRadius = '50px';
-        btnCompra.style.color = 'white';
-        btnCompra.innerText =  "Descargado";
-        btnCompra.disabled = false;
-        btnCompra.style.cursor = 'default';
-        btnCompra.className = 'btn-success' + ' btn ' + ' btn-lg';
+        var btnDescargar = document.getElementById('btnDescargar');
+        btnDescargar.style.borderRadius = '50px';
+        btnDescargar.style.color = 'white';
+        btnDescargar.innerText =  "Descargado";
+        btnDescargar.className = 'btn-success' + ' btn ' + ' btn-lg';
+        btnDescargar.id = "btnDescargado";
+        btnDescargar.cursor = 'default';
     }
 }
 
@@ -130,19 +153,26 @@ btnCompra.addEventListener('click', function(){
             confirmButtonText: 'Confirmar'
         }).then((result) => {
             //  Cambia el estilo del botón
-            removerMangaCarrito();
-            btnCompra.style.borderRadius = '50px';
-            btnCompra.style.color = 'white';
-            btnCompra.innerText =  "Descargado";
-            btnCompra.disabled = false;
-            btnCompra.className = 'btn-success' + ' btn ' + ' btn-lg';
-            btnCompra.style.cursor = 'default';
+            // btnCompra.style.borderRadius = '50px';
+            // btnCompra.style.color = 'white';
+            // btnCompra.innerText =  "Descargar";
+            // btnCompra.className = 'btn-success' + ' btn ' + ' btn-lg';
+            // btnCompra.id = "btnDescargar";
             if (result.isConfirmed) {
+                removerMangaCarrito();
+                var padre1 = btnCompra.parentNode;
+                var nuevoBoton = document.createElement("button");
+                nuevoBoton.setAttribute('id','btnDescargar');
+                nuevoBoton.setAttribute('class','btn btn-primary btn-lg');
+                nuevoBoton.innerText = 'Descargar';
+                padre1.appendChild(nuevoBoton);
+                nuevoBoton.addEventListener('click', function(){
+                    descargarPDF();
+                })
+                padre1.removeChild(btnCompra);
                 //  Se remueve el botón de añadir al carrito
                 padre = btnAgregarCarrito.parentNode;
                 padre.removeChild(btnAgregarCarrito);
-                //  Se descarga el pdf del respectivo manga
-                descargarPDF();
                 Swal.fire({
                     title: '¡Compra realizada!',
                     text: '¡Gracias por tu compra!',
@@ -152,28 +182,13 @@ btnCompra.addEventListener('click', function(){
                     footer: '<a href="Biblioteca.html" class="btn btn-primary">Ir a mi biblioteca</a>'
                 })
             }
-            //  Primero, se verifica si ya existe un array de descargados
-            if(localStorage.getItem('Descargados')) {
+            if(localStorage.getItem('biblioteca')){
                 biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
-                descargados = JSON.parse(localStorage.getItem('Descargados'));
                 biblioteca.push(manga);
-                descargados.push(manga);
-                localStorage.setItem('Descargados',JSON.stringify(descargados));
                 localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
-            }
-            else{   //  Caso en el que no hayan descargados pero sí biblioteca
-                if(localStorage.getItem('biblioteca')){
-                    biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
-                    biblioteca.push(manga);
-                    descargados.push(manga);
-                    localStorage.setItem('Descargados',JSON.stringify(descargados));
-                    localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
-                }else{  //  Caso que no hayan ni descargados ni mangas en la biblioteca
-                    biblioteca.push(manga);
-                    descargados.push(manga);
-                    localStorage.setItem('Descargados',JSON.stringify(descargados));
-                    localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
-                }
+            }else{  //  Caso que no hayan ni descargados ni mangas en la biblioteca
+                biblioteca.push(manga);
+                localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
             }
         })
     }
@@ -197,6 +212,12 @@ const removerMangaCarrito = function(){
 
 //  Método para descargar el pdf del manga
 const descargarPDF = function(){
+    var btnDescargar = document.getElementById('btnDescargar');
+    btnDescargar.style.borderRadius = '50px';
+    btnDescargar.style.color = 'white';
+    btnDescargar.innerText =  "Descargado";
+    btnDescargar.className = 'btn-success' + ' btn ' + ' btn-lg';
+    btnDescargar.id = "btnDescargado";
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -230,4 +251,13 @@ const descargarPDF = function(){
             link.click();
             document.body.removeChild(link);
         })
+
+    if(localStorage.getItem('Descargados')) {
+            descargados = JSON.parse(localStorage.getItem('Descargados'));
+            descargados.push(manga);
+            localStorage.setItem('Descargados',JSON.stringify(descargados));
+    }else{
+        descargados.push(manga);
+        localStorage.setItem('Descargados',JSON.stringify(descargados));
+    }
 }
