@@ -23,14 +23,10 @@ function Manga(titulo, autor, generos, rutaArchivo, imagenURL, id, precio) {
 
 //  Método cuando se carga el DOM
 document.addEventListener('DOMContentLoaded', function() {
-    // leerDatos();
-    if(localStorage.getItem('biblioteca')) {
-        biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
-    }
+    //  Sólo se cargará la página si hay mangas almacenados en el carrito
     if(localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'));
         pintarCards();
-        cargarDatos();
     } else{
         Swal.fire({
             icon: 'warning',
@@ -39,22 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
             footer: '<a href="Categorias_Main.html" class="btn">Ir a categorías</a>'
         })
     }
+    if(localStorage.getItem('biblioteca')) {
+        biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
+        quitarMangasComprados();
+    }
 });
-
-//  Se leen los datos del JSON
-const leerDatos = async() => {
-    const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            let datos = JSON.parse(this.responseText);
-            pintarCards(datos);
-            llenarCarrito(datos);
-            cargarDatos();
-        }
-    };
-    xhttp.open("GET", "Mangas.json");
-    xhttp.send();
-};
 
 //  Se pintan los templates (cartas) a partir de los mangas leídos del JSON
 const pintarCards = function(){
@@ -81,23 +66,6 @@ const llenarCarrito = function(datos){
     console.log(carrito);
 };
 
-//  En caso de que los mangas ya hayan sido comprados, aparecerá el botón como agregado
-//  NOTA: Esto se reemplazará por que ya no aparezcan, pues se supone que una vez comprados ya no deben aparecer
-const cargarDatos = function(){
-    var botones = document.getElementsByClassName('btn-dark btn');
-    for(var i = 0; i < botones.length; i++){
-        var btn = botones[i];
-        for(var j = 0; j < biblioteca.length; j++){
-            if(biblioteca[j].id == btn.dataset.id){
-                btn.style.backgroundColor =  "#419641";
-                btn.innerText =  "Agregado";
-                btn.disabled = false;
-                precioTotal += eval(biblioteca[j].precio);
-                btnPagar.innerHTML = "Pagar: $"+precioTotal.toFixed(2);
-            }
-        }
-    }
-};
 
 //  Evento cuando se haga click al botón de pagar
 btnPagar.addEventListener('click', function(){
@@ -114,7 +82,7 @@ btnPagar.addEventListener('click', function(){
         })
         Toast.fire({
             icon: 'warning',
-            title: '¡No tienes nada agregado a la biblioteca!'
+            title: '¡No tienes ningún manga seleccionado!'
         })
     }
 });
@@ -164,21 +132,26 @@ const vaciarComprados = function(){
     }
 };
 
+//  Para quitar los mangas comprados del array del carrito
 const quitarMangasComprados = function(){
     for(var i = 0; i < biblioteca.length; i++){
         for(var j = 0; j < carrito.length; j++){
             if(JSON.stringify(biblioteca[i]) == JSON.stringify(carrito[j])){
                 removeItemFromArr(carrito[j]);
-                console.log(carrito);
             }
         }
         if(carrito.length > 0){
             localStorage.setItem('carrito',JSON.stringify(carrito));
-        }else{
+        }else{  // Si ya no hay mangas, se quita el carrito del localStorage
             localStorage.removeItem('carrito');
         }
     }
 }
+
+var removeItemFromArr = ( manga ) => {
+    var i = carrito.indexOf( manga );
+    i !== -1 && carrito.splice( i, 1 );
+};
 
 //  Método en el que el usuario decide quitar la selección de mangas a comprar
 btnQuitarSeleccion.addEventListener('click', function(){
@@ -277,24 +250,12 @@ btnVaciarCarrito.addEventListener('click', function(){
         iconColor: '#eaec41'
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire({
-                title: '¡Carrito vaciado!',
-                text: 'Puedes ir en busca de nuevos mangas para agregar a tu carrito.',
-                icon: 'success',
-                confirmButtonColor: '#419641',
-                confirmButtonText: 'Entendido'
-            })
             carrito = [];
             localStorage.removeItem('carrito');
             document.location.reload();
         }
     })
 });
-
-var removeItemFromArr = ( manga ) => {
-    var i = carrito.indexOf( manga );
-    i !== -1 && carrito.splice( i, 1 );
-};
 
 // const btnSwitch = document.querySelector("#switchb");
 
