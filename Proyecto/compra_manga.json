@@ -1,0 +1,12 @@
+
+    {
+        "titulo":"Sinner",
+        "autor":"Kye" ,
+        "generos": ["tragedia","accion","drama"    
+        ],
+    "sinopsis":"Los bebés son escaneados al nacer, y se encuentra su probabilidad de ser criminal en un futuro. Todo está bien si no están inclinados criminalmente. Sin embargo, si sus números son demasiado arriesgados, se eliminan de la sociedad. Para muchos, un grupo de pecadores es una causa de ruptura de corazón que ahora está luchando por su derecho a intentarlo y no solo a ser etiquetado al nacer",
+        "rutaArchivo":"PDF/Sinner.pdf",
+        "imagenURL":"Imagenes/img_Sinner.jpg",
+        "id":"#",
+        "precio": "99.99"
+    }

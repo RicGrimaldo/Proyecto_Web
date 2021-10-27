@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+html, body {
+    min-height: 100%;
+}
+.clearfix{
+    clear:both;
+}
+body{
+    background:linear-gradient(#88a7d0af,#CAECF1);
+}
+
+.flex-container {
+    display:flex;
+    padding:20px;
+    flex-flow:row wrap;
+    justify-content:center;
+    /*min-width: 100%;*/
+}
+
+.flex-container > div{
+    box-shadow: 10px 11px 40px -11px rgba(0,0,0,0.75);
+    background-color:aliceblue;
+    width:100px;
+    height:350px;
+    line-height:100px;
+    text-align:left;
+    margin: 10px;
+    
+     
+}
+
+
+@media (max-width: 950px) {
+    
+    .flex-container{
+        flex-direction: column;
+        align-items:center;
+    }
+    .flex-container > div {
+      
+      width: 70%;
+      height:100%;
+    }
+    .manga{
+        max-width:50%;
+        padding-bottom: 3%;
+       
+        
+     }
+}
+
+
+
+.flex-container > .i3{
+    height:450px;
+}
+
+.i1{
+    height:450px;
+    flex-basis: 22%;
+   
+
+}
+
+.manga{
+   width:60%;
+   margin: 26px auto auto auto;
+  
+   
+}
+
+.manga img{
+    box-shadow:-1px 5px 10px rgb(0 0 0 / 30%); 
+    border: 1px solid rgb(0, 0, 0);
+    width:100%;
+    
+  
+}
+
+.i2{
+    height:450px;
+    flex-basis: 50%;
+}
+
+.but > button{
+    margin-left: 40px;
+    
+  
+}
+.i3{
+    
+    flex-basis:73.5%;
+    
+}
+
+p{
+   margin: 30px;
+   margin-bottom: -20px;
+}
+h5{
+   margin: 30px;
+}
+h4{
+    margin:40px;
+ }
+ h3{
+    margin:40px;
+ }
