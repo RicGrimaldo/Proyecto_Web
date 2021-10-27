@@ -1,0 +1,146 @@
+[
+    {
+        "titulo":"Delivery of the dead",
+        "autor":"Yusuke Hiro" ,
+        "generos": ["18+","comedia", "drama", "ecchi", "gore", "horror"
+           
+        ],
+	"sinopsis":"Bienvenido a un mundo donde los muertos vivientes se pueden comprar por un precio que rasca cualquier picor que tengas. Ya sea sexual o no, estas chicas te tienen cubierto.",
+        "rutaArchivo":"PDF/Delivery of the dead.pdf",
+        "imagenURL":"Imagenes/img_Delivery.jpg",
+        "id":"#",
+        "precio": "79.99"
+    },
+
+  {
+        "titulo":"Tsumuji Magari x Spring",
+        "autor":"Yumeno Tanuki" ,
+        "generos": ["18+","comedia","ecchi","romance","sobrenatural"
+           
+        ],
+	"sinopsis":"Esta es una misteriosa fuente termal donde se reúnen los Yokia de todo Japón. ¡¿Izumi Onsui, un estudiante de primer año de secundaria, se reúne con una chica Yokai en una fuente termal dirigida por su difunto abuelo...?",
+        "rutaArchivo":"PDF/Tsumuji Magari x Spring.pdf",
+        "imagenURL": "Imagenes/img_Tsumuji.jpg",
+        "id": "#",
+        "precio": "99.99"
+    },
+
+  {
+        "titulo":"Pikari-chan wa Nakanaka Shinanai",
+        "autor":"Sanbu Bebe" ,
+        "generos": ["comedia","recuentos de vida"
+            
+        ],
+	"sinopsis":"Naruto Shiohito, un joven cocinero de una tienda de ramen que no es muy conocida, se ha visto afectado por una cucaracha... ¡Que se ha transformado en una chica cucaracha!",
+        "rutaArchivo":"PDF/Pikari-chan wa Nakanaka Shinanai.pdf" ,
+        "imagenURL":"Imagenes/img_Pikari.jpg" ,
+        "id":"#" ,
+        "precio":"89.99" 
+    },
+
+  {
+        "titulo":"Isekai ni Tobasareta Ossan wa Doko e Iku?",
+        "autor":"Ci Garette" ,
+        "generos": ["fantasía", "magia", "sobrenatural","ciencia ficcion","recuentos de vida","aventura" 
+        ],
+	"sinopsis":"¿Qué pasará con esta Ossan después de ser lanzada a otro mundo? Junto con su amigo lobo, vive una vida relajante. Él no ha luchado mucho, pero este Ossan era fuerte originalmente. Odia a la gente autoimportante.",
+        "rutaArchivo":"PDF/Isekai ni Tobasareta.pdf",
+        "imagenURL":"Imagenes/img_Isekai.jpg" ,
+        "id":"#" ,
+        "precio":"79.99" 
+    },
+    {
+        "titulo":"Yojouhan Isekai Kouryuu Ki",
+        "autor":"Yamaguchi Mikoto" ,
+        "generos": ["comedia","fantasía","sobrenatural"
+           
+        ],
+    "sinopsis":"Bienvenidos al primer programa de intercambio a otro mundo. Un encuentro con la vida diaria de personas de otro mundo en una sala de tatami de 4.5.",
+        "rutaArchivo":"PDF/Yojouhan Isekai Kouryuu Ki.pdf" ,
+        "imagenURL":"Imagenes/img_Yojouhan.jpg",
+        "id":"#",
+        "precio": "109.99"
+    },
+    
+    {
+        "titulo":"Shimakaze Tsumujikaze no Shoujo ",
+        "autor":"Yamazaki Kazuma" ,
+        "generos": ["accion","comedia"
+           
+        ],
+    "sinopsis":"El mundo está en un estado de aislamiento. La causa se ​​debe a misteriosas entidades de aguas profundas que la marina ha apodado la Flota del Mar Profundo. Negarse a sentarse de brazos cruzados y dejar que la Flota del Mar Profundo tiene su manera, todos los países del mundo unen sus recursos para hacer una nueva arma para luchar contra ellos ... un arma que es comparable en potencia a la de un acorazado .. . y su nombre es: Las chicas de la Flota.",
+        "rutaArchivo":"PDF/Shimakaze Tsumujikaze no Shoujo.pdf",
+        "imagenURL":"Imagenes/img_Shimakaze.jpg",
+        "id":"#",
+        "precio": "99.99"
+    },
+    
+    {
+        "titulo":"Kangoku Jikken",
+        "autor":"Kantetsu" ,
+        "generos": ["18+","drama","horror","misterio","tragedia"
+           
+        ],
+    "sinopsis":"Eyama Aito, un estudiante de secundaria, es una víctima de acoso u hostigamiento diario. Un día, le llega una extraña carta invitándole a un Juego de Cautiverio. Él puede elegir a una persona para mantenerla cautiva durante un mes con la oportunidad de ganar una gran cantidad de dinero. Él elige a la cabecilla de sus matones: Aya Kirishima. ¡Y la única regla del juego es NO matarla, todo lo demás es juego limpio! ¡La venganza de Eyama comienza!",
+        "rutaArchivo":"PDF/Kangoku Jikken.pdf",
+        "imagenURL":"Imagenes/img_Kangoku.jpg",
+        "id":"#",
+        "precio": "119.99"
+    },
+    
+    {
+        "titulo":"Sinner",
+        "autor":"Kye" ,
+        "generos": ["tragedia","accion","drama"    
+        ],
+    "sinopsis":"Los bebés son escaneados al nacer, y se encuentra su probabilidad de ser criminal en un futuro. Todo está bien si no están inclinados criminalmente. Sin embargo, si sus números son demasiado arriesgados, se eliminan de la sociedad. Para muchos, un grupo de pecadores es una causa de ruptura de corazón que ahora está luchando por su derecho a intentarlo y no solo a ser etiquetado al nacer",
+        "rutaArchivo":"PDF/Sinner.pdf",
+        "imagenURL":"Imagenes/img_Sinner.jpg",
+        "id":"#",
+        "precio": "99.99"
+    },
+    
+    {
+        "titulo":"Tokyo Undead",
+        "autor":"SHIGEO NAKAYAMA" ,
+        "generos": ["18+","gore","tragedia","horror"
+           
+        ],
+    "sinopsis":"Después de que un agente patógeno creado por el hombre conocido como el virus K se libera accidentalmente de los Laboratorios Fieldwar en el corazón de Tokio, la ciudad es invadida por zombis devoradores de carne. Con la esperanza de salvar a los últimos supervivientes de este apocalipsis, una organización conocida como Madara envía a su miembro novato en un último esfuerzo para encontrar una cura.",
+        "rutaArchivo":"PDF/Tokyo Undead.pdf",
+        "imagenURL":"Imagenes/img_Tokyo Undead.jpg",
+        "id":"#",
+        "precio": "119.99"
+    },
+    
+    {
+        "titulo":"Yagate Kimi ni Naru",
+        "autor":"Nakatani Nio" ,
+        "generos": ["drama","recuentos de vida","yuri","romance"
+           
+        ],
+        "sinopsis":"Un amor especial que sea capaz de elevarte y a la vez hacerte sentir cálida, todo eso es lo que busca Koito Yuu. Con el nuevo año escolar comenzando y uniéndose como ayudante del Consejo Estudiantil, aprenderá todo lo que significa tener a una persona especial en su vida gracias a Nanami Touko, una misteriosa y popular chica que casualmente también está dentro del Consejo.",
+        "rutaArchivo":"PDF/Yagate Kimi ni Naru.pdf",
+        "imagenURL":"Imagenes/img_Yagate.jpg",
+        "id":"#",
+        "precio": "79.99"
+    },
+    
+    
+    {
+        "titulo":"Risou no Himo Seikatsu",
+        "autor":"Watanabe Tsunehiko" ,
+        "generos": ["18+","comedia","ecchi","romance","fantasía"        
+        ],
+       "sinopsis":"Invocado por una hermosa mujer en un mundo diferente, a Yamai Zenjiro se le pide que se case con ella y tengan un hijo. ¿Dejara aun lado su vida en su mundo para vivir a expensas de una hermosa mujer?",
+        "rutaArchivo":"PDF/Risou no Himo Seikatsu.pdf",
+        "imagenURL":"Imagenes/img_Risou.jpg",
+        "id":"#",
+        "precio": "119.99"
+    }
+    
+
+  
+
+
+]
