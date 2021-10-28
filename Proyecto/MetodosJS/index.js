@@ -1,9 +1,11 @@
 const items = document.getElementById('items')
 const templateCard = document.getElementById('template-card').content
-const fragment = document.createDocumentFragment()
+const fragment = document.createDocumentFragment();
+const textoBusqueda = document.getElementById('textoBusqueda');
 const mangas = [];
-var buscar = " "
-var buscador = " "
+var buscar = " ";
+var buscador = " ";
+var encontrado = false;
 
 function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, precio) {
   this.titulo = titulo;
@@ -17,67 +19,18 @@ function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, pre
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // fetchData()
- leerDatos()
- });
-
- function getCookie(name) {
-  let cname = name + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  
-  //let ca = document.cookie.split(';');
-  for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      
-      while(c.charAt(0) == ' ') {
-          c = c.substring(1, c.length);
-      }
-      
-      if(c.indexOf(cname) == 0) {
-          return c.substring(cname.length, c.length);
-      }
+  var1 = localStorage.getItem('contenidoABuscar');
+  if(var1 == null){
+    Swal.fire({
+      icon: 'warning',
+      title: '¡No se encontró ningún manga a buscar!',
+      text: 'Intenta de nuevo.',
+      showConfirmButton: false,
+      footer: '<a href="Pagina_Principal.html" class="btn btn-primary">Ir a Inicio</a>'
+  })
   }
-  return "";
-}
-
-function setCookie(name, value, expires) {
-  if(expires) {
-      const date = new Date();
-      date.setTime(date.getTime() + (expires*24*60*60*1000));
-      expires = "expires="+ date.toUTCString();
-  }
-  else {
-      expires = "";
-  }
-  document.cookie = name + "=" + value + expires + "; path=/";
-}
-
-function removeCookies(name) {
-  setCookie(name, "", -1)
-}
-
-
-  // const btn = document.getElementById("btn");
-  // /*btn.addEventListener('click',function(){
-  //   if(typeof buscar === 'undefined'||buscar===null){
-  //     var buscar =  document.formulario.nom.value
-  //     setCookie("buscar",buscar,10)
-  //   }
-  //   else{
-  //     removeCookies(buscar)
-  //     var buscar =  document.formulario.nom.value
-  //     setCookie("buscar",buscar,10)
-  //   }
-  //   var buscador = getCookie("buscar");*/
-  //   var buscar =  document.formulario.nom.value
-  //   setCookie("buscar",buscar,10)
-  //   buscador=getCookie(buscar)
-  //   removeCookies(buscar)
-  // })
-
-
-var1 = prompt("dime un anime")
+  leerDatos()
+});
 
   const leerDatos = async() => {
     const xhttp = new XMLHttpRequest();
@@ -100,18 +53,28 @@ const pintarCards = data => {
         const clone = templateCard.cloneNode(true)
         var array = producto.titulo.toLowerCase().split(" ");
         console.log(array.indexOf(var1.toLowerCase()));
-        if(producto.titulo.toLowerCase().indexOf(buscador.toLowerCase()) >= 0){
-        //if(producto.titulo.toLowerCase().indexOf(var1.toLowerCase()) >= 0){
+        if(producto.titulo.toLowerCase().indexOf(var1.toLowerCase()) >= 0){
           fragment.appendChild(clone);
           nuevoManga = new Manga(producto.titulo, producto.autor, 
             producto.generos, producto.sinopsis,
             producto.rutaArchivo, producto.imagenURL, 
             producto.id, producto.precio);
             mangas.push(nuevoManga);
+            encontrado = true;
         }
       
     })
     items.appendChild(fragment)
+    textoBusqueda.innerText = 'Se muestran resultados para \"'+var1+"\""
+    if(!encontrado){
+      Swal.fire({
+        icon: 'warning',
+        title: 'No se encontró nada relacionado con \"'+var1+'\"',
+        text: 'Intenta de nuevo.',
+        showConfirmButton: false,
+        footer: '<a href="Pagina_Principal.html" class="btn btn-primary">Ir a Inicio</a>'
+    })
+    }
 }
 
 const almacenarMangas = function(datos){
@@ -148,9 +111,4 @@ const mandarMangaSeleccionado = objeto => {
   localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));
 }
 
-//  Para agregar o quitar la clase dark al body 
-btnCambiarOscuro.addEventListener('click', function(){
-    document.body.classList.toggle('dark');
-    // console.log('click')
-});
 

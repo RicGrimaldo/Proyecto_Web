@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s ease all;
+}
+
+.navbar, .navbar-expand-lg, .navbar-light, .bg-light{
+    background-color: #6a9eda;
+}
+
+body{
+    background:linear-gradient(#88a7d0af,#CAECF1);
+    transition: 0.5s ease all;
+}
 
 
 /*estilos para header*/
@@ -22,9 +44,6 @@
     text-align: center;
     padding: 8px;
 }
-
-
-
 
 
 #btn-menu{
@@ -146,6 +165,9 @@ header .lbl:hover{
 
 }
 
+.dropdown-menu a:hover{
+    background-color: #5086c1;
+}
 /*Estilos header continuacion...*/
 
 #carrito img{
@@ -183,6 +205,40 @@ header .lbl:hover{
     color: #5086c1;
 }
 
+#opcionesMenus{
+    background-color: #5086c1!important;
+}
+
+#opcionesMenus a{
+    color: white;
+}
+
+#opcionesMenus a:hover{
+    color: #5086c1;
+}
+
+body.dark #opcionesMenus{
+    background: #34587e!important;
+}
+
+body.dark #cabeceraPrincipal{
+    background: #3c6ea3!important;
+}
+
+.navbar-nav li:hover{
+    transition: 0.4s;
+    background: #dfe0e0;
+    border-radius: 5px;
+}
+
+.nav-link:hover{
+    color: #5086c1;
+}
+
+.navbar-nav.justify-content-center.nav-pills.nav-fill li a.active {
+    background-color: #1d3f5e;
+}
+
 .menuNav li a{
     display: flex;
     margin-top: 10px;
@@ -192,12 +248,22 @@ header .lbl:hover{
     font-size: 20px;
 }
 
+.form-control.mr-sm-2{
+    width: 500px;
+}
+
+.navbar-nav li a{
+    font-size: 20px;
+    padding: 13px 60px!important;
+}
+
 /*.header #carrito{
     background-color: #5086c1;
    
 }*/
 
 /*Estilos para boton modo oscuro
+
 :root {
     --color-1: #172841;
     --color-2: #b2dafa;
@@ -232,6 +298,7 @@ header .lbl:hover{
 #switch-button .switch-button__checkbox:checked + .switch-button__label {
     background-color: var(--color-1);
 }
+
 #switch-button .switch-button__checkbox:checked + .switch-button__label:before {
     transform: translateX(20px);
 }*/
@@ -313,8 +380,12 @@ body.dark .footer{
 }
 body.dark {
     background:linear-gradient(#081324,#040912);
+    transition: 0.5s ease all;
 }
 
+.form-inline input{
+    width: 500px!important;
+}
 
 /*estilos para barra de busqueda*/
 #form{
@@ -391,6 +462,10 @@ body.dark {
         margin-top: 14px;
         display: flex;
         flex-direction:column-reverse;
+    }
+
+    #txt-usuario {
+        display: none;
     }
 
     .menuNav{

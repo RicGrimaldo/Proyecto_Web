@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 body{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Rubik', sans-serif;
-    background:linear-gradient(#88a7d0af,#CAECF1);
+    font-family: 'Roboto', sans-serif;
 }
 
 main{
@@ -216,5 +213,43 @@ body.dark .contenedor__login-register form{
         position: relative;
         
     }
+
+}
+
+@media screen and (max-width: 600px){
+    main{
+        margin-top: 50px;
+        margin-bottom: 200px;
+    }
+
+    .caja__trasera{
+        max-width: 300px;
+        height: 250px;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+    
+    .contenedor__login-register{
+        width: 300px;
+        height: 275px;
+        top: 35px;
+        left: -5px;
+        margin-left: 0px;
+    }
+
+    .contenedor__login-register form{
+        margin-top: 70px;
+    }
+
+
+    .contenedor__login-register form input{
+        width: 284px;
+    }
+
 
 }

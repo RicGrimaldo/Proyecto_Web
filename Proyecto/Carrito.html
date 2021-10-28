@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <link rel="icon" type="image/png" href="Imagenes/LogoPestana.png">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="EstilosCSS/EstilosCarrito.css">
     <link rel="stylesheet" href="EstilosCSS/Estilos_header_footer.css">
     <link
@@ -13,73 +14,83 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
         crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+
 </head>
 <body>
 
-    <header class="header">
-        <div class="item-flex-header" id="logo">
-            <a href="#"><img src="Imagenes/Header_Footer/logo.png" alt="MangaWeb Logo"></a>
-        </div>
-        <div class="item-flex-header" id="busqueda">
-            <form action="index.html">
-                <input type="text" id="form" name="nom" placeholder="Busca comics, mangas, etc." required>
-                <button class="btnHeader">
-                <img src="Imagenes/Header_Footer/search-icon.png" width="30px">
-                </button>
-            </form>
-    
-        </div>
-    
-        <div class="item-flex-header" id="txt-usuario">
-            <a href="#">Iniciar Sesi&oacuten</a>
-        </div>
-        <div class="item-flex-header" id="usuario">
-            <ul class="menu">
-                <li class="liuserimg"><a href="#"><img src="Imagenes/Header_Footer/user-icon.png" alt="User Logo"></a>
-                <ul>
-                    <li class="menuli"><a href="#">Mi Perfil</a></li>
-                    <li class="menuli"><a href="#">Mi Biblioteca</a></li>
-                    <li class="menuli"><a href="#">Cerrar Sesion</a></li>
-                </ul>
-                </li>
+    <nav class="navbar navbar-expand-lg navbar-light py-md-2" id="cabeceraPrincipal">
+        <a class="navbar-brand" href="#">
+            <img src="Imagenes/Header_Footer/logo.png" width="100px" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+            <ul class="navbar-nav mr-auto justify-content-center">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Busca tus mangas favoritos" aria-label="Search" id="contenidoABuscar" required>
+                    <a href="busqueda.html" class="btn btn-primary my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</a>
+                </form>
             </ul>
-    
-    
-    
-        </div>
-    
-        <input type="checkbox" id="btn-menu">
-        <label for="btn-menu" class="lbl"><img src="Imagenes/Header_Footer/hamicon.png" alt="menu"></label>
-        <nav class="menuNav">
-            <ul>
-                <li><a>
-                    <div class="boton-text">
-                    <div id="switch-button">
-                        <button class="darkModeSwitch" id="switchb">
-                        <span><i class="fa fa-sun-o"></i></span>
-                        <span><i class="fa fa-moon-o"></i></span>
-                        </button>
-                        <!-- <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox"> -->
-                    <!-- <label for="switch-label" class="switch-button__label"></label> -->
-                    <!-- <img src="Imagenes/Header_Footer/moon.png" alt="moon"> -->
-                    </div>
-                    </div>
-                </a></li>
-                <li class="li"><a href="#">Inicio</a></li>
-                <li class="li"><a href="#">Categor&iacuteas</a></li>
-                <li class="li"><a href="#">&Uacuteltimos</a></li>
-                <li class="li"><a href="#">Tendencias</a></li>
-                <li class="li"><a href="#">NSFW</a></li>
-                <li>
-                <div id="carrito">
-                    <a href="#"><img src="Imagenes/Header_Footer/carritob.png" alt="carrito"></a>
+            <ul class="navbar-nav flex-row mr-lg-0">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle mr-3 mr-lg-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="Imagenes/Header_Footer/user-icon.png" width="30px" class="d-inline-block align-top" alt="">
+                    Iniciar sesión
+                </a>
+                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="background-color: #6a9eda;">
+                    <a class="dropdown-item" href="#">Mi perfil</a>
+                    <a class="dropdown-item" href="#">Mi biblioteca</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Cerrar sesión</a>
                 </div>
                 </li>
+
             </ul>
-    
+            </div>
         </nav>
-    
-      </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light" id="opcionesMenus">
+            <button class="darkModeSwitch" id="switchb">
+                <span><i class="fa fa-sun-o"></i></span>   
+                <span><i class="fa fa-moon-o"></i></span>
+            </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse justify-content-center order-2" id="navbarSupportedContent">
+                    
+                    <ul class="navbar-nav justify-content-center nav-pills nav-fill">
+                        <!-- <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li> -->
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categor&iacuteas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">&Uacuteltimos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tendencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">+18</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Carrito.html" id="carritoNav" ><img src="Imagenes/Header_Footer/carritob.png" class="d-inline-block align-top" alt="carrito" width="30px"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        
 
     <div class="container" id="container">
         <div class="titulos">
@@ -105,9 +116,54 @@
             </div>
         </div>
     </template>
+
+    <footer class="footer">
+        <div id="menu">
+            <h4><a href="#">Menu</a></h4> <br>
+            <a href="#">Inicio</a> <br>
+            <a href="#">Categorias</a> <br>
+            <a href="#">Ultimas</a> <br>
+            <a href="#">Tendencias</a> <br>
+            <a href="#">NSFW</a> <br>
+        </div>
+        <div id="cliente">
+            <h4>Atencion al Cliente</h4> <br>
+            ¿Tienes dudas? <br>
+            Déjanos ayudarte, <br>
+            <a href="#">haz clic aquí.</a>
+        
+        </div>
+        <div id="nosotros">
+            <h4><a href="#">Acerca de Nosotros</a></h4> <br>
+            Somos la editorial oficial <br>
+            para <br>
+            Comics , revistas y <br>
+            mangas alrededor del <br>
+            mundo.
+        
+        </div>
+        <div id="redes">
+            <h4>Redes Sociales</h4> <br>
+            <a href="#">Facebook</a> <br>
+            <a href="#">Twitter</a> <br>
+            <a href="#">Instagram</a> <br>
+            <a href="#"><img src="Imagenes/Header_Footer/facebook_icon.png" alt="facebook_icon"></a>
+            <a href="#"><img src="Imagenes/Header_Footer/twitter_icon.png" alt="twitter_icon"></a>
+            <a href="#"><img src="Imagenes/Header_Footer/instagram-icon.png" alt="instagram-icon"></a>
+        </div>
+        
+        
+        </footer>
     
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="MetodosJS/CarritoMetodos.js"></script>
     <script src="MetodosJS/dark-mode-Header-Footer.js"></script>
+    <script src="MetodosJS/MetodosBuscar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+
 </body>
 </html>
