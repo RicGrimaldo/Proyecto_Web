@@ -58,23 +58,23 @@ function removeCookies(name) {
 }
 
 
-  const btn = document.getElementById("btn");
-  /*btn.addEventListener('click',function(){
-    if(typeof buscar === 'undefined'||buscar===null){
-      var buscar =  document.formulario.nom.value
-      setCookie("buscar",buscar,10)
-    }
-    else{
-      removeCookies(buscar)
-      var buscar =  document.formulario.nom.value
-      setCookie("buscar",buscar,10)
-    }
-    var buscador = getCookie("buscar");*/
-    var buscar =  document.formulario.nom.value
-    setCookie("buscar",buscar,10)
-    buscador=getCookie(buscar)
-    removeCookies(buscar)
-  })
+  // const btn = document.getElementById("btn");
+  // /*btn.addEventListener('click',function(){
+  //   if(typeof buscar === 'undefined'||buscar===null){
+  //     var buscar =  document.formulario.nom.value
+  //     setCookie("buscar",buscar,10)
+  //   }
+  //   else{
+  //     removeCookies(buscar)
+  //     var buscar =  document.formulario.nom.value
+  //     setCookie("buscar",buscar,10)
+  //   }
+  //   var buscador = getCookie("buscar");*/
+  //   var buscar =  document.formulario.nom.value
+  //   setCookie("buscar",buscar,10)
+  //   buscador=getCookie(buscar)
+  //   removeCookies(buscar)
+  // })
 
 
 var1 = prompt("dime un anime")
@@ -100,7 +100,7 @@ const pintarCards = data => {
         const clone = templateCard.cloneNode(true)
         var array = producto.titulo.toLowerCase().split(" ");
         console.log(array.indexOf(var1.toLowerCase()));
-        if(producto.titulo.toLowerCase().indexOf(buscador.toLowerCase()) >= 0)
+        if(producto.titulo.toLowerCase().indexOf(buscador.toLowerCase()) >= 0){
         //if(producto.titulo.toLowerCase().indexOf(var1.toLowerCase()) >= 0){
           fragment.appendChild(clone);
           nuevoManga = new Manga(producto.titulo, producto.autor, 
