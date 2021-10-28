@@ -10,10 +10,80 @@
         rel="stylesheet" 
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
         crossorigin="anonymous">
-    <link rel="stylesheet" href="compra_estilos.css">
+        <link rel="stylesheet" href="EstilosCSS/Estilos_header_footer.css">
+    <link rel="stylesheet" href="EstilosCSS/compra_estilos.css">
     <title>Compra</title>
 </head>
 <body>
+
+    <header class="header">
+        <div class="item-flex-header" id="logo">
+          <a href="#"><img src="Imagenes/Header_Footer/logo.png" alt="MangaWeb Logo"></a>
+        </div>
+        <div class="item-flex-header" id="busqueda">
+          <form action="index.html">
+            <input type="text" id="form" name="nom" placeholder="Busca comics, mangas, etc." required>
+            <button class="btn">
+              <img src="Imagenes/Header_Footer/search-icon.png" width="30px">
+            </button>
+          </form>
+    
+        </div>
+    
+        <div class="item-flex-header" id="txt-usuario">
+          <a href="#">Iniciar Sesi&oacuten</a>
+        </div>
+        <div class="item-flex-header" id="usuario">
+          <ul class="menu">
+            <li class="liuserimg"><a href="#"><img src="Imagenes/Header_Footer/user-icon.png" alt="User Logo"></a>
+              <ul>
+                <li class="menuli"><a href="#">Mi Perfil</a></li>
+                <li class="menuli"><a href="#">Mi Biblioteca</a></li>
+                <li class="menuli"><a href="#">Cerrar Sesion</a></li>
+              </ul>
+            </li>
+          </ul>
+    
+    
+    
+        </div>
+    
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" class="lbl"><img src="Imagenes/Header_Footer/hamicon.png" alt="menu"></label>
+        <nav class="menuNav">
+          <ul>
+            <li><a>
+                <div class="boton-text">
+                  <div id="switch-button">
+                    <button class="darkModeSwitch" id="switchb">
+                      <span><i class="fa fa-sun-o"></i></span>
+                      <span><i class="fa fa-moon-o"></i></span>
+                    </button>
+                    <!--<input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+                <label for="switch-label" class="switch-button__label"></label>
+                <img src="Imagenes/moon.png" alt="moon">-->
+                  </div>
+                </div>
+              </a></li>
+            <li class="li"><a href="#">Inicio</a></li>
+            <li class="li"><a href="#">Categor&iacuteas</a></li>
+            <li class="li"><a href="#">&Uacuteltimos</a></li>
+            <li class="li"><a href="#">Tendencias</a></li>
+            <li class="li"><a href="#">NSFW</a></li>
+            <li>
+              <div id="carrito">
+                <a href="#"><img src="Imagenes/Header_Footer/carritob.png" alt="carrito"></a>
+              </div>
+            </li>
+          </ul>
+    
+        </nav>
+    
+      </header>
+
+
+<!-- CO*****NTENIDO CENTRAL PAGE  *** -->
+
     <div class="flex-container">
         
         <div class="item i1">
@@ -23,24 +93,63 @@
             </div> 
         </div>
         <div class="item i2">
-            <h4 id="tit">Titulo</h4> 
-            <h3 id="costo">$</h3>
+            <h4 class="texto-titulo" id="tit">Titulo</h4> 
+            <h3 class="texto-costo" id="costo">$</h3>
             <div class="but">
                 <button type="button" class="btn btn-secondary btn-lg" id="btnAgregarCarrito">Añadir a mi carrito</button>
                 <button type="button" class="btn btn-primary btn-lg" id="btnCompra">Comprar ahora</button>
             </div>
         </div>
         <div class="item i3">
-            <p>Detalles del producto:</p>
-            <h5 id="generos">Generos: </h5>
-            <h5 id="autor">Autores: </h5>
-            <h5 id="sinopsis">Sinopsis: </h5>
+            <p class="texto-detalles">Detalles del producto:</p>
+            <h5 class="texto-generos" id="generos">Generos: </h5>
+            <h5 class="texto-generos" id="autor">Autores: </h5>
+            <h5 class="texto-generos" id="sinopsis">Sinopsis: </h5>
         </div>
 
     </div>
+<!-- CO*****NTENIDO CENTRAL PAGE  *** -->
+    <footer class="footer">
+        <div id="menu">
+          <h4><a href="#">Menu</a></h4> <br>
+          <a href="#">Inicio</a> <br>
+          <a href="#">Categorias</a> <br>
+          <a href="#">Ultimas</a> <br>
+          <a href="#">Tendencias</a> <br>
+          <a href="#">NSFW</a> <br>
+        </div>
+        <div id="cliente">
+          <h4>Atencion al Cliente</h4> <br>
+          ¿Tienes dudas? <br>
+          Déjanos ayudarte, <br>
+          <a href="#">haz clic aquí.</a>
+      
+        </div>
+        <div id="nosotros">
+          <h4><a href="#">Acerca de Nosotros</a></h4> <br>
+          Somos la editorial oficial <br>
+          para <br>
+          Comics , revistas y <br>
+          mangas alrededor del <br>
+          mundo.
+      
+        </div>
+        <div id="redes">
+          <h4>Redes Sociales</h4> <br>
+          <a href="#">Facebook</a> <br>
+          <a href="#">Twitter</a> <br>
+          <a href="#">Instagram</a> <br>
+          <a href="#"><img src="Imagenes/Header_Footer/facebook_icon.png" alt="facebook_icon"></a>
+          <a href="#"><img src="Imagenes/Header_Footer/twitter_icon.png" alt="twitter_icon"></a>
+          <a href="#"><img src="Imagenes/Header_Footer/instagram-icon.png" alt="instagram-icon"></a>
+        </div>
+      
+      
+      </footer>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script type="text/javascript" src="metodos_compra.js"></script>
+    <script src="MetodosJS/dark-mode-Header-Footer.js"></script>
+    <script type="text/javascript" src="MetodosJS/metodos_compra.js"></script>
 </body>
 </html>

@@ -99,16 +99,16 @@ body{
     
 }
 
-p{
+.texto-detalles{
    margin: 30px;
    margin-bottom: -20px;
 }
-h5{
+.texto-generos{
    margin: 30px;
 }
-h4{
+.texto-titulo{
     margin:40px;
  }
- h3{
+.texto-costo{
     margin:40px;
  }

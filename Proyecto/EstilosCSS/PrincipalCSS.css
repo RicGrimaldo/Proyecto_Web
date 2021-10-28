@@ -20,13 +20,14 @@ width: 100%;
 }
 .lateral1{
     width: 13%;
+    height: 100%;
     position: absolute;
 left: 0;
 margin: 0%;
 padding: 0;
 }
 .imagen1{   
-    height: 1000px;
+    height: 600px;
 }
 
 .imagen1 img{
@@ -57,13 +58,21 @@ padding: 0;
 
 }
 .lateral2{
-    top: 0;
-    width: 15%;
-    position:absolute;
-    right: 0; 
+  top: 0;
+    width: 13%;
+ position: absolute;
+right: 0;
+
+}
+.trending{
+   margin-top: 210px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 2px;
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
 /*CONTIENE EL CONTENEDOR CENTRAL ESTA CENTRADO*/
 .contenedor2{   
+    padding-top: 50px;
     width: 65%;    
    margin:auto;    
 }
@@ -498,11 +507,7 @@ background-color: #4facfe;
 /* BARRA LATERAL DERECHA*/
 
 /***************************************/
-.trending{
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 2px;
-    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-}
+
 .LoMasVisto{
 
     border-bottom: 1px solid rgb(0, 0, 0);

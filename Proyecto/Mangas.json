@@ -862,5 +862,18 @@
         "id": "75",
         "precio": "129.90"
     }
+    ,
 
+    {
+        "titulo": "Katekyo Hitman Reborn!",
+        "autor": "Akira Amano",
+        "generos": [
+            "acción","Escolar", "Comedia"
+        ],
+        "sinopsis": "Todos los compañeros de Tsuna lo consideran un perdedor: es malo en los estudios, en los deportes y con las mujeres… Lo que nadie sabía es que él es el heredero legítimo del liderazgo de los Vongola, una familia mafiosa. Reborn llega para entrenar a Tsuna para que pueda cumplir con su destino. Aunque Reborn parece un bebé, es un sicario de primer nivel que no dudará en poner en peligro la vida de Tsuna para educarlo.",
+        "rutaArchivo": "PDF/Katekyo Hitman Reborn.pdf",
+        "imagenURL": "Imagenes/Katekyo Hitman Reborn.jpg",
+        "id": "75",
+        "precio": "129.90"
+    }
 ]

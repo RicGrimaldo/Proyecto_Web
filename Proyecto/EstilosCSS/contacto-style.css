@@ -80,6 +80,10 @@ button{
   cursor: pointer;
 }
 
+textarea{
+  resize: none;
+}
+
 
 button p{
   color: #fff; 

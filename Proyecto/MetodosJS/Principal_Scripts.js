@@ -63,15 +63,6 @@ const pintarCards = function(datos){
 
 
 
-///***********************BOTON PARA PROBAR EL MODO OSUCURO********************* */
-const btnCambiarOscuro = document.getElementById('btnCambiarOscuro');
-
-
-//  Para agregar o quitar la clase dark al body 
-btnCambiarOscuro.addEventListener('click', function(){
-    document.body.classList.toggle('dark');
-});
-
 
 /*
 const boton_Recom = document.getElementById('boton_estilo');
