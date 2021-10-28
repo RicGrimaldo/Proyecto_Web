@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*estilos para header*/
+
+.header{
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #66bde6;
+    padding: 0px;
+    color: #ffffff;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.item-flex-header{
+    flex: 12%;
+    background: #6a9eda;
+
+    text-align: center;
+    padding: 8px;
+}
+
+.header #logo img{
+    width: 100px;
+}
+
+#usuario{
+    padding-top: 20px;
+    align-items: center;
+    text-align: right;
+    flex: 6%;
+}
+
+#txt-usuario{
+    font-size: 16px;
+    align-items: center;
+    padding-top: 30px;
+    text-align: left;
+    flex: 8%;
+}
+
+#switch-button{
+    align-items: center;
+    padding-top: 18px;
+    background-color: #5086c1;
+    text-align: right;
+    flex: 2%;
+}
+
+#txt-mnoche{
+    align-items: center;
+    padding-top: 20px;
+    background-color: #5086c1;
+    text-align: left;
+    flex: 4%;
+}
+
+#usuario img{
+    align-content: center;
+    width: 40px;
+}
+
