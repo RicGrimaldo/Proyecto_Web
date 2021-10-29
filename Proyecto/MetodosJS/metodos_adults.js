@@ -92,8 +92,8 @@ const pintarCards = function(datos){
                     fragment_tragedia.appendChild(clone8);
                 }
                 if(item.generos[i].toString().toLowerCase()=="accion"){
-                    const clone3 = templateCard.cloneNode(true);
-                    fragment_accion.appendChild(clone3);
+                    const clone9 = templateCard.cloneNode(true);
+                    fragment_accion.appendChild(clone9);
                 }
                 
 

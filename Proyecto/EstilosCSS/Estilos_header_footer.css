@@ -124,6 +124,10 @@ body.dark {
     transition: 0.5s ease all;
 }
 
+body.dark .footer{
+    background: #34587e;
+}
+
 .form-inline input{
     width: 500px!important;
 }
