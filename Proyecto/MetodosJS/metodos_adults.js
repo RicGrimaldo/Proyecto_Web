@@ -4,6 +4,7 @@ const card_drama = document.getElementById('cat_drama');
 const card_romance = document.getElementById('cat_romance');
 const card_horror = document.getElementById('cat_horror');
 const card_tragedia = document.getElementById('cat_tragedia');
+const card_accion = document.getElementById('cat_accion');
 
 const templateCard = document.getElementById('template-card').content;
 
@@ -13,6 +14,7 @@ const fragment_drama = document.createDocumentFragment();
 const fragment_romance = document.createDocumentFragment();
 const fragment_horror = document.createDocumentFragment();
 const fragment_tragedia = document.createDocumentFragment();
+const fragment_accion = document.createDocumentFragment();
 
 const mangas = [];
 
@@ -61,7 +63,7 @@ const pintarCards = function(datos){
 
         templateCard.querySelector('img').setAttribute('src', item.imagenURL);
 
-        if(item.generos[0]=="18+"){
+        if(item.generos[0]=="18+"||item.generos[0]=="+18"){
 
             for(i=0; i<item.generos.length;i++){
 
@@ -81,7 +83,7 @@ const pintarCards = function(datos){
                     const clone6 = templateCard.cloneNode(true);
                     fragment_romance.appendChild(clone6);
                 }
-                if(item.generos[i].toString().toLowerCase()=="horror"){
+                if(item.generos[i].toString().toLowerCase()=="horror"||item.generos[i].toString().toLowerCase()=="terror"){
                     const clone7 = templateCard.cloneNode(true);
                     fragment_horror.appendChild(clone7);             
                 }
@@ -89,6 +91,11 @@ const pintarCards = function(datos){
                     const clone8 = templateCard.cloneNode(true);
                     fragment_tragedia.appendChild(clone8);
                 }
+                if(item.generos[i].toString().toLowerCase()=="accion"){
+                    const clone3 = templateCard.cloneNode(true);
+                    fragment_accion.appendChild(clone3);
+                }
+                
 
             }
 
@@ -103,7 +110,7 @@ const pintarCards = function(datos){
     card_romance.appendChild(fragment_romance);
     card_horror.appendChild(fragment_horror);
     card_tragedia.appendChild(fragment_tragedia);
-
+    card_accion.appendChild(fragment_accion);
     
 };
 
@@ -131,6 +138,11 @@ card_horror.addEventListener('click', e =>{
 card_tragedia.addEventListener('click', e =>{
     cartaMangaClick(e);
 });
+
+card_accion.addEventListener('click', e =>{
+    cartaMangaClick(e);
+});
+
 
 const cartaMangaClick = e =>{
     if(e.target.classList.contains('card-img')){

@@ -70,7 +70,7 @@ const pintarCards = function(datos){
 
         templateCard.querySelector('img').setAttribute('src', item.imagenURL);
 
-        if(item.generos[0].toString()!="18+"){
+        if(item.generos[0]!="18+"&&item.generos[0]!="+18"){
 
             for(i=0; i<item.generos.length;i++){
 
@@ -99,7 +99,7 @@ const pintarCards = function(datos){
                     const clone6 = templateCard.cloneNode(true);
                     fragment_romance.appendChild(clone6);
                 }
-                if(item.generos[i].toString().toLowerCase()=="horror"){
+                if(item.generos[i].toString().toLowerCase()=="horror"||item.generos[i].toString().toLowerCase()=="terror"){
                     const clone7 = templateCard.cloneNode(true);
                     fragment_horror.appendChild(clone7);             
                 }

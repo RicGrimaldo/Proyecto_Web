@@ -6,9 +6,6 @@
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
 }
-
-
-
 html, body {
   min-height: 100%;
 }
@@ -28,6 +25,12 @@ body{
   background-color: #fbfbfb; 
   padding-left: 30px; 
 }
+
+body.dark .contact_form, body.dark label{  
+  background: #3b638f;
+  color: #fbfbfb;;
+}
+
 
 
 input{
@@ -65,7 +68,7 @@ label{
 }
 
 
-button{
+.buttonFormulario{
   height: 45px; 
   padding-left: 5px;
   padding-right: 5px;   
@@ -80,12 +83,12 @@ button{
   cursor: pointer;
 }
 
-textarea{
+#mensaje{
   resize: none;
 }
 
 
-button p{
+.buttonFormulario p{
   color: #fff; 
 }
 

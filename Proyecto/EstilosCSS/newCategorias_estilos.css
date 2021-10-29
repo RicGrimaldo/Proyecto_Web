@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+html, body {
+    min-height: 100%;
+}
 .clearfix{
     clear:both;
+}
+body{
+    background:linear-gradient(#88a7d0af,#CAECF1);
 }
 
 .flex-container {
@@ -38,7 +49,6 @@
     
 }
 
-
 /*
 @media(max-width:200px){
     
@@ -50,6 +60,7 @@
               
     }   
 }*/
+
 .titulo{
     margin-left: 60px;
     margin-top: 30px;
@@ -68,6 +79,26 @@
   
 }
 
+/************** Dark Mode **************/
+
+body.dark {
+    background:linear-gradient(#081324,#040912);
+}
+body.dark .contenedor1{
+    background:linear-gradient(#081324,#040912);
+}
+body.dark .flex-container > div{
+    background:linear-gradient(#6f8bb188,#506c72);
+    box-shadow: 5px 4px 12px rgb(0 0 0 / 30%); 
+    color:white;
+}
+body.dark .sample :hover{
+    box-shadow:-5px 5px 20px rgb(0 0 0 / 30%);   
+}
+body.dark .manga img{
+    box-shadow:-5px 10px 12px rgb(0 0 0 / 30%); 
+    border:3px solid #ffffff;
+}
 
 
 
