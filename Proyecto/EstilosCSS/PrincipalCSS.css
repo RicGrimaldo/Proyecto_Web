@@ -706,6 +706,9 @@ body.dark .list li >a:hover{
     
 }
 
+#tituloRecomendacion, #tt{
+    font-size: 25px;
+}
 
 .flex-caption-descripcion p{
   font-size: 15px;
@@ -841,8 +844,8 @@ bottom: 0;
 .texto .titulo{
     height: 5%;
 }
-.titulo >h1{
-    font-size: 16px;
+#tituloRecomendacion, #tt{
+    font-size: 20px;
 }
 .contenedor4 .imagen{   
     width: 30%;    
