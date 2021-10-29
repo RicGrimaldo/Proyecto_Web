@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       title: '¡No se encontró ningún manga a buscar!',
       text: 'Intenta de nuevo.',
       showConfirmButton: false,
-      footer: '<a href="Pagina_Principal.html" class="btn btn-primary">Ir a Inicio</a>'
+      footer: '<a href="index.html" class="btn btn-primary">Ir a Inicio</a>'
   })
   }
   leerDatos()
@@ -72,7 +72,7 @@ const pintarCards = data => {
         title: 'No se encontró nada relacionado con \"'+var1+'\"',
         text: 'Intenta de nuevo.',
         showConfirmButton: false,
-        footer: '<a href="Pagina_Principal.html" class="btn btn-primary">Ir a Inicio</a>'
+        footer: '<a href="index.html" class="btn btn-primary">Ir a Inicio</a>'
     })
     }
 }
