@@ -101,7 +101,6 @@ const pintarCards = function(datos){
 
         }
 
- 
     }
     
     card_comedia.appendChild(fragment_comedia);
