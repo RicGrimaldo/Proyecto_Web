@@ -85,9 +85,9 @@ right: 0;
 /*  CONTIENE LOS SLIDES STATICOS */
 @font-face {
     font-family: 'flexslider-icon';
-    src: url('/Imagenes/fonts/flexslider-icon.eot');
-    src: url('/Imagenes/fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('/Imagenes/fonts/flexslider-icon.woff') 
-    format('woff'), url('/Imagenes/fonts/flexslider-icon.ttf') format('truetype'), url('/Imagenes/fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+    src: url('.../Imagenes/fonts/flexslider-icon.eot');
+    src: url('.../Imagenes/fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('../Imagenes/fonts/flexslider-icon.woff') 
+    format('woff'), url('../Imagenes/fonts/flexslider-icon.ttf') format('truetype'), url('.../Imagenes/fonts/flexslider-icon.svg#flexslider-icon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
