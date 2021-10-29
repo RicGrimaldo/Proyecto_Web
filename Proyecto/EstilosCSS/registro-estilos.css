@@ -139,23 +139,22 @@ main{
 .formulario__register{
     display: none;
 }
-
 .ph-email::placeholder{
-    background-image: url(/Imagenes/Header_Footer/at_icon.png);
+    background-image: url(../Imagenes/Header_Footer/at_icon.png);
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: left center;
 }
 
 .ph-pass::placeholder{
-    background-image: url(/Imagenes/Header_Footer/lock_icon.png);
+    background-image: url(../Imagenes/Header_Footer/lock_icon.png);
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: left center;
 }
 
 .ph-user::placeholder{
-    background-image: url(/Imagenes/Header_Footer/user_icon.png);
+    background-image: url(../Imagenes/Header_Footer/user-icon.png);
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: left center;

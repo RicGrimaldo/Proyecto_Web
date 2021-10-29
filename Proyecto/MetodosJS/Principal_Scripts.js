@@ -135,31 +135,31 @@ const mandarMangaSeleccionado = objeto =>{
 }
 
 
-// //Parte estatica SLIDES 
-// const slide1= document.getElementById('referencia_slide1');
-// slide1.addEventListener('click', function(){    
-//     const titulo = document.querySelector('#titulo1').textContent;   
-//     let manga = mangas.find(manga => manga.titulo === titulo);   
-//         localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));   
-// });
-// const slide2= document.getElementById('referencia_slide2');
-// slide2.addEventListener('click', function(){    
-//     const titulo = document.querySelector('#titulo2').textContent;   
-//     let manga = mangas.find(manga => manga.titulo === titulo);   
-//         localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));   
-// });
-// const slide3= document.getElementById('referencia_slide3');
-// slide3.addEventListener('click', function(){    
-//     const titulo = document.querySelector('#titulo3').textContent;   
-//     let manga = mangas.find(manga => manga.titulo === titulo);   
-//         localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));   
-// });
-// const slide4= document.getElementById('referencia_slide4');
-// slide4.addEventListener('click', function(){    
-//     const titulo = document.querySelector('#titulo4').textContent;   
-//     let manga = mangas.find(manga => manga.titulo === titulo);   
-//         localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));   
-// });
+//Parte estatica SLIDES 
+const slide1= document.getElementById('referencia_slide1');
+slide1.addEventListener('click', function(){    
+    const titulo = document.querySelector('#titulo1').textContent;   
+    let manga = mangas.find(manga => manga.titulo === titulo);   
+        localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));   
+});
+const slide2= document.getElementById('referencia_slide2');
+slide2.addEventListener('click', function(){    
+    const titulo = document.querySelector('#titulo2').textContent;   
+    let manga = mangas.find(manga => manga.titulo === titulo);   
+        localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));   
+});
+const slide3= document.getElementById('referencia_slide3');
+slide3.addEventListener('click', function(){    
+    const titulo = document.querySelector('#titulo3').textContent;   
+    let manga = mangas.find(manga => manga.titulo === titulo);   
+        localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));   
+});
+const slide4= document.getElementById('referencia_slide4');
+slide4.addEventListener('click', function(){    
+    const titulo = document.querySelector('#titulo4').textContent;   
+    let manga = mangas.find(manga => manga.titulo === titulo);   
+        localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));   
+});
 
 
 

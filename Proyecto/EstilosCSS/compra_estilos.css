@@ -55,8 +55,6 @@ body{
      }
 }
 
-
-
 .flex-container > .i3{
     height:auto;
 }
@@ -112,3 +110,21 @@ body{
 .texto-costo{
     margin:40px;
  }
+
+
+body.dark {
+    background:linear-gradient(#081324,#040912);
+}
+body.dark .contenedor1{
+    background:linear-gradient(#081324,#040912);
+}
+body.dark .flex-container > div{
+    background:linear-gradient(#6f8bb188,#506c72);
+    box-shadow: 5px 4px 12px rgb(0 0 0 / 30%); 
+    color:white;
+}
+body.dark #show{
+    box-shadow:-5px 10px 12px rgb(0 0 0 / 30%); 
+    border:3px solid #ffffff;
+    width:100%;  
+}
