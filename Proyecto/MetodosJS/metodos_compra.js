@@ -106,6 +106,7 @@ btnAgregarCarrito.addEventListener('click', function() {
         btnAgregarCarrito.style.cursor = 'default';
         //  En caso de que ya exista el carrito, se le agrega el nuevo manga
         if(localStorage.getItem('carrito')) {
+            guardarDatosSQL("carrito");
             carrito = JSON.parse(localStorage.getItem('carrito'));
             carrito.push(manga);
             localStorage.setItem('carrito',JSON.stringify(carrito));
@@ -117,6 +118,44 @@ btnAgregarCarrito.addEventListener('click', function() {
         }
     }
 });
+
+// const guardarDatosSQL = function(destino){
+//     var datos = [];
+//     datos["destino"] = destino;
+//     datos["id"] = manga.id;
+//     datosJSON = JSON.stringify(datos);
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function() {
+//             if (this.readyState == 4 && this.status == 200) {
+//                 //El resultado se muestra en consola
+//                 console.log(this.responseText);
+//                 alert(this.responseText);
+//             }
+//         };
+//     xhttp.open('POST', 'PHP/guardar.php', true);
+//     xhttp.send(datosJSON); 
+// }
+
+const guardarDatosSQL = function(destino){
+    $.ajax({
+        url : "PHP/guardar.php",
+        type: "POST",
+        async: true,
+        data:{
+            destino: destino,
+            id_manga: manga.id
+        },
+        beforeSend: function(){
+
+        },
+        success: function(response){
+            console.log(response);
+        },
+        error: function(error){
+            console.log(error);
+        }
+    })
+}
 
 //  Al momento de realizar la compra
 btnCompra.addEventListener('click', function(){
