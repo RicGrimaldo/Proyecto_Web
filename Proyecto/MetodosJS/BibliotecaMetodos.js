@@ -3,7 +3,6 @@ const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
 const btnCambiarOscuro = document.getElementById('btnCambiarOscuro');
 let biblioteca = [];
-let descargados = [];
 
 function Manga(titulo, autor, generos, rutaArchivo, imagenURL, id) {
     this.titulo = titulo;
@@ -28,11 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
             footer: '<a href="Carrito.html" class="button">Ir a mi carrito</a>'
         })
     }
-
-    if(localStorage.getItem('Descargados')){
-        descargados = JSON.parse(localStorage.getItem('Descargados'));
-        cargarDescargados();
-    }
 });
 
 //  Para pintar las cartas a partir de los mangas almacenados en la biblioteca
@@ -45,21 +39,6 @@ const pintarCards = function(){
         fragment.appendChild(clone);
     }
     cards.appendChild(fragment);
-}
-
-//  Carga los mangas que ya hayan sido descargados y cambia su botón por 'descargado'
-const cargarDescargados = function(){
-    var botones = document.getElementsByClassName('button');
-    for(var i = 0; i < botones.length; i++){
-        var btn = botones[i];
-        let manga = descargados.find(manga => manga.id === btn.dataset.id);
-        if(manga != null){
-            btn.innerHTML =  `<span class="icon-check"></span>Descargado`;
-            btn.className = "buttonDescargado";
-            i--;
-        }
-
-    }
 }
 
 //  Cuando se haga referencia a una carta
@@ -87,9 +66,6 @@ const descargarPDF = objeto => {
     //  Tanto el contenido como la clase cambiará de 'Descargar' a 'Descargado'
     btn.innerHTML =  `<span class="icon-check"></span>Descargado`;
     btn.className = "buttonDescargado";
-
-    //  Almacenamos el manga descargado al array de Descargados
-    descargados.push(manga);
 
     //  Para un alert mostrando el éxito de la descarga del pdf del manga seleccionado
     const Toast = Swal.mixin({
@@ -126,8 +102,11 @@ const descargarPDF = objeto => {
             document.body.removeChild(link);
         })
 
-        //  Se guarda el array de descargados en localStorage
-    localStorage.setItem('Descargados',JSON.stringify(descargados));
+    setTimeout(function(){
+        var btn = objeto.querySelector('.buttonDescargado');
+        btn.innerHTML =  `<span class="icon-download"></span>Descargar`;
+        btn.className = "button";
+    }, 3000);
 
 };
 

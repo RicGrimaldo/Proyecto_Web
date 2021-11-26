@@ -2,7 +2,6 @@ const btnCompra = document.getElementById('btnCompra');
 const btnAgregarCarrito = document.getElementById('btnAgregarCarrito');
 let manga;
 let carrito = [];
-let descargados = [];
 let biblioteca = [];
 
 function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, precio) {
@@ -94,25 +93,6 @@ const cargarAgregadoBiblioteca = function(){
         //  Se remueve el botón de añadir al carrito
         var padre = btnAgregarCarrito.parentNode;
         padre.removeChild(btnAgregarCarrito);
-        //  En caso de que el manga ya haya sido descargado, se actualizará el botón
-        if(localStorage.getItem('Descargados')){
-            descargados = JSON.parse(localStorage.getItem('Descargados'));
-            cargarDescargado();
-        }
-    }
-}
-
-//  Método para cambiar el botón en caso de que el manga ya haya sido descargado
-const cargarDescargado = function(){
-    var existe = descargados.find(item => item.titulo === manga.titulo);
-    if(existe){
-        var btnDescargar = document.getElementById('btnDescargar');
-        btnDescargar.style.borderRadius = '50px';
-        btnDescargar.style.color = 'white';
-        btnDescargar.innerText =  "Descargado";
-        btnDescargar.className = 'btn-success' + ' btn ' + ' btn-lg';
-        btnDescargar.id = "btnDescargado";
-        btnDescargar.cursor = 'default';
     }
 }
 
@@ -140,7 +120,7 @@ btnAgregarCarrito.addEventListener('click', function() {
 
 //  Al momento de realizar la compra
 btnCompra.addEventListener('click', function(){
-    var existe = descargados.find(item => item.titulo === manga.titulo);
+    var existe = biblioteca.find(item => item.titulo === manga.titulo);
     if(!existe){
         Swal.fire({
             text: '¿Deseas realizar tu compra?',
@@ -252,12 +232,10 @@ const descargarPDF = function(){
             document.body.removeChild(link);
         })
 
-    if(localStorage.getItem('Descargados')) {
-            descargados = JSON.parse(localStorage.getItem('Descargados'));
-            descargados.push(manga);
-            localStorage.setItem('Descargados',JSON.stringify(descargados));
-    }else{
-        descargados.push(manga);
-        localStorage.setItem('Descargados',JSON.stringify(descargados));
-    }
+    setTimeout(function(){
+        var btnDescargado = document.getElementById('btnDescargado');
+        btnDescargado.setAttribute('id','btnDescargar');
+        btnDescargado.setAttribute('class','btn btn-primary btn-lg');
+        btnDescargado.innerText = 'Descargar';
+    }, 3000);
 }
