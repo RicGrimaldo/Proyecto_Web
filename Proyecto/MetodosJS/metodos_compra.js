@@ -130,8 +130,7 @@ const recuperarIDSQL = function(origen){
         type: "POST",
         async: true,
         data:{
-            origen: origen,
-            id_manga: manga.id
+            origen: origen
         },
         beforeSend: function(){
 
@@ -169,7 +168,6 @@ const almacenarMangas = function(datos){
                             item.id, item.precio);
         mangas.push(nuevoManga);
     }
-    console.log(mangas);
 };
 
 const llenarCarrito = function(mangasComprados){
