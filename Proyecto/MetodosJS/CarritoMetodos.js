@@ -170,7 +170,7 @@ const vaciarComprados = function(){
                         document.location.reload();
                     }
                 })
-                //setTimeout( function() { document.location.reload(); }, 2500 );
+                setTimeout( function() { document.location.reload(); }, 2500 );
             }
         })
     }else{
@@ -204,6 +204,7 @@ const quitarMangasComprados = function(){
         }
     }
     guardarDatosSQL("carrito", "removerLista", JSON.stringify(ids));
+    guardarDatosSQL("biblioteca", "guardarLista", JSON.stringify(ids));
 }
 
 var removeItemFromArr = ( manga ) => {
@@ -211,7 +212,6 @@ var removeItemFromArr = ( manga ) => {
     i !== -1 && carrito.splice( i, 1 );
 };
 
-//  ["2","50","11","46","59","30","75","68","40"]
 //  Método para guardar los id de los mangas ya sea de mangas comprados (carrito) o biblioteca
 const guardarDatosSQL = function(destino, accion, ids){
     $.ajax({

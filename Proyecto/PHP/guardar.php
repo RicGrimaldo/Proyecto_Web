@@ -77,19 +77,39 @@
     }
     
 	if($_POST['destino'] == 'biblioteca'){
-        $id = $_POST['id_manga'];
-        header("content-type: application/json");
-        $sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
-        $resultado = mysqli_query($conexion, $sentenciaSQL);
-        if ($resultado->num_rows > 0) {
-            $datos = $resultado->fetch_assoc();
-            $nuevoArreglo = json_decode($datos["ID_Biblioteca"]);
-            $nuevoArreglo[] = $id;
-            $array_texto = json_encode($nuevoArreglo);
-            $sql = "UPDATE usuarios SET ID_Biblioteca='$array_texto' WHERE Usuario='GrimaldoRic'";
-            $resultado = mysqli_query($conexion, $sql);
-			echo $array_texto;
-        }
+		if($_POST['accion'] == 'guardar'){
+			$id = $_POST['id_manga'];
+			header("content-type: application/json");
+			$sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+			$resultado = mysqli_query($conexion, $sentenciaSQL);
+			if ($resultado->num_rows > 0) {
+				$datos = $resultado->fetch_assoc();
+				$nuevoArreglo = json_decode($datos["ID_Biblioteca"]);
+				$nuevoArreglo[] = $id;
+				$array_texto = json_encode($nuevoArreglo);
+				$sql = "UPDATE usuarios SET ID_Biblioteca='$array_texto' WHERE Usuario='GrimaldoRic'";
+				$resultado = mysqli_query($conexion, $sql);
+				echo $array_texto;
+			}
+		}
+
+		if($_POST['accion'] == 'guardarLista'){
+		$ids = json_decode($_POST['arregloIDS']);
+		$sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+		$resultado = mysqli_query($conexion, $sentenciaSQL);
+			if ($resultado->num_rows > 0) {
+				$datos = $resultado->fetch_assoc();
+				$nuevoArreglo = json_decode($datos["ID_Biblioteca"]);
+				$nuevoArreglo = array_merge($nuevoArreglo, $ids);
+				$nuevoArreglo = array_values($nuevoArreglo);
+				$array_texto = json_encode($nuevoArreglo);
+				$sql = "UPDATE usuarios SET ID_Biblioteca='$array_texto' WHERE Usuario='GrimaldoRic'";
+				$resultado = mysqli_query($conexion, $sql);
+				echo $array_texto;
+			}
+
+		}
+
     }
 
 	// $sentenciaSQL = "SELECT ArregloPrueba, Usuario FROM usuario WHERE Usuario='GrimaldoRic'";
