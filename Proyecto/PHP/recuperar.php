@@ -22,6 +22,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 
     }
+
+    if($_POST['origen'] == 'biblioteca'){
+        $sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+        $resultado = mysqli_query($conexion, $sentenciaSQL);
+
+        if ($resultado->num_rows > 0) {
+            $datos = $resultado->fetch_assoc();
+            echo $datos["ID_Biblioteca"];
+        } else {
+            echo "0 resultados";
+        }
+
+    }
 }
 else echo 'Hubo un error extraño...';
 

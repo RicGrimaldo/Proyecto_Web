@@ -24,11 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         recuperarIDSQL('carrito');
         pintarCard(mangaSeleccionado);
         insertDatos(mangaSeleccionado);
-        //  En caso de que haya elementos en la biblioteca, se verificará si el manga actual está almacenado allí
-        if(localStorage.getItem('biblioteca')){
-            biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
-            cargarAgregadoBiblioteca();
-        }
+        recuperarIDSQL('biblioteca');
     } else{
         Swal.fire({
             icon: 'warning',
@@ -141,7 +137,11 @@ const recuperarIDSQL = function(origen){
 
         },
         success: function(response){
-            llenarCarrito(JSON.parse(response));
+            if(origen == 'carrito')
+                llenarCarrito(JSON.parse(response));
+            else if(origen == 'biblioteca'){
+                llenarBiblioteca(JSON.parse(response));
+            }
         },
         error: function(error){
             console.log(error);
@@ -175,7 +175,6 @@ const almacenarMangas = function(datos){
 const llenarCarrito = function(mangasComprados){
     for(var i=0; i<mangasComprados.length; i++){
         var existe = mangas.find(item => item.id === mangasComprados[i]);
-        // console.log("Compraremos "+item.id+" de JSON con "+mangaComprado.id_manga+" del manga comprado");
         if(existe){
             carrito.push(existe);
         }
@@ -183,6 +182,18 @@ const llenarCarrito = function(mangasComprados){
     localStorage.removeItem('carrito');
     localStorage.setItem('carrito',JSON.stringify(carrito));
     buscarEnCarrito(manga);
+}
+
+const llenarBiblioteca = function(mangasDeBiblioteca){
+    for(var i=0; i<mangasDeBiblioteca.length; i++){
+        var existe = mangas.find(item => item.id === mangasDeBiblioteca[i]);
+        if(existe){
+            biblioteca.push(existe);
+        }
+    }
+    localStorage.removeItem('biblioteca');
+    localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
+    cargarAgregadoBiblioteca();
 }
 
 //  Método para buscar el manga y verificar si existe en el carrito
