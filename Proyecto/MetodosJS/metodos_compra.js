@@ -104,7 +104,7 @@ btnAgregarCarrito.addEventListener('click', function() {
 //  Método para guardar los id de los mangas ya sea de mangas comprados (carrito) o biblioteca
 const guardarDatosSQL = function(destino, accion){
     $.ajax({
-        url : "PHP/guardar.php",
+        url : "PHP/guardarCB.php",
         type: "POST",
         async: true,
         data:{
@@ -127,7 +127,7 @@ const guardarDatosSQL = function(destino, accion){
 
 const recuperarIDSQL = function(origen){
     $.ajax({
-        url : "PHP/recuperar.php",
+        url : "PHP/recuperarCB.php",
         type: "POST",
         async: true,
         data:{

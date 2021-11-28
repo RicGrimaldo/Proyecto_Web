@@ -3,31 +3,92 @@ const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
 const btnCambiarOscuro = document.getElementById('btnCambiarOscuro');
 let biblioteca = [];
+const mangas = [];
 
-function Manga(titulo, autor, generos, rutaArchivo, imagenURL, id) {
+//  Objeto de tipo manga
+function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, precio) {
     this.titulo = titulo;
     this.autor = autor;
     this.generos = generos;
+    this.sinopsis = sinopsis;
     this.rutaArchivo = rutaArchivo;
     this.imagenURL = imagenURL;
     this.id = id;
+    this.precio = precio;
 }
 
-//  Falta recorrer todo de nuevo y registrar elementos que ya hayan sido descargados
-//  Para inhabilitar el botón, aunque también se puede preguntar "desea descargar de nuevo?" o similar
 document.addEventListener('DOMContentLoaded', function() {
-    if(localStorage.getItem('biblioteca')) {
-        biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
-        pintarCards();
-    } else{
-        Swal.fire({
-            icon: 'warning',
-            title: '¡No tienes nada agregado a la biblioteca!',
-            showConfirmButton: false,
-            footer: '<a href="Carrito.html" class="button">Ir a mi carrito</a>'
-        })
-    }
+    leerDatos();
+    recuperarIDSQL('biblioteca');
 });
+
+//  Para leer con ajax el JSON que contiene la información de todos los mangas
+const leerDatos = async() => {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let datos = JSON.parse(this.responseText);
+            almacenarMangas(datos);
+        }
+    };
+    xhttp.open("GET", "Mangas.json");
+    xhttp.send();
+};
+
+//  Para almacenar objetos de tipo manga
+const almacenarMangas = function(datos){
+    for(item of datos){
+        nuevoManga = new Manga(item.titulo, item.autor, 
+                            item.generos, item.sinopsis,
+                            item.rutaArchivo, item.imagenURL, 
+                            item.id, item.precio);
+        mangas.push(nuevoManga);
+    }
+};
+
+//  Método para recuperar los datos de la base de datos
+//  El origen puede ser tanto el carrito como de la biblioteca
+const recuperarIDSQL = function(origen){
+    $.ajax({
+        url : "PHP/recuperarCB.php",
+        type: "POST",
+        async: true,
+        data:{
+            origen: origen
+        },
+        beforeSend: function(){
+
+        },
+        success: function(response){
+            llenarBiblioteca(JSON.parse(response));
+        },
+        error: function(error){
+            console.log(error);
+        }
+    })
+}
+
+//  Para llenar el array de biblioteca a partir de la base de datos
+const llenarBiblioteca = function(mangasDeBiblioteca){
+    for(var i=0; i<mangasDeBiblioteca.length; i++){
+        var existe = mangas.find(item => item.id === mangasDeBiblioteca[i]);
+        if(existe){
+            biblioteca.push(existe);
+        }
+    }
+    if(mangasDeBiblioteca.length == 0){
+        Swal.fire({
+                icon: 'warning',
+                title: '¡No tienes nada agregado a la biblioteca!',
+                showConfirmButton: false,
+                footer: '<a href="Carrito.html" class="button">Ir a mi carrito</a>'
+            })
+            setTimeout( function() { window.location.href = "Categorias_Main.html"; }, 4500 );
+    }
+    localStorage.removeItem('biblioteca');
+    localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
+    pintarCards();
+}
 
 //  Para pintar las cartas a partir de los mangas almacenados en la biblioteca
 const pintarCards = function(){

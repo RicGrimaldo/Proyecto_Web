@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //  El origen puede ser tanto el carrito como de la biblioteca
 const recuperarIDSQL = function(origen){
     $.ajax({
-        url : "PHP/recuperar.php",
+        url : "PHP/recuperarCB.php",
         type: "POST",
         async: true,
         data:{
@@ -222,7 +222,7 @@ var removeItemFromArr = ( manga ) => {
 //  Método para guardar los id de los mangas ya sea de mangas comprados (carrito) o biblioteca
 const guardarDatosSQL = function(destino, accion, ids){
     $.ajax({
-        url : "PHP/guardar.php",
+        url : "PHP/guardarCB.php",
         type: "POST",
         async: true,
         data:{
