@@ -9,7 +9,6 @@
 		if (!$conexion) {
 			die("Fallo: " . mysqli_connect_error());
 		}
-        else echo 'Conexion exitosa';
 
 	// $arreglo = array();
 	// $array_texto = json_encode($arreglo);
@@ -30,12 +29,26 @@
             $nuevoArreglo[] = $id;
             $array_texto = json_encode($nuevoArreglo);
             $sql = "UPDATE usuarios SET ID_ComprasMangas='$array_texto' WHERE Usuario='GrimaldoRic'";
-            echo mysqli_query($conexion, $sql);
+            $resultado = mysqli_query($conexion, $sql);
+			echo $array_texto;
         }
-
-        // echo json_encode($data);
     }
-    else echo 'Un error';
+    
+	if($_POST['destino'] == 'biblioteca'){
+        $id = $_POST['id_manga'];
+        header("content-type: application/json");
+        $sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+        $resultado = mysqli_query($conexion, $sentenciaSQL);
+        if ($resultado->num_rows > 0) {
+            $datos = $resultado->fetch_assoc();
+            $nuevoArreglo = json_decode($datos["ID_Biblioteca"]);
+            $nuevoArreglo[] = $id;
+            $array_texto = json_encode($nuevoArreglo);
+            $sql = "UPDATE usuarios SET ID_Biblioteca='$array_texto' WHERE Usuario='GrimaldoRic'";
+            $resultado = mysqli_query($conexion, $sql);
+			echo $array_texto;
+        }
+    }
 
 	// $sentenciaSQL = "SELECT ArregloPrueba, Usuario FROM usuario WHERE Usuario='GrimaldoRic'";
 

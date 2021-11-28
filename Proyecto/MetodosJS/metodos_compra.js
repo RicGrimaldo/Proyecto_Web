@@ -3,6 +3,7 @@ const btnAgregarCarrito = document.getElementById('btnAgregarCarrito');
 let manga;
 let carrito = [];
 let biblioteca = [];
+const mangas = [];
 
 function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, precio) {
     this.titulo = titulo;
@@ -15,16 +16,12 @@ function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, pre
     this.precio = precio;
 }
 document.addEventListener('DOMContentLoaded', function() {
+    leerDatos();
     //  Para obtener el mangaSeleccionado
     if(localStorage.getItem('mangaSeleccionado')) {
         let mangaSeleccionado = JSON.parse(localStorage.getItem('mangaSeleccionado'));
         manga = mangaSeleccionado;
-        if(localStorage.getItem('carrito')) {
-            //  En caso de que el manga ya haya sido agregado en el carrito
-            //  Se actualizará el botón
-            carrito = JSON.parse(localStorage.getItem('carrito'));
-            buscarEnCarrito(mangaSeleccionado);
-        }
+        recuperarIDSQL('carrito');
         pintarCard(mangaSeleccionado);
         insertDatos(mangaSeleccionado);
         //  En caso de que haya elementos en la biblioteca, se verificará si el manga actual está almacenado allí
@@ -43,18 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 });
-
-//  Método para buscar el manga y verificar si existe en el carrito
-const buscarEnCarrito = function(mangaSeleccionado){
-    var existe = carrito.find(item => item.titulo === mangaSeleccionado.titulo);
-    //  De ser así, el botón de "Añadir al carrito" cambiará
-    if(existe){
-        btnAgregarCarrito.style.backgroundColor =  "#419641";
-        btnAgregarCarrito.innerText =  "Añadido al carrito";
-        btnAgregarCarrito.disabled = false;
-        btnAgregarCarrito.cursor = 'default';
-    }
-}
 
 //  Método para pintar la imagen del manga en la página
 const pintarCard = function(mangaSeleccionado){
@@ -113,29 +98,14 @@ btnAgregarCarrito.addEventListener('click', function() {
         }
         else{
             //  Caso contrario, se guarda en el localStorage
+            guardarDatosSQL("carrito");
             carrito.push(manga);
             localStorage.setItem('carrito',JSON.stringify(carrito));
         }
     }
 });
 
-// const guardarDatosSQL = function(destino){
-//     var datos = [];
-//     datos["destino"] = destino;
-//     datos["id"] = manga.id;
-//     datosJSON = JSON.stringify(datos);
-//     var xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function() {
-//             if (this.readyState == 4 && this.status == 200) {
-//                 //El resultado se muestra en consola
-//                 console.log(this.responseText);
-//                 alert(this.responseText);
-//             }
-//         };
-//     xhttp.open('POST', 'PHP/guardar.php', true);
-//     xhttp.send(datosJSON); 
-// }
-
+//  Método para guardar los id de los mangas ya sea de mangas comprados (carrito) o biblioteca
 const guardarDatosSQL = function(destino){
     $.ajax({
         url : "PHP/guardar.php",
@@ -149,12 +119,83 @@ const guardarDatosSQL = function(destino){
 
         },
         success: function(response){
-            console.log(response);
+            console.log(JSON.stringify(response) + " por medio de "+destino);
         },
         error: function(error){
             console.log(error);
         }
     })
+}
+
+const recuperarIDSQL = function(origen){
+    $.ajax({
+        url : "PHP/recuperar.php",
+        type: "POST",
+        async: true,
+        data:{
+            origen: origen,
+            id_manga: manga.id
+        },
+        beforeSend: function(){
+
+        },
+        success: function(response){
+            console.log(JSON.parse(response));
+            llenarCarrito(JSON.parse(response));
+            // carrito = response;
+        },
+        error: function(error){
+            console.log(error);
+        }
+    })
+}
+
+const leerDatos = async() => {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let datos = JSON.parse(this.responseText);
+            almacenarMangas(datos);
+        }
+    };
+    xhttp.open("GET", "Mangas.json");
+    xhttp.send();
+};
+
+const almacenarMangas = function(datos){
+    for(item of datos){
+        nuevoManga = new Manga(item.titulo, item.autor, 
+                            item.generos, item.sinopsis,
+                            item.rutaArchivo, item.imagenURL, 
+                            item.id, item.precio);
+        mangas.push(nuevoManga);
+    }
+    console.log(mangas);
+};
+
+const llenarCarrito = function(mangasComprados){
+    for(var i=0; i<mangasComprados.length; i++){
+        var existe = mangas.find(item => item.id === mangasComprados[i]);
+        // console.log("Compraremos "+item.id+" de JSON con "+mangaComprado.id_manga+" del manga comprado");
+        if(existe){
+            carrito.push(existe);
+        }
+    }
+    localStorage.removeItem('carrito');
+    localStorage.setItem('carrito',JSON.stringify(carrito));
+    buscarEnCarrito(manga);
+}
+
+//  Método para buscar el manga y verificar si existe en el carrito
+const buscarEnCarrito = function(mangaSeleccionado){
+    var existe = carrito.find(item => item.titulo === mangaSeleccionado.titulo);
+    //  De ser así, el botón de "Añadir al carrito" cambiará
+    if(existe){
+        btnAgregarCarrito.style.backgroundColor =  "#419641";
+        btnAgregarCarrito.innerText =  "Añadido al carrito";
+        btnAgregarCarrito.disabled = false;
+        btnAgregarCarrito.cursor = 'default';
+    }
 }
 
 //  Al momento de realizar la compra
@@ -202,10 +243,12 @@ btnCompra.addEventListener('click', function(){
                 })
             }
             if(localStorage.getItem('biblioteca')){
+                guardarDatosSQL("biblioteca");
                 biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
                 biblioteca.push(manga);
                 localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
-            }else{  //  Caso que no hayan ni descargados ni mangas en la biblioteca
+            }else{  //  Caso que no haya mangas en la biblioteca
+                guardarDatosSQL("biblioteca");
                 biblioteca.push(manga);
                 localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
             }
