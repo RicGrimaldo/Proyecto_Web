@@ -91,14 +91,14 @@ btnAgregarCarrito.addEventListener('click', function() {
         btnAgregarCarrito.style.cursor = 'default';
         //  En caso de que ya exista el carrito, se le agrega el nuevo manga
         if(localStorage.getItem('carrito')) {
-            guardarDatosSQL("carrito");
+            guardarDatosSQL("carrito", "guardar");
             carrito = JSON.parse(localStorage.getItem('carrito'));
             carrito.push(manga);
             localStorage.setItem('carrito',JSON.stringify(carrito));
         }
         else{
             //  Caso contrario, se guarda en el localStorage
-            guardarDatosSQL("carrito");
+            guardarDatosSQL("carrito", "guardar");
             carrito.push(manga);
             localStorage.setItem('carrito',JSON.stringify(carrito));
         }
@@ -106,13 +106,14 @@ btnAgregarCarrito.addEventListener('click', function() {
 });
 
 //  Método para guardar los id de los mangas ya sea de mangas comprados (carrito) o biblioteca
-const guardarDatosSQL = function(destino){
+const guardarDatosSQL = function(destino, accion){
     $.ajax({
         url : "PHP/guardar.php",
         type: "POST",
         async: true,
         data:{
             destino: destino,
+            accion: accion,
             id_manga: manga.id
         },
         beforeSend: function(){
@@ -140,9 +141,7 @@ const recuperarIDSQL = function(origen){
 
         },
         success: function(response){
-            console.log(JSON.parse(response));
             llenarCarrito(JSON.parse(response));
-            // carrito = response;
         },
         error: function(error){
             console.log(error);
@@ -243,12 +242,12 @@ btnCompra.addEventListener('click', function(){
                 })
             }
             if(localStorage.getItem('biblioteca')){
-                guardarDatosSQL("biblioteca");
+                guardarDatosSQL("biblioteca", "guardar");
                 biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
                 biblioteca.push(manga);
                 localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
             }else{  //  Caso que no haya mangas en la biblioteca
-                guardarDatosSQL("biblioteca");
+                guardarDatosSQL("biblioteca", "guardar");
                 biblioteca.push(manga);
                 localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
             }
@@ -266,8 +265,10 @@ const removerMangaCarrito = function(){
         }
     }
     if(carrito.length > 0){
+        guardarDatosSQL("carrito", "remover");
         localStorage.setItem('carrito',JSON.stringify(carrito));
     }else{  //  Significa que el carrito está vacío, por lo que se remueve del localStorage
+        guardarDatosSQL("carrito", "remover");
         localStorage.removeItem('carrito');
     }
 }
