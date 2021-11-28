@@ -10,15 +10,10 @@
 			die("Fallo: " . mysqli_connect_error());
 		}
 
-	// $arreglo = array();
-	// $array_texto = json_encode($arreglo);
-
-	// $sentenciaSQL = "INSERT INTO usuario (Usuario, ArregloPrueba) VALUES ('Grimaldo', '$array_texto')";
-
-	// echo mysqli_query($conexion, $sentenciaSQL);
-
+	//	Métodos de carrito
     if($_POST['destino'] == 'carrito'){
 
+		//	Para guardar un id
 		if($_POST['accion'] == 'guardar'){
 			$id = $_POST['id_manga'];
 			header("content-type: application/json");
@@ -35,6 +30,7 @@
 			}
 		}
 
+		//	Para remover un id en específico
 		if($_POST['accion'] == 'remover'){
 			$id = $_POST['id_manga'];
 			header("content-type: application/json");
@@ -53,8 +49,10 @@
 			}
 		}
 
+		//	Para remover una lista de IDS
 		if($_POST['accion'] == 'removerLista'){
 			$ids = json_decode($_POST['arregloIDS']);
+			header("content-type: application/json");
 			foreach($ids as $idManga){
 				$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
 				$resultado = mysqli_query($conexion, $sentenciaSQL);
@@ -74,9 +72,19 @@
 			}
 		}
 
+		if($_POST['accion'] == 'vaciarCarrito'){
+			header("content-type: application/json");
+			$sql = "UPDATE usuarios SET ID_ComprasMangas='[]' WHERE Usuario='GrimaldoRic'";
+			$resultado = mysqli_query($conexion, $sql);
+			echo '[]';
+		}
+
     }
     
+	//	Métodos de biblioteca
 	if($_POST['destino'] == 'biblioteca'){
+
+		//	Para guardar un id 
 		if($_POST['accion'] == 'guardar'){
 			$id = $_POST['id_manga'];
 			header("content-type: application/json");
@@ -93,6 +101,7 @@
 			}
 		}
 
+		//	Para guardar una lista de ids
 		if($_POST['accion'] == 'guardarLista'){
 		$ids = json_decode($_POST['arregloIDS']);
 		$sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
@@ -111,32 +120,6 @@
 		}
 
     }
-
-	// $sentenciaSQL = "SELECT ArregloPrueba, Usuario FROM usuario WHERE Usuario='GrimaldoRic'";
-
-	// $resultado = mysqli_query($conexion, $sentenciaSQL);
-	// if ($resultado->num_rows > 0) {
-	// 	$datos = $resultado->fetch_assoc();
-	// 	$nuevoArreglo = json_decode($datos["ArregloPrueba"]);
-	// 	// $resul = "";
-	// 	// $i = 1;
-	// 	// for ($i = 1; $i <= 10; $i++) {
-	// 	// 	if(isset($nuevoArreglo[$i])){
-	// 	// 		if($i == $nuevoArreglo[$i])
-	// 	// 			$resul .= $valor . " , ";
-	// 	// 		else $resul .= " * ";
-	// 	// 	}
-	// 	// }
-	// 	// echo $resul;
-	// 	$nuevoArreglo[] = "10";
-	// 	$array_texto = json_encode($nuevoArreglo);
-	// 	$sql = "UPDATE usuario SET ArregloPrueba='$array_texto' WHERE Usuario='Grimaldo'";
-	// 	echo mysqli_query($conexion, $sql);
-	// } else {
-	// 	echo "0 resultados";
-	// }
 }
-else echo 'Hubo un error extraño...';
-
 
 ?>

@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     recuperarIDSQL('biblioteca');
 });
 
+//  Método para recuperar los datos de la base de datos
+//  El origen puede ser tanto el carrito como de la biblioteca
 const recuperarIDSQL = function(origen){
     $.ajax({
         url : "PHP/recuperar.php",
@@ -53,6 +55,7 @@ const recuperarIDSQL = function(origen){
     })
 }
 
+//  Para leer con ajax el JSON que contiene la información de todos los mangas
 const leerDatos = async() => {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -65,6 +68,7 @@ const leerDatos = async() => {
     xhttp.send();
 };
 
+//  Para almacenar objetos de tipo manga
 const almacenarMangas = function(datos){
     for(item of datos){
         nuevoManga = new Manga(item.titulo, item.autor, 
@@ -73,19 +77,6 @@ const almacenarMangas = function(datos){
                             item.id, item.precio);
         mangas.push(nuevoManga);
     }
-};
-
-//  Se pintan los templates (cartas) a partir de los mangas leídos del JSON
-const pintarCards = function(){
-    for(var i = 0; i < carrito.length; i++){
-        templateCard.querySelector('h5').textContent = carrito[i].titulo;
-        templateCard.querySelector('p').textContent = "$"  + carrito[i].precio;
-        templateCard.querySelector('img').setAttribute('src', carrito[i].imagenURL);
-        templateCard.querySelector('.btn-dark').dataset.id = carrito[i].id;
-        const clone = templateCard.cloneNode(true);
-        fragment.appendChild(clone);
-    }
-    cards.appendChild(fragment);
 };
 
 //  Se llena el array de carrito con objetos de tipo manga
@@ -110,6 +101,20 @@ const llenarCarrito = function(mangasComprados){
     pintarCards();
 }
 
+//  Se pintan los templates (cartas) a partir de los mangas almacenados en el carrito
+const pintarCards = function(){
+    for(var i = 0; i < carrito.length; i++){
+        templateCard.querySelector('h5').textContent = carrito[i].titulo;
+        templateCard.querySelector('p').textContent = "$"  + carrito[i].precio;
+        templateCard.querySelector('img').setAttribute('src', carrito[i].imagenURL);
+        templateCard.querySelector('.btn-dark').dataset.id = carrito[i].id;
+        const clone = templateCard.cloneNode(true);
+        fragment.appendChild(clone);
+    }
+    cards.appendChild(fragment);
+};
+
+//  Para llenar el array de biblioteca a partir de la base de datos
 const llenarBiblioteca = function(mangasDeBiblioteca){
     for(var i=0; i<mangasDeBiblioteca.length; i++){
         var existe = mangas.find(item => item.id === mangasDeBiblioteca[i]);
@@ -141,7 +146,7 @@ btnPagar.addEventListener('click', function(){
     }
 });
 
-//  Este método será modificado, pues una vez se compren los mangas, ya no deberían aparecer en la página del carrito
+//  Cuando se decida comprar mangas
 const vaciarComprados = function(){
     if(precioTotal > 0){
         Swal.fire({
@@ -203,7 +208,9 @@ const quitarMangasComprados = function(){
             localStorage.removeItem('carrito');
         }
     }
+    //  Se quitan los ids de los mangas comprados del atributo de carrito
     guardarDatosSQL("carrito", "removerLista", JSON.stringify(ids));
+    //  Así mismo, se guardan en biblioteca
     guardarDatosSQL("biblioteca", "guardarLista", JSON.stringify(ids));
 }
 
@@ -330,9 +337,10 @@ btnVaciarCarrito.addEventListener('click', function(){
         iconColor: '#eaec41'
     }).then((result) => {
         if (result.isConfirmed) {
+            guardarDatosSQL("carrito","vaciarCarrito");
             carrito = [];
             localStorage.removeItem('carrito');
-            document.location.reload();
+            // document.location.reload();
         }
     })
 });
