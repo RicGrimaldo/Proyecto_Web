@@ -25,23 +25,8 @@ function Manga(titulo, autor, generos, sinopsis, rutaArchivo, imagenURL, id, pre
 //  Método cuando se carga el DOM
 document.addEventListener('DOMContentLoaded', function() {
     leerDatos();
-    //  Sólo se cargará la página si hay mangas almacenados en el carrito
     recuperarIDSQL('carrito');
-    // if(localStorage.getItem('carrito')) {
-    //     carrito = JSON.parse(localStorage.getItem('carrito'));
-    //     pintarCards();
-    // } else{
-    //     Swal.fire({
-    //         icon: 'warning',
-    //         title: '¡No tienes nada agregado al carrito!',
-    //         showConfirmButton: false,
-    //         footer: '<a href="Categorias_Main.html" class="btn">Ir a categorías</a>'
-    //     })
-    // }
-    if(localStorage.getItem('biblioteca')) {
-        biblioteca = JSON.parse(localStorage.getItem('biblioteca'));
-        quitarMangasComprados();
-    }
+    recuperarIDSQL('biblioteca');
 });
 
 const recuperarIDSQL = function(origen){
@@ -56,7 +41,11 @@ const recuperarIDSQL = function(origen){
 
         },
         success: function(response){
-            llenarCarrito(JSON.parse(response));
+            if(origen == 'carrito')
+                llenarCarrito(JSON.parse(response));
+            else if(origen == 'biblioteca'){
+                llenarBiblioteca(JSON.parse(response));
+            }
         },
         error: function(error){
             console.log(error);
@@ -84,7 +73,6 @@ const almacenarMangas = function(datos){
                             item.id, item.precio);
         mangas.push(nuevoManga);
     }
-    console.log(mangas);
 };
 
 //  Se pintan los templates (cartas) a partir de los mangas leídos del JSON
@@ -103,35 +91,35 @@ const pintarCards = function(){
 //  Se llena el array de carrito con objetos de tipo manga
 const llenarCarrito = function(mangasComprados){
     for(var i = 0; i < mangasComprados.length; i++){
-        console.log("Busquemos el manga comprado " + mangasComprados[i]);
         var existe = mangas.find(item => item.id === mangasComprados[i]);
-        console.log(mangas.includes(mangasComprados[i]));
-        console.log(existe);
         if(existe){
             carrito.push(existe);
         }
+    }
+    if(mangasComprados.length == 0){
+        Swal.fire({
+                icon: 'warning',
+                title: '¡No tienes nada agregado al carrito!',
+                showConfirmButton: false,
+                footer: '<a href="Categorias_Main.html" class="btn">Ir a categorías</a>'
+            })
+            setTimeout( function() { window.location.href = "Categorias_Main.html"; }, 4500 );
     }
     localStorage.removeItem('carrito');
     localStorage.setItem('carrito',JSON.stringify(carrito));
     pintarCards();
 }
 
-//  Se llena el array de carrito con objetos de tipo manga
-// const llenarCarrito = function(mangasComprados){
-//     for(var j = 0; j < mangas.length; j++){
-//         for(var i = 0; i < mangasComprados.length; i++){
-//             console.log("Comparemos "+mangas[j].id+" con "+mangasComprados[i]+" del objeto "+mangas[j]);
-//             console.log("Busquemos el manga comprado " + mangasComprados[i]);
-//             if(mangas[j].id === mangasComprados[i]){
-//                 carrito.push(existe);
-//             }
-//         }
-//     }
-//     localStorage.removeItem('carrito');
-//     localStorage.setItem('carrito',JSON.stringify(carrito));
-//     pintarCards();
-// }
-
+const llenarBiblioteca = function(mangasDeBiblioteca){
+    for(var i=0; i<mangasDeBiblioteca.length; i++){
+        var existe = mangas.find(item => item.id === mangasDeBiblioteca[i]);
+        if(existe){
+            biblioteca.push(existe);
+        }
+    }
+    localStorage.removeItem('biblioteca');
+    localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
+}
 
 //  Evento cuando se haga click al botón de pagar
 btnPagar.addEventListener('click', function(){
@@ -182,6 +170,7 @@ const vaciarComprados = function(){
                         document.location.reload();
                     }
                 })
+                //setTimeout( function() { document.location.reload(); }, 2500 );
             }
         })
     }else{
@@ -200,9 +189,11 @@ const vaciarComprados = function(){
 
 //  Para quitar los mangas comprados del array del carrito
 const quitarMangasComprados = function(){
+    var ids = [];
     for(var i = 0; i < biblioteca.length; i++){
         for(var j = 0; j < carrito.length; j++){
             if(JSON.stringify(biblioteca[i]) == JSON.stringify(carrito[j])){
+                ids.push(carrito[j].id);
                 removeItemFromArr(carrito[j]);
             }
         }
@@ -212,12 +203,37 @@ const quitarMangasComprados = function(){
             localStorage.removeItem('carrito');
         }
     }
+    guardarDatosSQL("carrito", "removerLista", JSON.stringify(ids));
 }
 
 var removeItemFromArr = ( manga ) => {
     var i = carrito.indexOf( manga );
     i !== -1 && carrito.splice( i, 1 );
 };
+
+//  ["2","50","11","46","59","30","75","68","40"]
+//  Método para guardar los id de los mangas ya sea de mangas comprados (carrito) o biblioteca
+const guardarDatosSQL = function(destino, accion, ids){
+    $.ajax({
+        url : "PHP/guardar.php",
+        type: "POST",
+        async: true,
+        data:{
+            destino: destino,
+            accion: accion,
+            arregloIDS: ids
+        },
+        beforeSend: function(){
+
+        },
+        success: function(response){
+            console.log("Accion de "+accion+" con " +JSON.stringify(response) + " por medio de "+destino);
+        },
+        error: function(error){
+            console.log(error);
+        }
+    })
+}
 
 //  Método en el que el usuario decide quitar la selección de mangas a comprar
 btnQuitarSeleccion.addEventListener('click', function(){

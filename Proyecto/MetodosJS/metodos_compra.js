@@ -117,6 +117,7 @@ const guardarDatosSQL = function(destino, accion){
         },
         success: function(response){
             console.log(JSON.stringify(response) + " por medio de "+destino);
+            recuperarIDSQL(destino);
         },
         error: function(error){
             console.log(error);

@@ -34,8 +34,10 @@
 				echo $array_texto;
 			}
 		}
+
 		if($_POST['accion'] == 'remover'){
 			$id = $_POST['id_manga'];
+			header("content-type: application/json");
 			$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
 			$resultado = mysqli_query($conexion, $sentenciaSQL);
 			if ($resultado->num_rows > 0) {
@@ -50,6 +52,28 @@
 				}
 			}
 		}
+
+		if($_POST['accion'] == 'removerLista'){
+			$ids = json_decode($_POST['arregloIDS']);
+			foreach($ids as $idManga){
+				$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+				$resultado = mysqli_query($conexion, $sentenciaSQL);
+				if ($resultado->num_rows > 0) {
+					$datos = $resultado->fetch_assoc();
+					$nuevoArreglo = json_decode($datos["ID_ComprasMangas"]);
+					if((in_array($idManga, $nuevoArreglo)) != false){
+						$clave = array_search($idManga, $nuevoArreglo);
+						unset($nuevoArreglo[$clave]);
+						$nuevoArreglo = array_values($nuevoArreglo);
+						$array_texto = json_encode($nuevoArreglo);
+						$sql = "UPDATE usuarios SET ID_ComprasMangas='$array_texto' WHERE Usuario='GrimaldoRic'";
+						$resultado = mysqli_query($conexion, $sql);
+						echo $array_texto;
+					}
+				}
+			}
+		}
+
     }
     
 	if($_POST['destino'] == 'biblioteca'){
