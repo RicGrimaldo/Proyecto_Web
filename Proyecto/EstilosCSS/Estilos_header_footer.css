@@ -61,6 +61,9 @@ body.dark #cabeceraPrincipal{
     background-color: #1d3f5e;
 }
 
+#imagenPerfil{
+    vertical-align: middle;
+}
 
 .form-control.mr-sm-2{
     width: 500px;
@@ -69,6 +72,7 @@ body.dark #cabeceraPrincipal{
 .navbar-nav li a{
     font-size: 20px;
     padding: 13px 60px!important;
+    vertical-align: middle!important;
 }
 
 .darkModeSwitch{
@@ -240,6 +244,19 @@ body.dark .footer{
 @media only screen and (max-width: 768px){
 
 /*estilo responsive para footer*/
+
+    .dropdown-item{
+        font-size: 17px!important;
+        width: auto!important;
+    }
+
+    .nav-item.dropdown{
+        width: auto!important;
+    }
+
+    .navbar-nav.flex-row.mr-lg-0{
+        width: auto!important;
+    }
 
     .footer{
         
