@@ -1,6 +1,7 @@
 const cards = document.getElementById('cards');
 const templateCard = document.getElementById('template-card').content;
 const fragment = document.createDocumentFragment();
+var mangaRecomendado;
 
 const mangas = [];
 
@@ -23,11 +24,10 @@ const leerDatos = async() => {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let datos = JSON.parse(this.responseText);
-almacenarMangas(datos);
-             pintarCards(datos);
-           
+            almacenarMangas(datos);
+            pintarCards(datos);
+            mangaAleatorio(datos);
            //reducir los que se muestran
-           
         }
     };
     xhttp.open("GET", "Mangas.json");
@@ -43,7 +43,6 @@ const almacenarMangas = function(datos){
                             item.id, item.precio);
         mangas.push(nuevoManga);
     }
-    console.log(mangas);
 }
 const pintarCards = function(datos){
     for(let item of datos){
@@ -60,7 +59,33 @@ const pintarCards = function(datos){
 };
 
 
+const mangaAleatorio = function(datos){
+    var numAleatorio = Math.floor((Math.random() * (75 - 1 + 1)) + 1);
+    for(item of datos){
+        if(item.id === String(numAleatorio) && item.titulo!= "Btooom" && item.titulo!="Parallel Paradise" && item.titulo!="Re : Zero kara Hajimeru Isekai Seikatsu"){
+            mangaMostrar = new Manga(item.titulo, item.autor, 
+                item.generos, item.sinopsis,
+                item.rutaArchivo, item.imagenURL, 
+                item.id, item.precio);
+            break;
+        }
+    }
+    recomendacionDia(mangaMostrar);
+}
 
+const recomendacionDia = function(mangaMostrar){
+    var objeto = document.querySelector('.contenedor4');
+    var imagen = objeto.querySelector('.imagen img');
+    var titulo = objeto.querySelector('.texto .titulo h1');
+    var parrafo = objeto.querySelector('.texto .parrafo p');
+    
+    imagen.removeAttribute('src');
+    imagen.setAttribute('src', mangaMostrar.imagenURL);
+    titulo.innerHTML = mangaMostrar.titulo;
+    parrafo.innerHTML = mangaMostrar.sinopsis;
+    objeto.setAttribute('height', 'auto');
+    mangaRecomendado = mangaMostrar;
+}
 
 
 
@@ -171,7 +196,7 @@ slide4.addEventListener('click', function(){
 
 const boton_a= document.getElementById('boton_estilo');
 boton_a.addEventListener('click', function(){    
-    let manga = mangas.find(manga => manga.titulo === 'Katekyo Hitman Reborn!');   
+    let manga = mangas.find(manga => manga.titulo === mangaRecomendado.titulo);   
     localStorage.setItem('mangaSeleccionado',JSON.stringify(manga));
 });
 

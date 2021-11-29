@@ -44,7 +44,6 @@ const pintarCard = function(mangaSeleccionado){
 
 //  Método para llenar los datos del manga y que se muestren en la página
 const insertDatos = function(mangaSeleccionado){
-    
     document.getElementById("tit").innerHTML = mangaSeleccionado.titulo.toString();
     document.getElementById("costo").innerHTML += mangaSeleccionado.precio.toString();
     document.getElementById("autor").innerHTML += mangaSeleccionado.autor.toString();
