@@ -60,15 +60,22 @@ const pintarCards = function(datos){
 
 
 const mangaAleatorio = function(datos){
+    var mangaMostrar;
     var numAleatorio = Math.floor((Math.random() * (75 - 1 + 1)) + 1);
     for(item of datos){
-        if(item.id === String(numAleatorio) && item.titulo!= "Btooom" && item.titulo!="Parallel Paradise" && item.titulo!="Re : Zero kara Hajimeru Isekai Seikatsu"){
+        if(item.id === String(numAleatorio) && item.titulo!= "Btooom" 
+            && item.titulo!="Parallel Paradise" 
+            && item.titulo!="Re : Zero kara Hajimeru Isekai Seikatsu" 
+            && item.generos[0]!="18+"&&item.generos[0]!="+18"){
             mangaMostrar = new Manga(item.titulo, item.autor, 
                 item.generos, item.sinopsis,
                 item.rutaArchivo, item.imagenURL, 
                 item.id, item.precio);
             break;
         }
+    }
+    if(mangaMostrar == null){
+        mangaMostrar = mangas.find(manga => manga.titulo === 'Katekyo Hitman Reborn!');   
     }
     recomendacionDia(mangaMostrar);
 }
@@ -78,7 +85,6 @@ const recomendacionDia = function(mangaMostrar){
     var imagen = objeto.querySelector('.imagen img');
     var titulo = objeto.querySelector('.texto .titulo h1');
     var parrafo = objeto.querySelector('.texto .parrafo p');
-    
     imagen.removeAttribute('src');
     imagen.setAttribute('src', mangaMostrar.imagenURL);
     titulo.innerHTML = mangaMostrar.titulo;
