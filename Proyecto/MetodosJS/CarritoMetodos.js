@@ -159,10 +159,10 @@ const vaciarComprados = function(){
             cancelButtonText: "Cancelar",
             confirmButtonText: 'Confirmar'
         }).then((result) => {
-            quitarMangasComprados();
-                //  El array de biblioteca se almacena en localStorage para ser recuperado por la página de Biblioteca
-            localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
             if (result.isConfirmed) {
+                quitarMangasComprados();
+                //  El array de biblioteca se almacena en localStorage para ser recuperado por la página de Biblioteca
+                localStorage.setItem('biblioteca',JSON.stringify(biblioteca));
                 Swal.fire({
                     title: '¡Compra realizada!',
                     text: '¡Gracias por tu compra!',
