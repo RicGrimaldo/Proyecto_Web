@@ -83,7 +83,7 @@
         <div class="formulario">      
             <h1>Formulario de contacto</h1>
             <h3>Escr&iacute;benos y en breve nos pondremos en contacto contigo</h3>
-            <form name="reg"class="formulario_contacto">       
+            <form name="reg"class="formulario_contacto" method="POST" action="PHP/enviarMail.php" accept-charset="utf-8">       
                 <p>
                     <label for="nombre" class="colocar_nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
@@ -94,13 +94,13 @@
                 </p>   
                 <p>
                     <label for="asunto" class="colocar_asunto">Asunto</label>
-                    <input type="text" name="asunto" id="assunto" placeholder="Escribe un asunto" required>
+                    <input type="text" name="asunto" id="asunto" placeholder="Escribe un asunto" required>
                 </p>    
                 <p>
                     <label for="mensaje" class="colocar_mensaje">Mensaje</label>                     
                     <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aqu&iacute; tu comentario..."></textarea> 
                 </p>                    
-                <button type="button" onclick="validacion()" class="buttonFormulario">Enviar</button>   
+                <button type="submit" onclick="validacion()" class="buttonFormulario">Enviar</button>   
             </form>
         </div>  
     </div>    
@@ -144,6 +144,33 @@
     </body>
     <script src="MetodosJS/contacto-js.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <?php
+    echo '<script>';
+    $estadoMensaje = (isset($_REQUEST["msj"])) ? $_REQUEST["msj"] : "";
+
+    echo 'var mensaje = \'\'; ';
+    echo 'var estado = \'\';';
+
+    if(hash_hmac('sha512','success', 'msjCifrado') === $estadoMensaje){
+        echo "var mensaje = '¡Mensaje enviado! ¡Gracias por contactarnos!';";
+        echo "var estado = 'success';";
+    }
+    else if (hash_hmac('sha512','warning', 'msjCifrado') === $estadoMensaje){
+        echo "var mensaje = 'Lo siento, parece que hubo un error al enviar el mensaje.'";
+        echo "var estado = 'warning';";
+    }
+        if(isset($estadoMensaje)){
+            echo 'if(mensaje!= \'\' && estado!= \'\'){';
+            echo 'Swal.fire({
+                position: \'top-end\',
+                icon: estado,
+                title: mensaje,
+                showConfirmButton: false,
+                timer: 2500
+            })}';
+        }
+        echo '</script>';
+    ?>
     <script src="MetodosJS/dark-mode-Header-Footer.js"></script>
     <script src="MetodosJS/MetodosBuscar.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
