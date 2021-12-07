@@ -307,6 +307,8 @@ const descargarPDF = function(){
         title: '¡'+manga.titulo+' se ha descargado con éxito!'
     })
 
+    <?php echo 'var titulo = manga.titulo.replace(/ /g, "") + generarHashTexto(manga.titulo) + \''.md5(time() . rand() .date("YmdHis"))."'";?>
+
     //  Para descargar el manga y no vuelva a poder ser descargado
     axios({
         url: manga.rutaArchivo,
@@ -318,7 +320,7 @@ const descargarPDF = function(){
                     .createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = url;
-            link.setAttribute('download', manga.titulo+'.pdf');
+            link.setAttribute('download', titulo+'.pdf');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -330,4 +332,21 @@ const descargarPDF = function(){
         btnDescargado.setAttribute('class','btn btn-primary btn-lg');
         btnDescargado.innerText = 'Descargar';
     }, 3000);
+}
+
+function generarHashTexto(texto) {
+    var tiempoTranscurrido = Date.now();
+    var hoy = new Date(tiempoTranscurrido);
+    texto = texto + hoy.toDateString();
+    if (typeof texto != 'string') {
+        throw TypeError('El argumento debe ser una cadena de caracteres.');
+    }
+
+    if (!texto.length) {
+        return null;
+    }
+
+    let caracteres = texto.split('');
+
+    return caracteres.reduce((h, c) => (h = c.charCodeAt(0) + (h << 6) + (h << 16) - h), 0);
 }
