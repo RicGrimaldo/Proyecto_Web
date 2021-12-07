@@ -1,0 +1,12 @@
+Instrucciones para la configuración para poder enviar correo:
+
+1. En el archivo 'enviarMail.php', específicamente en la línea 14, se deberá ingresar el correo
+a vincular, es decir, desde donde se enviará el correo.
+
+2. En la línea 15, poner la contraseña de dicho correo gmail ingresado.
+
+3. En la línea 16, ingresar el correo gmail ingresado anteriormente, en la línea 14.
+
+4. Finalmente, es necesario ir a gmail, e irse al apartado de configuración (administrar tu cuenta de Google).
+Una vez dentro, es indispensalbe ir al apartado de seguridad, y permitir el 'Acceso de apps menos seguras'.
+
