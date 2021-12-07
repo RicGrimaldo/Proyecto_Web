@@ -1,14 +1,10 @@
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-	$servidor = "localhost";
-	$usuario = "root";
-	$contrasena = "";
-	$basedatos = "db_mangaweb_v2";
-
-	$conexion = mysqli_connect($servidor, $usuario, $contrasena, $basedatos);
-		if (!$conexion) {
-			die("Fallo: " . mysqli_connect_error());
+		$mysqli = new mysqli("localhost", "root", "", "db_mangaweb");
+		if ($mysqli->connect_errno) {
+			echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 		}
+		$conexion = mysqli_connect("localhost", "root", "", "db_mangaweb");
 
 	//	Métodos de carrito
     if($_POST['destino'] == 'carrito'){
@@ -17,14 +13,14 @@
 		if($_POST['accion'] == 'guardar'){
 			$id = $_POST['id_manga'];
 			header("content-type: application/json");
-			$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+			$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='XDave'";
 			$resultado = mysqli_query($conexion, $sentenciaSQL);
 			if ($resultado->num_rows > 0) {
 				$datos = $resultado->fetch_assoc();
 				$nuevoArreglo = json_decode($datos["ID_ComprasMangas"]);
 				$nuevoArreglo[] = $id;
 				$array_texto = json_encode($nuevoArreglo);
-				$sql = "UPDATE usuarios SET ID_ComprasMangas='$array_texto' WHERE Usuario='GrimaldoRic'";
+				$sql = "UPDATE usuarios SET ID_ComprasMangas='$array_texto' WHERE Usuario='XDave'";
 				$resultado = mysqli_query($conexion, $sql);
 				echo $array_texto;
 			}
@@ -34,7 +30,7 @@
 		if($_POST['accion'] == 'remover'){
 			$id = $_POST['id_manga'];
 			header("content-type: application/json");
-			$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+			$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='XDave'";
 			$resultado = mysqli_query($conexion, $sentenciaSQL);
 			if ($resultado->num_rows > 0) {
 				$datos = $resultado->fetch_assoc();
@@ -42,7 +38,7 @@
 				if(($clave = array_search($id, $nuevoArreglo)) != false){
 					unset($nuevoArreglo[$clave]);
 					$array_texto = json_encode($nuevoArreglo);
-					$sql = "UPDATE usuarios SET ID_ComprasMangas='$array_texto' WHERE Usuario='GrimaldoRic'";
+					$sql = "UPDATE usuarios SET ID_ComprasMangas='$array_texto' WHERE Usuario='XDave'";
 					$resultado = mysqli_query($conexion, $sql);
 					echo $array_texto;
 				}
@@ -54,7 +50,7 @@
 			$ids = json_decode($_POST['arregloIDS']);
 			header("content-type: application/json");
 			foreach($ids as $idManga){
-				$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+				$sentenciaSQL = "SELECT ID_ComprasMangas, Usuario FROM usuarios WHERE Usuario='XDave'";
 				$resultado = mysqli_query($conexion, $sentenciaSQL);
 				if ($resultado->num_rows > 0) {
 					$datos = $resultado->fetch_assoc();
@@ -64,7 +60,7 @@
 						unset($nuevoArreglo[$clave]);
 						$nuevoArreglo = array_values($nuevoArreglo);
 						$array_texto = json_encode($nuevoArreglo);
-						$sql = "UPDATE usuarios SET ID_ComprasMangas='$array_texto' WHERE Usuario='GrimaldoRic'";
+						$sql = "UPDATE usuarios SET ID_ComprasMangas='$array_texto' WHERE Usuario='XDave'";
 						$resultado = mysqli_query($conexion, $sql);
 						echo $array_texto;
 					}
@@ -74,7 +70,7 @@
 
 		if($_POST['accion'] == 'vaciarCarrito'){
 			header("content-type: application/json");
-			$sql = "UPDATE usuarios SET ID_ComprasMangas='[]' WHERE Usuario='GrimaldoRic'";
+			$sql = "UPDATE usuarios SET ID_ComprasMangas='[]' WHERE Usuario='XDave'";
 			$resultado = mysqli_query($conexion, $sql);
 			echo '[]';
 		}
@@ -88,14 +84,14 @@
 		if($_POST['accion'] == 'guardar'){
 			$id = $_POST['id_manga'];
 			header("content-type: application/json");
-			$sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+			$sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='XDave'";
 			$resultado = mysqli_query($conexion, $sentenciaSQL);
 			if ($resultado->num_rows > 0) {
 				$datos = $resultado->fetch_assoc();
 				$nuevoArreglo = json_decode($datos["ID_Biblioteca"]);
 				$nuevoArreglo[] = $id;
 				$array_texto = json_encode($nuevoArreglo);
-				$sql = "UPDATE usuarios SET ID_Biblioteca='$array_texto' WHERE Usuario='GrimaldoRic'";
+				$sql = "UPDATE usuarios SET ID_Biblioteca='$array_texto' WHERE Usuario='XDave'";
 				$resultado = mysqli_query($conexion, $sql);
 				echo $array_texto;
 			}
@@ -104,7 +100,7 @@
 		//	Para guardar una lista de ids
 		if($_POST['accion'] == 'guardarLista'){
 		$ids = json_decode($_POST['arregloIDS']);
-		$sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='GrimaldoRic'";
+		$sentenciaSQL = "SELECT ID_Biblioteca, Usuario FROM usuarios WHERE Usuario='XDave'";
 		$resultado = mysqli_query($conexion, $sentenciaSQL);
 			if ($resultado->num_rows > 0) {
 				$datos = $resultado->fetch_assoc();
@@ -112,7 +108,7 @@
 				$nuevoArreglo = array_merge($nuevoArreglo, $ids);
 				$nuevoArreglo = array_values($nuevoArreglo);
 				$array_texto = json_encode($nuevoArreglo);
-				$sql = "UPDATE usuarios SET ID_Biblioteca='$array_texto' WHERE Usuario='GrimaldoRic'";
+				$sql = "UPDATE usuarios SET ID_Biblioteca='$array_texto' WHERE Usuario='XDave'";
 				$resultado = mysqli_query($conexion, $sql);
 				echo $array_texto;
 			}

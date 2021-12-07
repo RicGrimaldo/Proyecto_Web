@@ -340,7 +340,7 @@ btnVaciarCarrito.addEventListener('click', function(){
             guardarDatosSQL("carrito","vaciarCarrito");
             carrito = [];
             localStorage.removeItem('carrito');
-            // document.location.reload();
+            document.location.reload();
         }
     })
 });
