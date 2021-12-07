@@ -148,7 +148,7 @@ const descargarPDF = objeto => {
     })
 
     <?php echo 'var titulo = manga.titulo.replace(/ /g, "") + generarHashTexto(manga.titulo) + \''.md5(time() . rand() .date("YmdHis"))."'";?>
-
+ 
     //  Para descargar el manga y no vuelva a poder ser descargado
     axios({
         url: manga.rutaArchivo,
