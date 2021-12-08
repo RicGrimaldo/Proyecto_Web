@@ -9,7 +9,6 @@
         "rutaArchivo": "PDF/Akamee5eebe86fc759be07dbcc85d8d0a4817.pdf",
         "imagenURL": "Imagenes/Akame.jpg",
         "id": "1",
-        "status":"new",
         "precio": "109.00"
     },
     {
@@ -256,6 +255,7 @@
         "rutaArchivo": "PDF/Btoomb50477ff38ca449854343526b708492c.pdf",
         "imagenURL": "Imagenes/Btooom.jpg",
         "id": "22",
+        "status":"new",
         "precio": "129.90"
     },
 
@@ -434,7 +434,6 @@
         "rutaArchivo":"PDF/ChainsawManea8685c070d6ed055f5315b37e0ac707.pdf" ,
         "imagenURL":"Imagenes/Chainsaw Man.jpg" ,
         "id": "38",
-        "status":"new",
         "precio":"99.90"
     },
     
@@ -591,6 +590,7 @@
         "rutaArchivo": "PDF/Shingeki1c62f117d204adf3f6b39236642ac873.pdf",
         "imagenURL": "Imagenes/Shingeki no Kyojin.jpg",
         "id": "52",
+        "status": "new",
         "precio": "129.90"
     },
 

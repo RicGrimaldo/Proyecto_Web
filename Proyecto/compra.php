@@ -96,8 +96,9 @@ include_once 'sesionNav.php';
             <h4 class="texto-titulo" id="tit">Titulo</h4> 
             <h3 class="texto-costo" id="costo">$</h3>
             <div class="but">
-                <button type="button" class="btn btn-secondary btn-lg" id="btnAgregarCarrito">A&ntilde;adir a mi carrito</button>
-                <button type="button" class="btn btn-primary btn-lg" id="btnCompra">Comprar ahora</button>
+                
+                <?php echo $buyButtons?>
+             
             </div>
         </div>
         <div class="item i3">

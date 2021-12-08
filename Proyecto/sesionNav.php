@@ -5,7 +5,9 @@
         $userkey = "Invitado";
         $sesionButtons ='<a class="dropdown-item" href="index.php">Iniciar Sesion</a>';
         $userIcon='Imagenes/Header_Footer/user-icon.png';
-        $buyButtons=' <button type="button" class="btn btn-primary btn-lg" id="btnLogCompra"> <a href="index.php" style="text-decoration:none; color:white" >Continuar</a></button>';
+        $buyButtons=' <button type="button" class="btn btn-primary btn-lg" id="btnLogCompra"> <a href="index.php" style="text-decoration:none; color:white" >Continuar</a></button>
+                    <button type="button" class="btn btn-secondary btn-lg disabled" id="btnAgregarCarrito" aria-disable="true">A&ntilde;adir a mi carrito</button>
+                    <button type="button" class="btn btn-primary btn-lg disabled" id="btnCompra" aria-disable="true">Comprar ahora</button>';
         $adultButton=  '<a id="adultID" class="nav-link disabled"  href="index.php">+18</a>';
     }else{
 
