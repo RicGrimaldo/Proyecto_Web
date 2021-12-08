@@ -146,7 +146,7 @@ include_once 'sesionNav.php';
     
     
 </footer>
-    <script src="MetodosJS/index.js"></script>
+    <script src="MetodosJS/metodosBusqueda.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="MetodosJS/dark-mode-Header-Footer.js"></script>
     <script src="MetodosJS/MetodosBuscar.js"></script>
