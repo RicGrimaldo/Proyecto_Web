@@ -9,7 +9,7 @@
     $filetype = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     $newfilename = $target_directory.$filename.".".$filetype;
     $allowedfileExtensions = array('jpg', 'jpeg', 'png');
-    if (in_array($fileExtension, $allowedfileExtensions)) {
+    if (in_array($filetype, $allowedfileExtensions)) {
         if(move_uploaded_file($_FILES["file"]["tmp_name"],$newfilename)){
         
             $foto = $newfilename;    
@@ -28,7 +28,7 @@
         
         } 
     }
-    else echo 'ErrorTipoFoto';
+    else echo json_encode('ErrorTipoFoto');
 
     
  

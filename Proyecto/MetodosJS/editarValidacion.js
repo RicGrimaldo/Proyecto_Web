@@ -64,7 +64,7 @@ document.getElementById('guardarFoto').addEventListener('click',function() {
                 processData: false,
                 data: form_data,
             success:function(dat2){
-                if(dat2 == 'ErrorTipoFoto'){
+                if(dat2 === "\"ErrorTipoFoto\""){
                     Swal.fire({
             
                         text: 'DEBES INGRESAR UNA EXTENSION VALIDA (jpg, jpeg, png)',
@@ -80,6 +80,7 @@ document.getElementById('guardarFoto').addEventListener('click',function() {
                         
                     })
                 }
+                else{
            
             setTimeout( function() { 
                 Swal.fire({
@@ -91,6 +92,7 @@ document.getElementById('guardarFoto').addEventListener('click',function() {
                 })
             }, 1500 );
             setTimeout( function() { window.location.href='EditarPerfil.php'; }, 4500 ); 
+        }
         
                 
             }
