@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_SESSION['username'])){
+        header("location: home.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,36 +18,27 @@
     <link rel="stylesheet" href="EstilosCSS/Estilos_header_footer.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light py-md-2" id="cabeceraPrincipal">
-        <a class="navbar-brand" href="#">
+<nav class="navbar navbar-expand-lg navbar-light py-md-2" id="cabeceraPrincipal">
+        <a class="navbar-brand" href="home.php">
             <img src="Imagenes/Header_Footer/logo.png" width="100px" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-        
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">               
             <ul class="navbar-nav mr-auto justify-content-center">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Busca tus mangas favoritos" aria-label="Search" id="contenidoABuscar" required>
-                    <a href="busqueda.html" class="btn btn-primary my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</a>
+                <form class="form-inline"> 
+                <input class="form-control mr-sm-2" type="search" placeholder="Busca tus mangas favoritos" aria-label="Search" id="contenidoABuscar" required autocomplete="off">
+                    <a href="busqueda.php" class="btn btn-primary my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</a>
                 </form>
             </ul>
             <ul class="navbar-nav flex-row mr-lg-0">
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.html">
-                    <img src="Imagenes/Header_Footer/user-icon.png" width="30px" class="d-inline-block align-top" alt="">
-                    Usuario
-                </a>
+                    
                 <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="background-color: #6a9eda;">
-                    <a class="dropdown-item active" href="reglog.html">Iniciar sesi&oacute;n</a>
-                    <a class="dropdown-item" href="Biblioteca.html">Mi biblioteca</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Cerrar sesi&oacute;n</a>
+                <?php echo $sesionButtons; ?>
                 </div>
                 </li>
-
             </ul>
             </div>
     </nav>
@@ -51,9 +48,6 @@
             <span><i class="fa fa-sun-o"></i></span>   
             <span><i class="fa fa-moon-o"></i></span>
         </button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
         
             <div class="collapse navbar-collapse justify-content-center order-2" id="navbarSupportedContent">
                 
@@ -62,22 +56,22 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li> -->
                     <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="home.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Categorias_Main.html">Categor&iacuteas</a>
+                        <a class="nav-link" href="Categorias_Main.php">Categor&iacuteas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#NuevosLanzamientos">&Uacuteltimos</a>
+                        <a class="nav-link" href="home.php#NuevosLanzamientos">&Uacuteltimos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Adult_Main.html">+18</a>
+                    <a class="nav-link" href="Adult_Main.php">+18</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="contacto.php">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Carrito.html" id="carritoNav" ><img src="Imagenes/Header_Footer/carritob.png" class="d-inline-block align-top" alt="carrito" width="30px"></a>
+                        <a class="nav-link" href="Carrito.php" id="carritoNav" ><img src="Imagenes/Header_Footer/carritob.png" class="d-inline-block align-top" alt="carrito" width="30px"></a>
                     </li>
                 </ul>
             </div>
@@ -85,7 +79,7 @@
 
 <main>
 
-    <div class="contenedor__todo">
+<div class="contenedor__todo">
         <div class="caja__trasera">
             <div class="caja__trasera-login">
                 <h3>&iquest;Ya tienes una cuenta de MangaWeb&quest;</h3>
@@ -101,23 +95,23 @@
 
         <!--Formulario de Login y registro-->
         <div class="contenedor__login-register">
-            <!--Login-->
-            <form name="loginn" class="formulario__login">
+            <form name="loginn"  class="formulario__login" autocomplete="off">
                 <h2>Iniciar Sesi&oacute;n</h2>
-                <input type="text" name="email" class="ph-email" placeholder="      Correo Electronico">
-                <input type="password" name="passwrd" class="ph-pass" placeholder="      Contrase&ntilde;a" >
-                <button type="button" onclick="validacion_log()">Entrar</button>
+                <input type="text" id = "userLog" name="userLog" class="ph-user" placeholder="      Usuario"  autofocus required>
+                <input type="password" id="passwrdLog" name="passwrdLog" class="ph-pass" placeholder="      Contrase&ntilde;a"  required>
+                <button id="loguear" name="loguear" type="button">Entrar</button>
             </form>
 
-            <!--Register-->
-            <form action="" name="reg" class="formulario__register">
+            <form id="registerID" name="reg" class="formulario__register"  autocomplete="off">
                 <h2>Reg&iacute;strarse</h2>
-                <input type="text" name="nombre" class="ph-user" placeholder="      Nombre completo" required>
-                <input type="text" name="email" class="ph-email" placeholder="      Correo Electronico" required>
-                <input type="text" name="user" class="ph-user" placeholder="      Usuario" required>
-                <input type="password" name="passwrd" class="ph-pass" placeholder="      Contrase&ntilde;a" required >
+                <input type="text" id= "nombre" name="nombre" class="ph-user" placeholder="      Nombre completo" required>
+                <input type="text" id="email" name="email" class="ph-email" placeholder="      Correo Electronico" required>
+                <input type="text" id="user" name="user" class="ph-user" placeholder="      Usuario" required>
+                <input type="date" id="birth" name="birth" min="1900-01-01" max="2020-01-01" class="" placeholder="      Fecha de nacimiento" required>
+                <input type="password" id="passwrd" name="passwrd" class="ph-pass" placeholder="      Contrase&ntilde;a" required >
                 <input type="password"  name="conpasswrd" class="ph-pass" placeholder="     Confirmar Contrase&ntilde;a" required>
-                <button type="button" onclick="validacion()">Registrarse</button>
+               
+                <button id="registrar" name="registrar" type="button">Registrarse</button>
             </form>
             
         </div>
@@ -128,16 +122,16 @@
 <footer class="footer">
         <div id="menu">
             <h4><a>Menu</a></h4> <br>
-            <a href="index.html">Inicio</a> <br>
-            <a href="Categorias_Main.html">Categor&iacute;as</a> <br>
-            <a href="index.html#">Ultimas</a> <br>
-            <a href="Adult_Main.html">+18</a> <br>
+            <a href="home.php">Inicio</a> <br>
+            <a href="Categorias_Main.php">Categor&iacute;as</a> <br>
+            <a href="home.php#">Ultimas</a> <br>
+            <a href="Adult_Main.php">+18</a> <br>
         </div>
         <div id="cliente">
             <h4>Atenci&oacute;n al Cliente</h4> <br>
             &iquest;Tienes dudas&quest; <br>
             D&eacute;janos ayudarte, <br>
-            <a href="contacto.html">haz clic aqu&iacute;.</a>
+            <a href="contacto.php">haz clic aqu&iacute;.</a>
         
         </div>
         <div id="nosotros">
@@ -161,15 +155,14 @@
         
     </footer>
 
-<script src="MetodosJS/dark-mode-Header-Footer.js"></script>
-<script src="MetodosJS/validacion.registro.js"></script>
-<script src="MetodosJS/Metodoslogin-registro.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="MetodosJS/MetodosBuscar.js"></script>
+    <script src="MetodosJS/dark-mode-Header-Footer.js"></script>
+    <script src="MetodosJS/Metodoslogin-registro.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+    <script src="MetodosJS/validacion.registro.js"></script>
 
 </body>
     </html>

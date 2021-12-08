@@ -23,7 +23,7 @@ require("sesionadmin.php");
     <a href="modAdmin.php?admin" type="submit" class="btn btn-dark btn-lg"  id="btnAdmin"name="btnAdmin"  >Administradores </a>
     <br><br>
     <div class="table-responsive">
-    <table class="table table-hover" Style="margin='auto'">
+    <table class="table table-hover" Style="margin:auto">
         <thead>
           <tr>
             <th>Usuario</th>

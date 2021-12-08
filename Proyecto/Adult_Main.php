@@ -1,3 +1,9 @@
+<?php
+include_once 'sesion.php';
+ if($tiempo[0]<17){
+    header('location: home.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,20 +37,17 @@
             <ul class="navbar-nav mr-auto justify-content-center">
                 <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Busca tus mangas favoritos" aria-label="Search" id="contenidoABuscar" required autocomplete="off">
-                    <a href="busqueda.html" class="btn btn-primary my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</a>
+                    <a href="busqueda.php" class="btn btn-primary my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</a>
                 </form>
             </ul>
             <ul class="navbar-nav flex-row mr-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active dropdownUsuario" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.html">
-                        <img src="imagenesUsuarios/Grimaldo.jpg" width="35px" height="35px" class="d-inline-block align-text-top rounded-circle" id="imagenPerfil" alt="">
-                        <span>Usuario</span>
+                    <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active dropdownUsuario" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.php">
+                        <img src="<?php echo $userIcon?>" width="35px" height="35px" class="d-inline-block align-text-top rounded-circle" id="imagenPerfil" alt="">
+                        <?php echo $userkey ?>
                     </a>
                     <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="background-color: #6a9eda;">
-                        <a class="dropdown-item" href="reglog.html">Iniciar sesi&oacute;n</a>
-                        <a class="dropdown-item" href="Biblioteca.html">Mi biblioteca</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Cerrar sesi&oacute;n</a>
+                    <?php echo $sesionButtons;?> 
                     </div>
                 </li>
             </ul>
@@ -64,22 +67,22 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li> -->
                     <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Categorias_Main.html">Categor&iacuteas</a>
+                        <a class="nav-link" href="Categorias_Main.php">Categor&iacuteas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#NuevosLanzamientos">&Uacuteltimos</a>
+                        <a class="nav-link" href="index.php#NuevosLanzamientos">&Uacuteltimos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Adult_Main.html">+18</a>
+                        <a class="nav-link active" href="Adult_Main.php">+18</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="contacto.php">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Carrito.html" id="carritoNav" ><img src="Imagenes/Header_Footer/carritob.png" class="d-inline-block align-top" alt="carrito" width="30px"></a>
+                        <a class="nav-link" href="Carrito.php" id="carritoNav" ><img src="Imagenes/Header_Footer/carritob.png" class="d-inline-block align-top" alt="carrito" width="30px"></a>
                     </li>
                 </ul>
             </div>
@@ -123,7 +126,7 @@
     
             <template id="template-card">
                 <div class="manga">
-                    <a href="compra.html" onclick="">
+                    <a href="compra.php" onclick="">
                         <img src="" alt="" class="card-img">
                     </a>
                 </div>
@@ -136,16 +139,16 @@
     <footer class="footer">
         <div id="menu">
             <h4><a>Menu</a></h4> <br>
-            <a href="index.html">Inicio</a> <br>
-            <a href="Categorias_Main.html">Categor&iacute;as</a> <br>
-            <a href="index.html#NuevosLanzamientos">Ultimas</a> <br>
-            <a href="Adult_Main.html">+18</a> <br>
+            <a href="index.php">Inicio</a> <br>
+            <a href="Categorias_Main.php">Categor&iacute;as</a> <br>
+            <a href="index.php#NuevosLanzamientos">Ultimas</a> <br>
+            <a href="Adult_Main.php">+18</a> <br>
         </div>
         <div id="cliente">
             <h4>Atenci&oacute;n al Cliente</h4> <br>
             ¿Tienes dudas&quest; <br>
             D&eacute;janos ayudarte, <br>
-            <a href="contacto.html">haz clic aqu&iacute;.</a>
+            <a href="contacto.php">haz clic aqu&iacute;.</a>
         
         </div>
         <div id="nosotros">

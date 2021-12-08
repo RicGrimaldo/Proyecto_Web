@@ -1,3 +1,6 @@
+<?php
+ include_once 'sesionNav.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -17,34 +20,31 @@
     <title>Categor&iacute;as</title>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light py-md-2" id="cabeceraPrincipal">
-        <a class="navbar-brand" href="#">
+<nav class="navbar navbar-expand-lg navbar-light py-md-2" id="cabeceraPrincipal">
+        <a class="navbar-brand" href="home.php">
             <img src="Imagenes/Header_Footer/logo.png" width="100px" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+            </button>
         
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 
             <ul class="navbar-nav mr-auto justify-content-center">
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Busca tus mangas favoritos" aria-label="Search" id="contenidoABuscar" required autocomplete="off">
-                    <a href="busqueda.html" class="btn btn-primary my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</a>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Busca tus mangas favoritos" aria-label="Search" id="contenidoABuscar" required>
+                    <a href="busqueda.php" class="btn btn-primary my-2 my-sm-0" type="submit" id="btnBuscar">Buscar</a>
                 </form>
             </ul>
             <ul class="navbar-nav flex-row mr-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active dropdownUsuario" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.html">
-                        <img src="imagenesUsuarios/Grimaldo.jpg" width="35px" height="35px" class="d-inline-block align-text-top rounded-circle" id="imagenPerfil" alt="">
-                        <span>Usuario</span>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="background-color: #6a9eda;">
-                        <a class="dropdown-item" href="reglog.html">Iniciar sesi&oacute;n</a>
-                        <a class="dropdown-item" href="Biblioteca.html">Mi biblioteca</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Cerrar sesi&oacute;n</a>
-                    </div>
+                <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.html">
+                    <img src="<?php echo $userIcon?>" width="35px" height="35px" class="d-inline-block align-text-top rounded-circle" id="imagenPerfil" alt="">
+                    <?php echo $userkey ?>
+                </a>
+                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="background-color: #6a9eda;">
+                <?php echo $sesionButtons;?>
+                </div>
                 </li>
             </ul>
             </div>
@@ -56,33 +56,33 @@
             <span><i class="fa fa-moon-o"></i></span>
         </button>
         
-            <div class="collapse navbar-collapse justify-content-center order-2" id="navbarSupportedContent">
-                
-                <ul class="navbar-nav justify-content-center nav-pills nav-fill">
-                    <!-- <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li> -->
-                    <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Categorias_Main.html">Categor&iacuteas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#NuevosLanzamientos">&Uacuteltimos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Adult_Main.html">+18</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Carrito.html" id="carritoNav" ><img src="Imagenes/Header_Footer/carritob.png" class="d-inline-block align-top" alt="carrito" width="30px"></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="collapse navbar-collapse justify-content-center order-2" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav justify-content-center nav-pills nav-fill">
+                <!-- <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item">
+                <a class="nav-link" href="home.php">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Categorias_Main.php">Categor&iacuteas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="home.php#NuevosLanzamientos">&Uacuteltimos</a>
+                </li>
+                <li class="nav-item">
+                <?php echo $adultButton ?>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.php">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Carrito.php" id="carritoNav" ><img src="Imagenes/Header_Footer/carritob.png" class="d-inline-block align-top" alt="carrito" width="30px"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 
 <!-- CO*****NTENIDO CENTRAL PAGE  *** -->
@@ -165,16 +165,16 @@
     <footer class="footer">
         <div id="menu">
             <h4><a>Menu</a></h4> <br>
-            <a href="index.html">Inicio</a> <br>
-            <a href="Categorias_Main.html">Categor&iacute;as</a> <br>
-            <a href="index.html#NuevosLanzamientos">Ultimas</a> <br>
-            <a href="Adult_Main.html">+18</a> <br>
+            <a href="home.php">Inicio</a> <br>
+            <a href="Categorias_Main.php">Categor&iacute;as</a> <br>
+            <a href="home.php#NuevosLanzamientos">Ultimas</a> <br>
+            <a href="Adult_Main.php">+18</a> <br>
         </div>
         <div id="cliente">
             <h4>Atenci&oacute;n al Cliente</h4> <br>
             &iquest;Tienes dudas&quest; <br>
             D&eacute;janos ayudarte, <br>
-            <a href="contacto.html">haz clic aqu&iacute;.</a>
+            <a href="contacto.php">haz clic aqu&iacute;.</a>
         
         </div>
         <div id="nosotros">

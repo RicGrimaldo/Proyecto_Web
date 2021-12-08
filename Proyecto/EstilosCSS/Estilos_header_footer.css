@@ -61,6 +61,10 @@ body.dark #cabeceraPrincipal{
     background-color: #1d3f5e;
 }
 
+.navbar-nav.justify-content-center.nav-pills.nav-fill li a.disabled {
+    background-color: #41566d;
+}
+
 #imagenPerfil{
     vertical-align: middle;
 }
