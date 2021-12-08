@@ -5,13 +5,12 @@
       
         $mysqli->set_charset('utf8');
 
-        $pattern_nombre = '/^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/';
+        $pattern_nombre = '/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/';
         $pattern_password = '/^[0-9a-zA-Z_-]+$/';
 
         $nombre = $mysqli->real_escape_string($_POST['Nombre']);
         $password = $mysqli->real_escape_string($_POST['Passwrd']);
         $pass = password_hash($password,PASSWORD_DEFAULT);
-        $foto ='Imagenes/Header_Footer/user-icon.png';
 
         $userkey = $_SESSION['username'];
 
@@ -25,7 +24,6 @@
                        
                 $_SESSION['name'] = $nombre;
                 header("location: index.php");   
-                // $_SESSION['photo'] = $foto;
                
             } else{
                 echo'ERROR';

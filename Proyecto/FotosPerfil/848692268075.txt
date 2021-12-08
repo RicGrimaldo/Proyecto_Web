@@ -1,0 +1,4 @@
+cuando se quiten elementos del carrito y se compren, hacer que se guarden
+en la base de datos en biblioteca
+
+también quedan pendientes los métodos en biblioteca (que sólo se recuperaría literalmente)

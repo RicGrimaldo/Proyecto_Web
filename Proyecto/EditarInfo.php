@@ -91,7 +91,7 @@ include_once 'sesion.php';
         <article class="register-cont">
 
             <div  id="response" class="form-register">
-                <form id="form" name="editor" style="text-align: center;">
+                <form id="form" name="editor" style="text-align: center;" enctype="multipart/form-data">
                 
                     <legend> INFORMACION PERSONAL DE LA CUENTA </legend>
                     <br><br>
@@ -101,17 +101,25 @@ include_once 'sesion.php';
                     <label class=lab >Contraseña</label><br>
                     <input class=controls2 type="password" id="passwrdEd" name="passwrdEd" required></input><br><br>
 
-                    <label class=lab>Foto de perfil </label><br><br>
+                    <br>
 
-                     <button type="button" class="btn btn-primary btn-lg" id="guardarCambios" name="guardarCambios">Guardar cambios</button> <br>
-                   <a href="home.php"> <button type="button" class="btn btn-secondary btn-lg" id="descartarCambios">Descartar cambios</button>  </a>
+                    <button type="button" class="btn btn-primary btn-lg" id="guardarCambios" name="guardarCambios">Guardar cambios</button> <br>
+                    <a href="home.php"> <button type="button" class="btn btn-secondary btn-lg" id="descartarCambios">Descartar cambios</button>  </a>
 
-                   
-                   <!-- <button id="enviar" class="button button1" type="button"> Recibir </button>-->
+                    <br><br>
+
+                   <label class=lab>Foto de perfil </label><br><br>
+                    <input type="file" id="toUpload" accept="image/png, image/jpeg" ></input>
+                    <br><br><br>
+                    <button type="button" class="btn btn-success btn-lg" id="guardarFoto" name="guardarFoto">Guardar Foto</button> <br>
+                    <br>
+
                 </form>
                 
            </div>
            <br><br>
+        </article>
+    </section>
 <!--
 <input class="controls2" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
                     <input class="controls2" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido">

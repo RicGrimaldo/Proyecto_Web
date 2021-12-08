@@ -55,16 +55,10 @@ include_once 'sesion.php';
             <span><i class="fa fa-sun-o"></i></span>   
             <span><i class="fa fa-moon-o"></i></span>
         </button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         
         <div class="collapse navbar-collapse justify-content-center order-2" id="navbarSupportedContent">
             
             <ul class="navbar-nav justify-content-center nav-pills nav-fill">
-                <!-- <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li> -->
                 <li class="nav-item">
                 <a class="nav-link" href="home.php">Inicio</a>
                 </li>
@@ -112,37 +106,16 @@ include_once 'sesion.php';
 
                     <label class=lab>Foto de perfil </label><br><br>
 
+                    <img src="<?php echo $userIcon?>" width="250px" alt="Avatar" style="border-radius:50%; box-shadow: 5px 10px 37px #000;" >
+                    <br> <br> <br>
+
                     <a href="EditarInfo.php"><button type="button" class="btn btn-warning btn-lg" id="btnEditarCuenta">Editar cuenta</button></a> <br>
                     <a href='delete.php'>   <button type="button" class="btn btn-danger btn-lg" id="btnEliminarCuenta">Eliminar cuenta</button></a>
 
-                   
-                   <!-- <button id="enviar" class="button button1" type="button"> Recibir </button>-->
-                </form>
+                    </form>
                 
            </div>
            <br><br>
-<!--
-<input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
-                    <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingrese su Apellido">
-                    <input class="controls" type="text" name="usuario" id="usuario" placeholder="Ingrese su Usuario">
-
-           <div  id="ver" class="form-register">
-            <form style="text-align: center;">
-            
-                <legend>Mensaje</legend>
-                <br>
-                <h1 id= "mens" class="mensaje"> Hola </h1>
-                <br><br>
-                <br><br>
-                <button id="reci" class="button button1" type="button"> Recibir </button>
-            </form>
-            
-       </div>
-            <br><br>
-            <br><br>
-        </article>
-    </section>
--->
     <footer class="footer">
         <div id="menu">
             <h4><a>Menu</a></h4> <br>
