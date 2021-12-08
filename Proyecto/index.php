@@ -110,7 +110,7 @@
                 <input type="date" id="birth" name="birth" min="1900-01-01" max="2020-01-01" class="" placeholder="      Fecha de nacimiento" required>
                 <input type="password" id="passwrd" name="passwrd" class="ph-pass" placeholder="      Contrase&ntilde;a" required >
                 <input type="password"  name="conpasswrd" class="ph-pass" placeholder="     Confirmar Contrase&ntilde;a" required>
-               
+
                 <button id="registrar" name="registrar" type="button">Registrarse</button>
             </form>
             
@@ -124,7 +124,7 @@
             <h4><a>Menu</a></h4> <br>
             <a href="home.php">Inicio</a> <br>
             <a href="Categorias_Main.php">Categor&iacute;as</a> <br>
-            <a href="home.php#">Ultimas</a> <br>
+            <a href="home.php#NuevosLanzamientos">Ultimas</a> <br>
             <a href="Adult_Main.php">+18</a> <br>
         </div>
         <div id="cliente">

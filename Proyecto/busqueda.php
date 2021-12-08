@@ -104,7 +104,7 @@ include_once 'sesionNav.php';
         <div class="card-body">
             <h5>Titulo</h5>   
             <p>Precio</p>
-            <a href="compra.html">
+            <a href="compra.php">
             <button class="btn btn-dark">Ver manga...</button>
             </a>
         </div>
