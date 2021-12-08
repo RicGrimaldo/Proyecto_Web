@@ -61,12 +61,11 @@ require("sesionadmin.php");
             <td><?php echo $row['Nombre']; ?></td>
             <td><?php echo $row['Correo']; ?></td>
             <td><?php echo $row['FNacimiento']; ?></td>
-            <td><?php echo $row['Foto']; ?></td>
+            <td><img src="../../<?php echo $row['Foto']; ?>" width="40px"></td>
             <td>
             
             
             <!--se cambio id por usuario-->
-            <a href="edit.php?ID=<?php echo $row['ID']?>"  class="btn btn-primary active" role="button" aria-pressed="true"><i class="fas fa-marker"></i></a>
             <a href="delete.php?ID=<?php  echo $row['ID']?>" class="btn btn-danger active" role="button" aria-pressed="true"><i class="far fa-trash-alt"></i></a>
             </a>
             <?php if($row['type']=='CLIENTE') { ?>

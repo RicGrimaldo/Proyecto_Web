@@ -14,6 +14,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #293133;">
       <div class="container">
         <a class="navbar-brand" href="modAdmin.php">Administrador de Usuarios</a>
-        <a href="../../home.php" type="button" class="btn btn-light" style="text-decoration: none"> Volver al Inicio <i class="fas fa-church"></i></a>
+        <a href="../../home.php" type="button" class="btn btn-light" style="text-decoration: none"> Volver al Inicio <i class="fas fa-home"></i></a>
       </div>
     </nav>
