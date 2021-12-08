@@ -18,6 +18,7 @@ if  (isset($_GET['ID'])) {
         $correo = $row['Correo'];
         $fNacimiento = $row['FNacimiento'];
         $foto = $row['Foto'];
+        $foto = "../../".$foto;
     }
 }
 
@@ -27,10 +28,9 @@ if (isset($_POST['update'])) {
     $Nombre= $_POST['nombre'];
     $Correo = $_POST['correo'];
     $FNacimiento = $_POST['fNacimiento'];
-    $Foto = $_POST['foto'];
-    $query = "UPDATE usuarios set Usuario = '$Usuario',Nombre = '$Nombre', Correo = '$Correo',FNacimiento='$FNacimiento',Foto='$Foto' WHERE ID=$id";
+    $query = "UPDATE usuarios set Usuario = '$Usuario',Nombre = '$Nombre', Correo = '$Correo',FNacimiento='$FNacimiento' WHERE ID=$id";
     mysqli_query($conn, $query);
-    $_SESSION['message'] = 'Task Updated Successfully';
+    $_SESSION['message'] = 'Usuario Actualizado';
     $_SESSION['message_type'] = 'warning';
     header('Location: modAdmin.php');
 }
@@ -54,8 +54,8 @@ if (isset($_POST['update'])) {
                         <div class="form-group">
                             <input name="fNacimiento" type="date" class="form-control" value="<?php echo $fNacimiento; ?>" placeholder="Update FNacimiento"> 
                         </div>
-                        <div class="form-group">
-                            <input name="foto" type="file" class="form-control" value="<?php echo $foto; ?>" placeholder="Update Foto">
+                        <div class="form-group" style="text-align: center;">
+                            <img src="<?php echo $foto?>" width="100px" alt="Avatar" style="border-radius:50%;" >
                         </div>
                         <button class="btn btn-success btn-lg" name="update">
                             Update
