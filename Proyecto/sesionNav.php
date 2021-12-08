@@ -9,6 +9,7 @@
                     <button type="button" class="btn btn-secondary btn-lg disabled" id="btnAgregarCarrito" aria-disable="true">A&ntilde;adir a mi carrito</button>
                     <button type="button" class="btn btn-primary btn-lg disabled" id="btnCompra" aria-disable="true">Comprar ahora</button>';
         $adultButton=  '<a id="adultID" class="nav-link disabled"  href="index.php">+18</a>';
+        $esMayor = "No";
     }else{
 
         $userkey = $_SESSION['username']; 
@@ -29,8 +30,10 @@
         }
 
         if($tiempo[0]>17){
+                $esMayor = "Si";
                 $adultButton = '<a class="nav-link" href="Adult_Main.php">+18</a>';
         }else{
+                $esMayor = "No";
                 $adultButton=  '<a id="adultID" class="nav-link disabled"  href="#">+18</a>';
         }
         

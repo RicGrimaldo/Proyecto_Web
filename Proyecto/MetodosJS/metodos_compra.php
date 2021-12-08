@@ -1,3 +1,6 @@
+<?php
+ include_once '../sesionNav.php';
+?>
 const btnCompra = document.getElementById('btnCompra');
 const btnAgregarCarrito = document.getElementById('btnAgregarCarrito');
 let manga;
@@ -21,6 +24,27 @@ document.addEventListener('DOMContentLoaded', function() {
     if(localStorage.getItem('mangaSeleccionado')) {
         let mangaSeleccionado = JSON.parse(localStorage.getItem('mangaSeleccionado'));
         manga = mangaSeleccionado;
+        if(manga.generos[0]=="18+"||manga.generos[0]=="+18"){
+            <?php echo "var esMayor = '$esMayor';";?>
+            if(esMayor === "No"){
+                <?php 
+                    if($userkey == "Invitado"){
+                        echo "var texto = '¡Debes iniciar sesión!';";
+                    }else
+                    echo "var texto = '¡Debes ser mayor de edad para comprar este manga!';";?>
+                btnCompra.setAttribute('class', 'btn btn-primary btn-lg disabled');
+                btnAgregarCarrito.setAttribute('class', 'btn btn-secondary btn-lg disabled');
+                Swal.fire({
+            
+                text: texto,
+                toast: true,
+                position: 'top-right',
+                icon: 'warning',
+                confirmButtonColor: '#DE3E49'
+                
+                })
+            }
+        }
         recuperarIDSQL('carrito');
         pintarCard(mangaSeleccionado);
         insertDatos(mangaSeleccionado);
