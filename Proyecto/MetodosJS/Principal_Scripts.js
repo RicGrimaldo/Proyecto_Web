@@ -144,11 +144,11 @@ cards.addEventListener('click', e =>{
 const cartaMangaClick = e =>{
  
     if(e.target.classList.contains('card')){
-        console.log(e.target.parentElement);
+        //  console.log(e.target.parentElement);
         mandarMangaSeleccionado(e.target.parentElement);
     }
     if(e.target.classList.contains('imagen-catalogo')){
-        console.log(e.target.parentElement);
+        //  console.log(e.target.parentElement);
         mandarMangaSeleccionado(e.target.parentElement);
     }
    

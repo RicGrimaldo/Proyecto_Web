@@ -15,6 +15,7 @@ $mail->isSMTP(true);
     $mail->Password = '';                               //  Poner la contraseña de ese correo
     $mail->setFrom('');                                 //  Poner correo de gmail desde donde se enviará el correo
     $mail->addAddress('mangawebcontacto@gmail.com', 'Manga Web');   //  Tu correo se enviará a nuestro correo de nuestra página
+
     $nombreF = htmlentities($_REQUEST["nombre"], ENT_QUOTES);
     $correoF = htmlentities($_REQUEST["email"], ENT_QUOTES);
     $mensajeF = htmlentities($_REQUEST["mensaje"], ENT_QUOTES);

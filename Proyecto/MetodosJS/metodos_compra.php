@@ -115,11 +115,11 @@ const guardarDatosSQL = function(destino, accion){
 
         },
         success: function(response){
-            console.log(JSON.stringify(response) + " por medio de "+destino);
+            //  console.log(JSON.stringify(response) + " por medio de "+destino);
             recuperarIDSQL(destino);
         },
         error: function(error){
-            console.log(error);
+            //   console.log(error);
         }
     })
 }
@@ -143,7 +143,7 @@ const recuperarIDSQL = function(origen){
             }
         },
         error: function(error){
-            console.log(error);
+            //  console.log(error);
         }
     })
 }

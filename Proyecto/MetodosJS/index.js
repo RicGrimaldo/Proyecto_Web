@@ -52,7 +52,6 @@ const pintarCards = data => {
         templateCard.querySelector('img').setAttribute("src",producto.imagenURL)
         const clone = templateCard.cloneNode(true)
         var array = producto.titulo.toLowerCase().split(" ");
-        console.log(array.indexOf(var1.toLowerCase()));
         if(producto.titulo.toLowerCase().indexOf(var1.toLowerCase()) >= 0){
           fragment.appendChild(clone);
           nuevoManga = new Manga(producto.titulo, producto.autor, 
@@ -104,7 +103,6 @@ const verMasClick = function(e){
 
 const mandarMangaSeleccionado = objeto => {
   let manga = mangas.find(manga => manga.titulo === objeto.querySelector('h5').textContent); 
-  console.log(manga)
   if(localStorage.getItem('mangaSeleccionado')){
     localStorage.removeItem('mangaSeleccionado');
   } 

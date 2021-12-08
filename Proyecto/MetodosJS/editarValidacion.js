@@ -45,7 +45,6 @@ document.getElementById('guardarCambios').addEventListener('click',function() {
             console.log("Error");
 
         }).always(function(){
-            console.log("");
         });
     }
 });

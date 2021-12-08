@@ -50,7 +50,7 @@ const recuperarIDSQL = function(origen){
             }
         },
         error: function(error){
-            console.log(error);
+            //  console.log(error);
         }
     })
 }
@@ -234,10 +234,10 @@ const guardarDatosSQL = function(destino, accion, ids){
 
         },
         success: function(response){
-            console.log("Accion de "+accion+" con " +JSON.stringify(response) + " por medio de "+destino);
+            //  console.log("Accion de "+accion+" con " +JSON.stringify(response) + " por medio de "+destino);
         },
         error: function(error){
-            console.log(error);
+            //  console.log(error);
         }
     })
 }

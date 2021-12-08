@@ -146,7 +146,7 @@ document.getElementById('loguear').addEventListener('click', function(){
             data: ruta
         }).done(function(response) {
             if(response=="NO"){
-                console.log("In");
+                //  console.log("In");
                 Swal.fire({
                     
                     text: 'Usuario o Contraseña son incorrectos',
@@ -168,7 +168,7 @@ document.getElementById('loguear').addEventListener('click', function(){
             }
             
         }).fail(function(){
-            console.log("Error");
+            //  console.log("Error");
 
         }).always(function(){
            
@@ -246,10 +246,10 @@ document.getElementById('registrar').addEventListener('click',function() {
             
 
         }).fail(function(){
-            console.log("Error");
+            //  console.log("Error");
 
         }).always(function(){
-            console.log("");
+            //  console.log("");
         });
     }
 })
