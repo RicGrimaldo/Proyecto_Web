@@ -33,7 +33,7 @@ include_once 'sesionNav.php';
                 </ul>
                 <ul class="navbar-nav flex-row mr-lg-0">
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.html">
+                    <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.php">
                         <img src="<?php echo $userIcon?>" width="35px" height="35px" class="d-inline-block align-text-top rounded-circle" id="imagenPerfil" alt="">
                         <?php echo $userkey ?>
                     </a>
@@ -108,16 +108,16 @@ include_once 'sesionNav.php';
     <footer class="footer">
         <div id="menu">
             <h4><a>Menu</a></h4> <br>
-            <a href="index.html">Inicio</a> <br>
-            <a href="Categorias_Main.html">Categor&iacute;as</a> <br>
-            <a href="index.html#NuevosLanzamientos">Ultimas</a> <br>
-            <a href="Adult_Main.html">+18</a> <br>
+            <a href="home.php">Inicio</a> <br>
+            <a href="Categorias_Main.php">Categor&iacute;as</a> <br>
+            <a href="home.php#NuevosLanzamientos">Ultimas</a> <br>
+            <a href="Adult_Main.php">+18</a> <br>
         </div>
         <div id="cliente">
             <h4>Atenci&oacute;n al Cliente</h4> <br>
             &iquest;Tienes dudas&quest; <br>
             D&eacute;janos ayudarte, <br>
-            <a href="contacto.html">haz clic aqu&iacute;.</a>
+            <a href="contacto.php">haz clic aqu&iacute;.</a>
         
         </div>
         <div id="nosotros">

@@ -35,7 +35,7 @@
             $sesionButtons = '<a class="dropdown-item" href="EditarPerfil.php">Editar perfil</a>
             <a class="dropdown-item" href="Biblioteca.php">Mi biblioteca</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Administrador</a> 
+            <a class="dropdown-item" href="PHP/admin/modAdmin.php">Administrador</a> 
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="CerrarSesion.php">Cerrar sesi&oacute;n</a>' ;
         }else{

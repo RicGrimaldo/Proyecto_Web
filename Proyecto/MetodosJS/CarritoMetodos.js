@@ -92,9 +92,9 @@ const llenarCarrito = function(mangasComprados){
                 icon: 'warning',
                 title: '¡No tienes nada agregado al carrito!',
                 showConfirmButton: false,
-                footer: '<a href="Categorias_Main.html" class="btn">Ir a categorías</a>'
+                footer: '<a href="Categorias_Main.php" class="btn">Ir a categorías</a>'
             })
-            setTimeout( function() { window.location.href = "Categorias_Main.html"; }, 4500 );
+            setTimeout( function() { window.location.href = "Categorias_Main.php"; }, 4500 );
     }
     localStorage.removeItem('carrito');
     localStorage.setItem('carrito',JSON.stringify(carrito));
@@ -169,7 +169,7 @@ const vaciarComprados = function(){
                     icon: 'success',
                     confirmButtonColor: '#419641',
                     confirmButtonText: 'Entendido',
-                    footer: '<a href="Biblioteca.html" class="btn">Ir a mi biblioteca</a>'
+                    footer: '<a href="Biblioteca.php" class="btn">Ir a mi biblioteca</a>'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         document.location.reload();

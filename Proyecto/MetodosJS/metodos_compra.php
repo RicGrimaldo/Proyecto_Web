@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: '¡No seleccionaste ningún manga!',
             text: 'Ve en busca de nuevos mangas para añadir a tu biblioteca y comprar.',
             showConfirmButton: false,
-            footer: '<a href="Categorias_Main.html" class="btn btn-primary btn-lg">Ir a categorías</a>'
+            footer: '<a href="Categorias_Main.php" class="btn btn-primary btn-lg">Ir a categorías</a>'
         })
     }
     
@@ -247,7 +247,7 @@ btnCompra.addEventListener('click', function(){
                     icon: 'success',
                     confirmButtonColor: '#419641',
                     confirmButtonText: 'Entendido',
-                    footer: '<a href="Biblioteca.html" class="btn btn-primary">Ir a mi biblioteca</a>'
+                    footer: '<a href="Biblioteca.php" class="btn btn-primary">Ir a mi biblioteca</a>'
                 })
             }
             if(localStorage.getItem('biblioteca')){

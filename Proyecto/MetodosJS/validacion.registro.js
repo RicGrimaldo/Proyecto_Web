@@ -240,8 +240,6 @@ document.getElementById('registrar').addEventListener('click',function() {
                     confirmButtonColor: '#DE3E49'
                     
                 })
-                document.getElementById('user').value = "";
-
             }else{
                 location.reload();
             }

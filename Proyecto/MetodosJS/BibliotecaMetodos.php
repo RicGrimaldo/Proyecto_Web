@@ -82,9 +82,9 @@ const llenarBiblioteca = function(mangasDeBiblioteca){
                 icon: 'warning',
                 title: '¡No tienes nada agregado a la biblioteca!',
                 showConfirmButton: false,
-                footer: '<a href="Carrito.html" class="button">Ir a mi carrito</a>'
+                footer: '<a href="Carrito.php" class="button">Ir a mi carrito</a>'
             })
-            setTimeout( function() { window.location.href = "Categorias_Main.html"; }, 4500 );
+            setTimeout( function() { window.location.href = "Categorias_Main.php"; }, 4500 );
     }
     localStorage.removeItem('biblioteca');
     localStorage.setItem('biblioteca',JSON.stringify(biblioteca));

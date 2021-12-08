@@ -7,7 +7,7 @@
       
         $mysqli->set_charset('utf8');
 
-        $pattern_nombre = '/^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/';
+        $pattern_nombre = '/^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+$/';
         $pattern_email = '/^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,})$/i';
         $pattern_usuario = '/^[0-9a-zA-ZñÑáéíóúÁÉÍÓÚ_-]+$/';
         $pattern_password = '/^[0-9a-zA-Z_-]+$/';

@@ -127,7 +127,7 @@ include_once 'sesionNav.php';
                     <ul class="slides" id="cards-slide">
 
                         <li id="slide">
-                            <a href="compra.html" id="referencia_slide1">
+                            <a href="compra.php" id="referencia_slide1">
                                 <img src="Imagenes/20th Century Boys.jpg" alt="" id="img-slide1">
                             </a>
                             <div class="flex-caption" id="titulo-slide1">
@@ -144,7 +144,7 @@ include_once 'sesionNav.php';
 
                         </li>
                         <li id="slide">
-                            <a href="compra.html" id="referencia_slide2">
+                            <a href="compra.php" id="referencia_slide2">
                                 <img src="Imagenes/Nichijou.jpg" alt="" id="img-slide2">
                             </a>
                             <div class="flex-caption" id="titulo-slide2">
@@ -165,7 +165,7 @@ include_once 'sesionNav.php';
 
 
                         <li id="slide">
-                            <a href="compra.html" id="referencia_slide3">
+                            <a href="compra.php" id="referencia_slide3">
                                 <img src="Imagenes/Spy x Family.jpg" alt="" id="img-slide3">
                             </a>
                             <div class="flex-caption" id="titulo-slide3">
@@ -183,7 +183,7 @@ include_once 'sesionNav.php';
                         </li>
 
                         <li id="slide">
-                            <a href="compra.html" id="referencia_slide4">
+                            <a href="compra.php" id="referencia_slide4">
                                 <img src="Imagenes/One Punch Man.jpg" alt="" id="img-slide4">
                             </a>
                             <div class="flex-caption" id="titulo-slide">
@@ -236,7 +236,7 @@ include_once 'sesionNav.php';
 
 
             <template id="template-card">
-                <a href="compra.html">
+                <a href="compra.php">
                     <div class="card" id="referencia">
                         <div class="imagen">
                             <img src="" id="imagen-card" class="imagen-catalogo">
@@ -279,7 +279,7 @@ include_once 'sesionNav.php';
                     </div>
 
                     <div class="button-div">
-                        <a class="type3" id="boton_estilo" href="compra.html">  Ver Ahora </a>
+                        <a class="type3" id="boton_estilo" href="compra.php">  Ver Ahora </a>
                     </div>
                 </div>
 
@@ -299,55 +299,55 @@ include_once 'sesionNav.php';
                     <ul class="list">
 
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top1">One Piece</h4>
                             </a>
                         </li>
 
                         <li>
-                            <a href="compra.html" id="topp" class="topp">
+                            <a href="compra.php" id="topp" class="topp">
                                 <h4 id="top2">Overlord</h4>
                             </a>
                         </li>
 
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top3">Yojo Senki</h4>
                             </a>
                         </li>
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top4">Kaiju NO 8</h4>
                             </a>
                         </li>
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top5">High Score Girl</h4>
                             </a>
                         </li>
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top6">Hatsukoi Zombie</h4>
                             </a>
                         </li>
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top7">Dragon Ball</h4>
                             </a>
                         </li>
 
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top8">Fire Force</h4>
                             </a>
                         </li>
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top9">Houseki no kuni</h4>
                             </a>
                         </li>
                         <li>
-                            <a href="compra.html" id="top">
+                            <a href="compra.php" id="top">
                                 <h4 id="top10">Another</h4>
                             </a>
                         </li>

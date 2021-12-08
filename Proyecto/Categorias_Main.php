@@ -38,7 +38,7 @@
             </ul>
             <ul class="navbar-nav flex-row mr-lg-0">
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.html">
+                <a class="nav-link dropdown-toggle mr-3 mr-lg-0 active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="reglog.php">
                     <img src="<?php echo $userIcon?>" width="35px" height="35px" class="d-inline-block align-text-top rounded-circle" id="imagenPerfil" alt="">
                     <?php echo $userkey ?>
                 </a>
@@ -149,7 +149,7 @@
     <template id="template-card">
 
         <div class="manga">
-            <a href="compra.html">
+            <a href="compra.php">
                 <img src="" alt="" class="card-img">
             </a>
         </div>
